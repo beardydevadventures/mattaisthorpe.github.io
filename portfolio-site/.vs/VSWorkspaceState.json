@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\public",
+    "\\src",
+    "\\src\\pages",
+    "\\src\\pages\\posts",
+    "\\src\\pages\\projects"
   ],
+  "SelectedNode": "\\src\\pages\\projects\\[...slug].astro",
   "PreviewInSolutionExplorer": false
 }
