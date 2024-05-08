@@ -11,6 +11,6 @@
     "\\src\\pages\\posts",
     "\\src\\pages\\projects"
   ],
-  "SelectedNode": "\\src\\content\\posts\\unity\\host-unity-github-pages.md",
+  "SelectedNode": "\\astro.config.mjs",
   "PreviewInSolutionExplorer": false
 }
