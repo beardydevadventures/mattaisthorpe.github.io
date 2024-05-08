@@ -7,5 +7,6 @@ export default defineConfig({
 	  	integrations: [mdx()],
 		site: 'https://beardydevadventures.github.io',
 		base: 'mattaisthorpe.github.io',
+		output: static,
 	},
 );
