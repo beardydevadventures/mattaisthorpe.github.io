@@ -6,6 +6,6 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [mdx()]
 },
-site: 'https://beardydevadventures.github.io/',
-base: '/mattaisthorpe.github.io',
+site: 'https://beardydevadventures.github.io',
+base: 'mattaisthorpe.github.io',
 );
