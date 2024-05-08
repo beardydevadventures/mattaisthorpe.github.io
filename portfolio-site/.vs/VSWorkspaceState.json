@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
     "\\src\\content",
-    "\\src\\content\\projects\\3d",
-    "\\src\\content\\projects\\app",
-    "\\src\\content\\projects\\vr",
-    "\\src\\content\\projects\\web",
-    "\\src\\content\\Templates",
+    "\\src\\content\\posts",
+    "\\src\\content\\posts\\code",
+    "\\src\\content\\posts\\unity",
     "\\src\\pages",
+    "\\src\\pages\\posts",
     "\\src\\pages\\projects"
   ],
-  "SelectedNode": "\\src\\pages\\blog.astro",
+  "SelectedNode": "\\src\\content\\posts\\unity\\host-unity-github-pages.md",
   "PreviewInSolutionExplorer": false
 }

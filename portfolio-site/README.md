@@ -5,7 +5,7 @@ This project is powered by Astro, designed to showcase a professional portfolio.
 ## Plugins
 
 - Icons: https://phosphoricons.com/
-- Framework: 
+- Framework: https://tailwindcss.com/
 
 ## Commands
 
