@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\content",
+    "\\src\\content\\projects\\3d",
+    "\\src\\content\\projects\\app",
+    "\\src\\content\\projects\\vr",
+    "\\src\\content\\projects\\web",
+    "\\src\\content\\Templates",
+    "\\src\\pages",
+    "\\src\\pages\\projects"
+  ],
+  "SelectedNode": "\\src\\pages\\blog.astro",
+  "PreviewInSolutionExplorer": false
+}

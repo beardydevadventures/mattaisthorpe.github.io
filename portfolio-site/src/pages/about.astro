@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Matthew Aisthorpe" description="About Matthew Aisthorpe">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Welcome! Here you'll find details about my skills, experience, and the journey that led me to where I am today."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Matthew Aisthorpe in a VR headset"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						<b>Hello!</b> I'm Matthew, an accomplished professional in the interactive digital industry, with a robust background in software development and agile project management. Over a decade of combined experiences, I've been instrumental in leading teams and projects that streamline processes with innovative technology and user-centric design.
+					</p>
+				</div>
+				<h2 class="section-title">Career Highlights</h2>
+				<div class="content">
+					<ul>
+						<li><b>Project Leader at CQUniversity:</b> Managed critical digital transformations, including the adoption of AI tools and migration of services to cloud platforms.</li>
+						<li><b>Product Owner at EB Games:</b> Spearheaded the integration of agile methodologies to streamline project delivery, significantly enhancing customer interaction points.</li>
+						<li><b>Founder of FoVR Interactive:</b> My venture into the virtual reality space where I focus on creating immersive VR experiences.</li>
+					<ul>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<ul>
+						<li><strong>Project Management</strong>: Strong leadership in project planning, execution, and monitoring, ensuring that all projects meet their deadlines, remain within budget, and achieve organizational goals.</li>
+						<li><strong>Agile and Scrum Methodologies</strong>: Expert in applying Agile and Scrum techniques to improve team performance and project delivery.</li>
+						<li><strong>Full Stack Development</strong>: Proficient in handling all aspects of software development, ensuring seamless integration from back-end to front-end.</li>
+						<li><strong>UX/UI Design</strong>: Skilled in designing interfaces that enhance user satisfaction by improving the usability, accessibility, and pleasure provided in the interaction between the user and the product.</li>
+						<li><strong>Communication</strong>: Excellent interpersonal and communication skills, essential for negotiating with stakeholders and leading diverse teams.</li>
+						<li><strong>Emerging Technologies</strong>: Passionate about Extended Reality (XR) and Artificial Intelligence (AI), continuously integrating new technologies to enhance business processes and user experiences.</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<ul>
+						<li><strong>SAE Institute Australia</strong>: Bachelor of Creative Media, Major in Interactive Media</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Certifications</h2>
+				<div class="content">
+					<ul>
+						<li><strong>Scrum Certification</strong>: Professional Scrum Master I (PSM I)</li>
+						<li><strong>Product Owner Certification</strong>: Professional Scrum Product Owner I (PSPO I)</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
