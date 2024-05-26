@@ -9,7 +9,7 @@ This project is powered by Astro, designed to showcase a professional portfolio.
 
 ## Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the portfolio-site folder in the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |

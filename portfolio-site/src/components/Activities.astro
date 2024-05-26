@@ -45,10 +45,10 @@ const feeds = await fetchFeeds();
             </div>
             <div class="min-w-0 flex-auto">
               <p class="text-sm font-semibold leading-6">{activity.title}</p>
-              <p class="mt-1 truncate text-xs leading-5">{activity.content}</p>
+              <p class="invisible md:visible mt-1 truncate text-xs leading-5">{activity.content}</p>
             </div>
           </div>
-          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+          <div class="shrink-0 sm:flex sm:flex-col sm:items-end">
             <p class="text-sm leading-6 ">{activity.pubDate.toLocaleDateString()}</p>
             <a href={activity?.link} target="_blank" rel="noopener noreferrer" class="mt-1 text-xs leading-5 hover:underline">{activity?.link?.includes('github.com') ? 'View repo' : 'Watch video'} <Icon icon="arrow-right" /></a>
           </div>

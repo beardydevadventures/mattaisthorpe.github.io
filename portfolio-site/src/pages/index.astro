@@ -11,6 +11,7 @@ import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
+import PostPreview from '../components/PostPreview.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -18,6 +19,11 @@ import Skills from '../components/Skills.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('projects'))
+	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+	.slice(0, 4);
+
+// Content Fetching: List four most recent blog posts
+const posts = (await getCollection('posts'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
@@ -74,6 +80,32 @@ const projects = (await getCollection('projects'))
 				<div class="cta">
 					<CallToAction href="/projects/">
 						View All
+						<Icon icon="arrow-right" size="1.2em" />
+					</CallToAction>
+				</div>
+			</section>
+
+			<section class="section with-background with-cta">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Blog Posts</h3>
+					<p>Explore some of my most notable blog posts from recent years.</p>
+				</header>
+
+				<div class="gallery">
+					<Grid variant="offset">
+						{
+							posts.map((post) => (
+								<li>
+									<PostPreview post={post} />
+								</li>
+							))
+						}
+					</Grid>
+				</div>
+
+				<div class="cta">
+					<CallToAction href="/projects/">
+						View Blog
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
