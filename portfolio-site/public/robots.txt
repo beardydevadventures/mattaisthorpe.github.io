@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://matthewaisthorpe.com.au/sitemap-index.xml

@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
-    "\\src",
-    "\\src\\content",
-    "\\src\\pages\\posts",
-    "\\src\\pages\\projects"
+    "\\src\\content"
   ],
-  "SelectedNode": "\\src\\layouts",
   "PreviewInSolutionExplorer": false
 }
