@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src\\content"
+    "\\public",
+    "\\src",
+    "\\src\\components",
+    "\\src\\content",
+    "\\src\\layouts",
+    "\\src\\pages",
+    "\\src\\pages\\posts",
+    "\\src\\pages\\projects",
+    "\\src\\styles"
   ],
+  "SelectedNode": "\\src\\components\\activity.astro",
   "PreviewInSolutionExplorer": false
 }

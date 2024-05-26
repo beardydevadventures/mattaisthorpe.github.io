@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Activity from '../components/Activity.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Activity | Matthew Aisthorpe" description="Matthew Aisthorpe Online Activity">
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="Recent Activity"
+				tagline="View my latest activity on GitHub and YouTube, where I share my ongoing projects."
+				align="start"
+			>
+			</Hero>
+			<Activity />
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>

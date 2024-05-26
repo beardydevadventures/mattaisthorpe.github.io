@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Global variables */
 :root {
 	/* Colors */
@@ -252,4 +256,8 @@ h5 {
 	.lg\:gap-48 {
 		gap: 12rem;
 	}
+}
+
+svg {
+	display: inline;
 }
