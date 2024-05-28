@@ -1,5 +1,5 @@
 ---
-title: Host Unity Projects on GitHub Pages
+title: How to host Unity projects on GitHub Pages
 publishDate: 2021-06-06 00:00:00
 img: /assets/posts/host-unity-github-pages.jpg
 img_alt: The unity and github icons with a plus symbol in between.
