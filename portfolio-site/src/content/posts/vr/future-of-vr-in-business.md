@@ -1,7 +1,7 @@
 ---
 title: The Future of VR in Business - Opportunities and Challenges
 publishDate: 2024-14-05 00:00:00
-img: /assets/posts/business-vr.jpg
+img: /assets/posts/business-vr.png
 img_alt: A futuristic depiction of virtual reality in a business setting
 description: |
   Virtual Reality (VR) is revolutionising the way businesses operate, offering new opportunities and presenting unique challenges. Explore how VR can transform various business sectors and the hurdles that need to be overcome.

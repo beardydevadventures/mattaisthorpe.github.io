@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
+    "\\public\\assets",
+    "\\public\\assets\\posts",
     "\\src",
     "\\src\\content",
-    "\\src\\content\\drafts",
     "\\src\\content\\posts",
-    "\\src\\content\\posts\\project-management",
     "\\src\\content\\posts\\unity",
     "\\src\\content\\posts\\vr",
-    "\\src\\content\\projects",
-    "\\src\\content\\Templates"
+    "\\src\\content\\projects"
   ],
-  "SelectedNode": "\\src\\content\\posts\\vr\\stream-quest-to-discord.md",
+  "SelectedNode": "\\public\\assets\\posts\\education-vr.png",
   "PreviewInSolutionExplorer": false
 }
