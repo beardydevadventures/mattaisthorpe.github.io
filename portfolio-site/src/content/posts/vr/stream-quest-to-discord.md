@@ -1,6 +1,6 @@
 ---
 title: Streaming Oculus(Meta) Quest 2,3,Pro to Discord
-publishDate: 2022-02-11 00:00:00
+publishDate: 2022-11-02 00:00:00
 img: /assets/posts/quest-stream.jpg
 img_alt: A woman adjusting her VR headset
 description: |

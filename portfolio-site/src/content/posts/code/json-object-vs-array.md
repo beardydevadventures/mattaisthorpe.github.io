@@ -1,6 +1,6 @@
 ---
 title: JSON Object vs JSON Array
-publishDate: 2020-05-16
+publishDate: 2020-16-05
 img: /assets/posts/json-object-array.jpg
 img_alt: A line of letter blocks spelling JSON
 description: Recently, a colleague asked me about the differences between JSON Objects and Arrays, inspiring me to share this knowledge with everyone.

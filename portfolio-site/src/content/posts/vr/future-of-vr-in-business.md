@@ -1,6 +1,6 @@
 ---
 title: The Future of VR in Business - Opportunities and Challenges
-publishDate: 2024-14-05 00:00:00
+publishDate: 2024-05-14 00:00:00
 img: /assets/posts/business-vr.png
 img_alt: A futuristic depiction of virtual reality in a business setting
 description: |
