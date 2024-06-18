@@ -7,10 +7,11 @@
     "\\src",
     "\\src\\content",
     "\\src\\content\\posts",
+    "\\src\\content\\posts\\code",
+    "\\src\\content\\posts\\project-management",
     "\\src\\content\\posts\\unity",
-    "\\src\\content\\posts\\vr",
-    "\\src\\content\\projects"
+    "\\src\\content\\posts\\vr"
   ],
-  "SelectedNode": "\\public\\assets\\posts",
+  "SelectedNode": "\\public\\assets\\posts\\yes-attitude.png",
   "PreviewInSolutionExplorer": false
 }
