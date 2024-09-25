@@ -33,7 +33,7 @@ While adopting a "yes" attitude can be beneficial, it's also crucial to approach
 **Challenges and Considerations**  
 Saying yes indiscriminately can lead to overcommitment and burnout. It’s important to know when to say no or to negotiate terms that make a challenging commitment more manageable.
 
-- **Balancing Act:** Don't burn yourself out saying "yes" to everything, "no" might be the more strategic choice, espiecially when you have enough on your plate. Even when saying "no" explain why and try to give them some direction, don't be a brick wall.
+- **Balancing Act:** Don't burn yourself out saying "yes" to everything, "no" might be the more strategic choice, especially when you have enough on your plate. Even when saying "no" explain why and try to give them some direction, don't be a brick wall.
 
 **Encouraging Others to Say Yes**  
 As a leader, you can cultivate a culture where your team feels comfortable and confident in taking on new challenges. This involves not only leading by example but also providing the necessary support and resources to turn their "yes" into successful outcomes.
