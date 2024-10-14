@@ -13,7 +13,7 @@
     "@astrojs/check": "^0.5.10",
     "@astrojs/mdx": "^2.3.1",
     "@astrojs/sitemap": "^3.1.5",
-    "astro": "^4.7.1",
+    "astro": "^4.16.3",
     "astro-embed": "^0.7.2",
     "rss-parser": "^3.13.0",
     "typescript": "^5.4.5"
