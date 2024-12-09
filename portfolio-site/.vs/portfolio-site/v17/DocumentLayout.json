@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\using-jira-for-task-management.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\content\\posts\\project-management\\using-jira-for-task-management.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\street-and-book-smarts.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\content\\posts\\project-management\\street-and-book-smarts.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\Nav.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Nav.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -22,19 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{93c5e7ad-af06-49e6-a756-b8f3eaca790d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "using-jira-for-task-management.md",
+              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\using-jira-for-task-management.md",
+              "RelativeDocumentMoniker": "src\\content\\posts\\project-management\\using-jira-for-task-management.md",
+              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\using-jira-for-task-management.md",
+              "RelativeToolTip": "src\\content\\posts\\project-management\\using-jira-for-task-management.md",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-12-09T07:34:54.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "street-and-book-smarts.md",
+              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\street-and-book-smarts.md",
+              "RelativeDocumentMoniker": "src\\content\\posts\\project-management\\street-and-book-smarts.md",
+              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\street-and-book-smarts.md",
+              "RelativeToolTip": "src\\content\\posts\\project-management\\street-and-book-smarts.md",
+              "ViewState": "AgIAABUAAAAAAAAAAAAswDEAAADQAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-12-09T07:29:31.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Nav.astro",
               "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\Nav.astro",
               "RelativeDocumentMoniker": "src\\components\\Nav.astro",
@@ -47,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "tailwind.config.js",
               "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\tailwind.config.js",
               "RelativeDocumentMoniker": "tailwind.config.js",
@@ -55,12 +81,11 @@
               "RelativeToolTip": "tailwind.config.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-25T07:00:08.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T07:00:08.335Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "future-of-vr-in-education.md",
               "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\vr\\future-of-vr-in-education.md",
               "RelativeDocumentMoniker": "src\\content\\posts\\vr\\future-of-vr-in-education.md",
@@ -68,8 +93,19 @@
               "RelativeToolTip": "src\\content\\posts\\vr\\future-of-vr-in-education.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2024-05-31T13:14:28.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T13:14:28.169Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{93c5e7ad-af06-49e6-a756-b8f3eaca790d}"
             }
           ]
         }

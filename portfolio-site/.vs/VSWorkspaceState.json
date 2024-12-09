@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
+    "\\public\\assets",
+    "\\public\\assets\\posts",
     "\\src",
-    "\\src\\components",
     "\\src\\content",
-    "\\src\\content\\drafts",
     "\\src\\content\\posts",
-    "\\src\\content\\posts\\project-management",
-    "\\src\\content\\posts\\unity",
-    "\\src\\content\\posts\\vr",
-    "\\src\\pages"
+    "\\src\\content\\posts\\code",
+    "\\src\\pages",
+    "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\components\\Nav.astro",
+  "SelectedNode": "\\src\\styles\\global.css",
   "PreviewInSolutionExplorer": false
 }
