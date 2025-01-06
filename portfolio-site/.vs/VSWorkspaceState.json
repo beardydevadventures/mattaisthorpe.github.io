@@ -7,10 +7,10 @@
     "\\src",
     "\\src\\content",
     "\\src\\content\\posts",
-    "\\src\\content\\posts\\code",
+    "\\src\\content\\posts\\project-management",
     "\\src\\pages",
     "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\styles\\global.css",
+  "SelectedNode": "\\public\\assets\\posts\\supporting-growth.png",
   "PreviewInSolutionExplorer": false
 }

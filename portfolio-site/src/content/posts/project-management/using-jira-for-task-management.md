@@ -1,6 +1,6 @@
 ---
 title: Using Jira Boards and Tasks for Efficient Task Management  
-publishDate: 2024-12-09 00:00:00  
+publishDate: 2024-09-12 00:00:00  
 img: /assets/posts/jira-task-management.png  
 img_alt: A Jira board with various task statuses highlighted.  
 description: A guide to managing tasks and projects effectively using Jira boards, epics, and tasks.  
