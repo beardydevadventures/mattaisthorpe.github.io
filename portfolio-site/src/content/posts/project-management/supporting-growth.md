@@ -37,7 +37,7 @@ I've been fortunate to work with mentors who believed in me during moments when 
 
 If you're looking for ways to encourage those around you, here are some ideas to get started:
 
-1. **Acknowledge effort, not just results:** Recognize the work and dedication someone puts in, even if the outcome isn't perfect.
+1. **Acknowledge effort, not just results:** Recognise the work and dedication someone puts in, even if the outcome isn't perfect.
 2. **Be a sounding board:** Sometimes, people just need someone to listen and provide perspective.
 3. **Share opportunities:** Whether it's recommending a colleague for a project or sharing resources, giving others a chance to shine helps everyone succeed.
 4. **Celebrate milestones:** Small wins matter. Taking the time to celebrate can boost morale and motivation.
