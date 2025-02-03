@@ -10,13 +10,13 @@ import Hero from '../components/Hero.astro';
 		<main class="wrapper about">
 			<Hero
 				title="About"
-				tagline="Welcome! Here you'll find details about my skills, experience, and the journey that led me to where I am today."
+				tagline="From full-stack developer to Agile leader, crafting impactful digital experiences."
 			>
 				<img
 					width="1553"
 					height="873"
 					src="/assets/at-work.jpg"
-					alt="Matthew Aisthorpe in a VR headset"
+					alt="Matthew Aisthorpe standing in a room looking professional and welcoming."
 				/>
 			</Hero>
 
@@ -28,29 +28,32 @@ import Hero from '../components/Hero.astro';
 					</p>
 				</div>
 			</section>
+
 			<section>
 				<h2 class="section-title">Career Highlights</h2>
 				<div class="content">
 					<ul>
-						<li><b>Project Leader at CQUniversity:</b> Managed critical digital transformations, including the adoption of AI tools and migration of services to cloud platforms.</li>
-						<li><b>Product Owner at EB Games:</b> Spearheaded the integration of agile methodologies to streamline project delivery, significantly enhancing customer interaction points.</li>
-						<li><b>Founder of FoVR Interactive:</b> My venture into the virtual reality space where I focus on creating immersive VR experiences.</li>
-					<ul>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<ul>
-						<li><strong>Project Management</strong>: Strong leadership in project planning, execution, and monitoring, ensuring that all projects meet their deadlines, remain within budget, and achieve organizational goals.</li>
-						<li><strong>Agile and Scrum Methodologies</strong>: Expert in applying Agile and Scrum techniques to improve team performance and project delivery.</li>
-						<li><strong>Full Stack Development</strong>: Proficient in handling all aspects of software development, ensuring seamless integration from back-end to front-end.</li>
-						<li><strong>UX/UI Design</strong>: Skilled in designing interfaces that enhance user satisfaction by improving the usability, accessibility, and pleasure provided in the interaction between the user and the product.</li>
-						<li><strong>Communication</strong>: Excellent interpersonal and communication skills, essential for negotiating with stakeholders and leading diverse teams.</li>
-						<li><strong>Emerging Technologies</strong>: Passionate about Extended Reality (XR) and Artificial Intelligence (AI), continuously integrating new technologies to enhance business processes and user experiences.</li>
+						<li><b>Project Leader at CQUniversity:</b> Led critical digital transformation initiatives, including the adoption of AI-driven tools and migration from on-premise software to cloud platforms, improving operational efficiency and student engagement.</li>
+						<li><b>Product Owner at EB Games:</b> Managed the successful integration of <i>Uber delivery</i>, allowing real-time delivery tracking and logistics solutions to enhance customer experience and streamline order fulfillment.</li>
+						<li><b>Founder of FoVR Interactive:</b> Established my own VR-focused venture, designing and developing immersive virtual experiences that push the boundaries of spatial computing.</li>
 					</ul>
 				</div>
 			</section>
+
+			<section>
+				<h2 class="section-title">Specialties</h2>
+				<div class="content">
+					<ul>
+						<li><strong>Project Management</strong>: Proven leadership in project planning, execution, and delivery, ensuring projects stay on time, within budget, and aligned with business goals.</li>
+						<li><strong>Agile and Scrum Methodologies</strong>: Expert in Agile methodologies and Scrum practices, optimizing workflows and improving team performance for efficient project delivery.</li>
+						<li><strong>Full Stack Development</strong>: Skilled in end-to-end software development, seamlessly integrating back-end and front-end technologies to create scalable solutions.</li>
+						<li><strong>UX/UI Design</strong>:  Focused on user-centric design, enhancing usability, accessibility, and engagement to improve digital experiences.</li>
+						<li><strong>Communication</strong>: Strong interpersonal and stakeholder management skills, fostering collaboration across cross-functional teams.</li>
+						<li><strong>Emerging Technologies</strong>: Passionate about Extended Reality (XR) and Artificial Intelligence (AI), leveraging cutting-edge tech to drive innovation.</li>
+					</ul>
+				</div>
+			</section>
+
 			<section>
 				<h2 class="section-title">Education</h2>
 				<div class="content">
@@ -59,6 +62,7 @@ import Hero from '../components/Hero.astro';
 					</ul>
 				</div>
 			</section>
+
 			<section>
 				<h2 class="section-title">Certifications</h2>
 				<div class="content">
@@ -66,6 +70,32 @@ import Hero from '../components/Hero.astro';
 						<li><strong>Scrum Certification</strong>: Professional Scrum Master I (PSM I)</li>
 						<li><strong>Product Owner Certification</strong>: Professional Scrum Product Owner I (PSPO I)</li>
 					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Explore My Professional Journey</h2>
+				<div class="content">
+					<p>My career has taken me from full-stack development to Agile leadership,  
+					working across software development, digital transformation, and emerging technologies.  
+					Want to see the full story? <a href="https://www.linkedin.com/in/matthewaisthorpe/" target="_blank">
+							View My LinkedIn Profile
+						</a></p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Beardy Dev Adventures</h2>
+				<div class="content">
+					<p>
+						Outside of my professional work, I run <strong>Beardy Dev Adventures</strong>, 
+						where I explore game development, XR, and emerging technologies through videos, blogs, and projects. 
+						It is a space where I share insights, tutorials, and experiments in game development and interactive media.
+					</p>
+					<p>
+						Follow along on <a href="https://www.youtube.com/@beardydevadventures" target="_blank">YouTube</a> 
+						or check out my latest experiments on <a href="https://github.com/beardydevadventures" target="_blank">GitHub</a>.
+					</p>
 				</div>
 			</section>
 		</main>
@@ -129,5 +159,14 @@ import Hero from '../components/Hero.astro';
 			display: contents;
 			font-size: var(--text-lg);
 		}
+	}
+
+	.content ul {
+		list-style-type: disc;  /* Ensures bullet points */
+		padding-left: 1.5rem;  /* Adds space for bullets */
+	}
+
+	.content ul li {
+		margin-bottom: 0.5rem;  /* Adds spacing between list items */
 	}
 </style>

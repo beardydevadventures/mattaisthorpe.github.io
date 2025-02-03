@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\project-management-with-full-stack.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\content\\posts\\project-management\\project-management-with-full-stack.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\supporting-growth.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\content\\posts\\project-management\\supporting-growth.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\effective-scrum-practices.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\content\\posts\\project-management\\effective-scrum-practices.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\street-and-book-smarts.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\content\\posts\\project-management\\street-and-book-smarts.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\pages\\blog.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\blog.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -26,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +54,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "street-and-book-smarts.md",
+              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\street-and-book-smarts.md",
+              "RelativeDocumentMoniker": "src\\content\\posts\\project-management\\street-and-book-smarts.md",
+              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\street-and-book-smarts.md",
+              "RelativeToolTip": "src\\content\\posts\\project-management\\street-and-book-smarts.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-02-03T05:21:47.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "effective-scrum-practices.md",
+              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\effective-scrum-practices.md",
+              "RelativeDocumentMoniker": "src\\content\\posts\\project-management\\effective-scrum-practices.md",
+              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\effective-scrum-practices.md",
+              "RelativeToolTip": "src\\content\\posts\\project-management\\effective-scrum-practices.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-02-03T05:21:28.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "supporting-growth.md",
+              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\supporting-growth.md",
+              "RelativeDocumentMoniker": "src\\content\\posts\\project-management\\supporting-growth.md",
+              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\supporting-growth.md",
+              "RelativeToolTip": "src\\content\\posts\\project-management\\supporting-growth.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-02-03T05:20:41.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "project-management-with-full-stack.md",
+              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\project-management-with-full-stack.md",
+              "RelativeDocumentMoniker": "src\\content\\posts\\project-management\\project-management-with-full-stack.md",
+              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\project-management\\project-management-with-full-stack.md",
+              "RelativeToolTip": "src\\content\\posts\\project-management\\project-management-with-full-stack.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-02-03T05:12:14.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "blog.astro",
               "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\pages\\blog.astro",
               "RelativeDocumentMoniker": "src\\pages\\blog.astro",
@@ -51,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "index.astro",
               "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\pages\\index.astro",
               "RelativeDocumentMoniker": "src\\pages\\index.astro",
@@ -59,12 +127,11 @@
               "RelativeToolTip": "src\\pages\\index.astro",
               "ViewState": "AgIAAF8AAAAAAAAAAAAAAG4AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-16T05:45:17.259Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T05:45:17.259Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Hero.astro",
               "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\Hero.astro",
               "RelativeDocumentMoniker": "src\\components\\Hero.astro",
@@ -72,12 +139,11 @@
               "RelativeToolTip": "src\\components\\Hero.astro",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-16T05:14:42.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T05:14:42.572Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "projects.astro",
               "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\pages\\projects.astro",
               "RelativeDocumentMoniker": "src\\pages\\projects.astro",
@@ -85,8 +151,7 @@
               "RelativeToolTip": "src\\pages\\projects.astro",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAB+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-16T05:07:11.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T05:07:11.852Z"
             }
           ]
         }

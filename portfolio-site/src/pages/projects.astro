@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+import CallToAction from '../components/CallToAction.astro';
+import Icon from '../components/Icon.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
@@ -18,12 +20,19 @@ const projects = (await getCollection('projects')).sort(
 	description="Learn about Matthew Aisthorpe's most recent projects"
 >
 	<div class="stack gap-20">
+
 		<main class="wrapper stack gap-8">
+			<CallToAction href="https://www.linkedin.com/in/matthewaisthorpe/">
+				View My Professional Journey on LinkedIn
+				<Icon icon="arrow-right" size="1.2em" />
+			</CallToAction>
+
 			<Hero
 				title="My Personal Projects"
-				tagline="Explore a collection of my recent personal projects. For insights into my professional career, visit my LinkedIn."
+				tagline="Explore my latest projects in game development, XR, and emerging technologies."
 				align="start"
 			/>
+
 			<Grid variant="offset">
 				{
 					projects.map((project) => (
