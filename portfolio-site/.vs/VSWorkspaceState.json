@@ -5,13 +5,12 @@
     "\\public\\assets",
     "\\public\\assets\\posts",
     "\\src",
-    "\\src\\components",
     "\\src\\content",
     "\\src\\content\\posts",
+    "\\src\\content\\posts\\code",
     "\\src\\content\\posts\\project-management",
-    "\\src\\pages",
     "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\pages\\blog.astro",
+  "SelectedNode": "\\src\\content\\posts\\project-management\\supporting-growth.md",
   "PreviewInSolutionExplorer": false
 }

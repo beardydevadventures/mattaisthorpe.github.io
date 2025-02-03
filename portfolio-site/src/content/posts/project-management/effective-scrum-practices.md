@@ -1,6 +1,6 @@
 ---
 title: Navigating the Agile Landscape - Tips for Effective Scrum Practices
-publishDate: 2024-28-05 00:00:00
+publishDate: 2024-05-28 00:00:00
 img: /assets/posts/scrum-practices.jpg
 img_alt: A hand pointing to a wall covered in sticky notes
 description: |
