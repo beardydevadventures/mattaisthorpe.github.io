@@ -35,7 +35,7 @@ const { Content } = await entry.render();
 					<a class="back-link" href="/projects/"><Icon icon="arrow-left" /> Projects</a>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
-							<div class="tags">
+							<div class="tags max-lg:hidden">
 								{entry.data.tags.map((t: string) => <Pill>{t}</Pill>)}
 							</div>
 							<p class="description">{entry.data.description}</p>
@@ -76,8 +76,7 @@ const { Content } = await entry.render();
 	}
 
 	.tags {
-		display: flex;
-		gap: 0.5rem;
+		display: none;
 	}
 
 	.description {
@@ -146,6 +145,11 @@ const { Content } = await entry.render();
 
 		.content :global(blockquote) {
 			font-size: var(--text-2xl);
+		}
+
+		.tags {
+			display: flex;
+			gap: 0.5rem;
 		}
 	}
 </style>

@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
     "\\src\\content",
     "\\src\\content\\projects",
     "\\src\\content\\projects\\3d",
     "\\src\\content\\projects\\ai",
-    "\\src\\content\\projects\\app",
     "\\src\\content\\projects\\vr",
-    "\\src\\styles"
+    "\\src\\content\\projects\\web",
+    "\\src\\pages",
+    "\\src\\pages\\projects"
   ],
+  "SelectedNode": "\\src\\pages\\projects\\[...slug].astro",
   "PreviewInSolutionExplorer": false
 }

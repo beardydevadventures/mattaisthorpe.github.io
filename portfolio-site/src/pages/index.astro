@@ -37,7 +37,7 @@ const posts = (await getCollection('posts'))
 			<header class="hero">
 				<Hero
 					title="Hello, my name is Matthew Aisthorpe"
-					tagline="Welcome to my little corner of the internet. I am an Agile Project Manager with a background in full-stack development."
+					tagline="Welcome to my little corner of the internet. I am an Agile Project Manager with a background in Software development."
 					align="start"
 				>
 					<div class="roles">
@@ -61,7 +61,7 @@ const posts = (await getCollection('posts'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h1>Professional Career</h1>
+					<h2>Professional Career</h2>
 					<p>Check out my LinkedIn for insights into my professional career.</p>
 				</header>
 
@@ -75,7 +75,7 @@ const posts = (await getCollection('posts'))
 
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h1>Blog Posts</h1>
+					<h2>Blog Posts</h2>
 					<p>Explore some of my most notable blog posts from recent years.</p>
 				</header>
 
@@ -102,7 +102,7 @@ const posts = (await getCollection('posts'))
 			<section class="section with-background with-cta">
 
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h1>Personal Project Highlights</h1>
+					<h2>Personal Project Highlights</h2>
 					<p>Take a look below at some of my personal projects I have built from the past few years.</p>
 				</header>
 
@@ -173,6 +173,11 @@ const posts = (await getCollection('posts'))
 		box-shadow: var(--shadow-md);
 	}
 
+	h2 {
+		font-size: var(--text-xl);
+		text-align: center;
+	}
+
 	@media (min-width: 50em) {
 		.hero {
 			display: grid;
@@ -191,6 +196,10 @@ const posts = (await getCollection('posts'))
 			aspect-ratio: 3 / 4;
 			border-radius: 4.5rem;
 			object-fit: cover;
+		}
+
+		h2 {
+			font-size: var(--text-3xl);
 		}
 	}
 
