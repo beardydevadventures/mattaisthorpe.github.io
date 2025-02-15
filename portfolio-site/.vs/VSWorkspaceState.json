@@ -1,12 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
-    "\\src\\components",
-    "\\src\\layouts",
-    "\\src\\pages",
     "\\src\\pages\\projects"
   ],
-  "SelectedNode": "\\src\\layouts\\BaseLayout.astro",
+  "SelectedNode": "\\public\\ads.txt",
   "PreviewInSolutionExplorer": false
 }
