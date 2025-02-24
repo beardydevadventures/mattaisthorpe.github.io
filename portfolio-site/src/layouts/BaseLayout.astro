@@ -6,7 +6,8 @@
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import GA from '../components/GoogleAnalytics.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import AdSense from '../components/AdSense.astro';
 
 interface Props {
 	title?: string | undefined;
@@ -19,7 +20,8 @@ const { title, description } = Astro.props;
 <html lang="en">
 	<head>
 		<MainHead title={title} description={description} />
-		<GA />
+		<GoogleAnalytics />
+		<AdSense />
 	</head>
 	<body>
 		<div class="stack backgrounds">
