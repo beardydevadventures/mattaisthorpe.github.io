@@ -37,5 +37,5 @@ To support real-time updates, the app uses a custom-built PHP API that handles l
 
 ## Project Goal & Learning Outcomes:
 - 🚀 Enhancing Outdoor Navigation – Helping hikers and campers find essential facilities easily.
-- 💡 Optimized API Performance – Creating a fast and lightweight API for mobile usage.
+- 💡 Optimised API Performance – Creating a fast and lightweight API for mobile usage.
 - 🌍 Offline Support – Ensuring functionality in remote locations with limited connectivity.

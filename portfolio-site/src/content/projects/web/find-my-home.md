@@ -23,7 +23,7 @@ Users can explore the recommended locations on an interactive map, click on high
 Read more about <strong>Find My Home</strong>: [Project Page](https://sites.google.com/view/findmyhome-govhack2021/home).
 
 ## Key Features:
-- ✅ Customizable Preferences – Users can define key factors such as cost of living, safety, and amenities.
+- ✅ Customisable Preferences – Users can define key factors such as cost of living, safety, and amenities.
 - ✅ ABS Data Integration – Uses real-time data from the ABS API to match locations to user needs.
 - ✅ Interactive Mapping – Highlights suitable areas based on user preferences.
 - ✅ Detailed Region Insights – Provides additional information about each suggested location.
@@ -37,4 +37,4 @@ Read more about <strong>Find My Home</strong>: [Project Page](https://sites.goog
 ## Project Goal & Learning Outcomes:
 - 🚀 Data-Driven Decision Making – Helping users make informed relocation choices using real-time data.
 - 🏠 Improving Urban Living Choices – Providing better insights into different regions for potential movers.
-- 🌍 Enhancing Public Space Utilization – Encouraging smarter city planning through data insights.
+- 🌍 Enhancing Public Space Utilisation – Encouraging smarter city planning through data insights.

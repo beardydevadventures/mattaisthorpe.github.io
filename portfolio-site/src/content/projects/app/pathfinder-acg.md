@@ -23,7 +23,7 @@ Built with Cordova, the app is cross-platform and provides a lightweight solutio
 ## Key Features:
 - ✅ Character Tracking – Monitor stats, skills, and upgrades for each game session.
 - ✅ Scenario Progression – Save completed scenarios and track campaign progress.
-- ✅ Deck Management – Organize and optimize character decks efficiently.
+- ✅ Deck Management – Organise and optimise character decks efficiently.
 - ✅ Cross-Platform Support – Available on both iOS and Android.
 
 ## Technology Stack:
