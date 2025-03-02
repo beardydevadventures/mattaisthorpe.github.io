@@ -39,7 +39,7 @@ const formattedDate = new Date(entry.data.publishDate).toLocaleDateString('en-US
 							<div class="tags max-lg:hidden">
 								{entry.data.tags.map((t: string) => <Pill>{t}</Pill>)}
 							</div>
-							<time class="publish-date" dateTime={entry.data.publishDate}>{formattedDate}</time>
+							<time class="publish-date" datetime={new Date(entry.data.publishDate).toISOString()}>{formattedDate}</time>
 							<p class="description">{entry.data.description}</p>
 						</div>
 					</Hero>

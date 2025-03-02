@@ -12,7 +12,7 @@ const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { y
 <a class="card" href={`/projects/${slug}`}>
 	<div class="info">
 		<span class="title">{data.title}</span>
-		<time class="date" dateTime={data.publishDate}>{formattedDate}</time>
+		<time class="date" datetime={new Date(data.publishDate).toISOString()}>{formattedDate}</time>
 	</div>
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 </a>
