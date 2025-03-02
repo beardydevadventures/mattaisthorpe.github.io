@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
-    "\\public\\assets",
     "\\src",
     "\\src\\content",
     "\\src\\content\\posts",
-    "\\src\\content\\projects",
-    "\\src\\content\\projects\\3d",
-    "\\src\\content\\projects\\ai",
-    "\\src\\content\\projects\\web"
+    "\\src\\content\\posts\\code",
+    "\\src\\content\\posts\\vr",
+    "\\src\\pages",
+    "\\src\\pages\\posts",
+    "\\src\\pages\\projects",
+    "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\pages\\index.astro",
+  "SelectedNode": "\\astro.config.mjs",
   "PreviewInSolutionExplorer": false
 }
