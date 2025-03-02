@@ -41,15 +41,15 @@ const { variant } = Astro.props;
 		}
 
 		/* Shift first item in each row vertically to create staggered effect. */
-		.grid.offset > :global(:nth-child(odd)) {
+		.grid.offset > :global(:nth-child(even)) {
 			transform: translateY(var(--row-offset));
 		}
 
-		/* If last row contains only one item, display it in the second column. */
+		/* If last row contains only one item, display it in the second column.
 		.grid.offset > :global(:last-child:nth-child(odd)) {
 			grid-column: 2 / 3;
 			transform: none;
-		}
+		}*/
 
 		.grid.small {
 			display: flex;

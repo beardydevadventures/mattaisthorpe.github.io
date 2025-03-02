@@ -1,14 +1,13 @@
 ---
 title: Supporting Others - Building a Foundation for Growth  
-publishDate: 2025-06-01 00:00:00  
+publishDate: 2025-02-06 00:00:00  
 img: /assets/posts/supporting-growth.png  
 img_alt: Hands reaching out to support each other, symbolising encouragement and teamwork.  
 description: Explore the importance of supporting others and fostering growth through encouragement, mentorship, and creating a positive environment for success.  
 tags:  
-  - Personal Growth  
+  - Teamwork
   - Leadership  
   - Mentorship  
-  - Teamwork  
 ---
 
 ## Supporting Others: Building a Foundation for Growth

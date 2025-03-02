@@ -6,10 +6,14 @@ interface Props {
 }
 
 const { data, slug } = Astro.props.project;
+const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 
 <a class="card" href={`/projects/${slug}`}>
-	<span class="title">{data.title}</span>
+	<div class="info">
+		<span class="title">{data.title}</span>
+		<time class="date" dateTime={data.publishDate}>{formattedDate}</time>
+	</div>
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 </a>
 
@@ -34,7 +38,9 @@ const { data, slug } = Astro.props.project;
 		box-shadow: var(--shadow-md);
 	}
 
-	.title {
+	.info {
+		display: flex;
+		flex-direction: column;
 		grid-area: 1 / 1 / 2 / 2;
 		z-index: 1;
 		margin: 0.5rem;
@@ -42,6 +48,11 @@ const { data, slug } = Astro.props.project;
 		background: var(--gray-999);
 		color: var(--gray-200);
 		border-radius: 0.375rem;
+	}
+
+	.date {
+		font-size: var(--text-sm);
+		color: var(--gray-400);
 	}
 
 	img {
@@ -57,7 +68,7 @@ const { data, slug } = Astro.props.project;
 			border-radius: 1.5rem;
 		}
 
-		.title {
+		.info {
 			border-radius: 0.9375rem;
 		}
 	}

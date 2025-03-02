@@ -1,6 +1,6 @@
 ---
 title: Coming from Full-Stack – How My Development Experience Enhanced My Project Management Skills
-publishDate: 2025-03-02 00:00:00
+publishDate: 2025-01-16 00:00:00
 img: /assets/posts/developer-project-manager.png
 img_alt: A developer transitioning into a project manager role, bridging the gap between teams.
 description: Leveraging full-stack development experience to become a more effective project manager.
