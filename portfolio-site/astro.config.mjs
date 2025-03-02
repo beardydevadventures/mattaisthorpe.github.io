@@ -30,5 +30,12 @@ export default defineConfig({
             status: 301,
             destination: '/posts/code/json-object-vs-array'
         }
+    },
+    markdown: {
+        shikiConfig: {
+            theme: 'github-dark',
+            showLineNumbers: true,
+            wrap: false,
+        }
     }
 });

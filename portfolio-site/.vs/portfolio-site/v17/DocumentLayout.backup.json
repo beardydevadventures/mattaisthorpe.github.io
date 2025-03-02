@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": ".gitignore",
               "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\.gitignore",
               "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-02-24T02:09:28.696Z",
               "EditorCaption": ""
@@ -111,8 +111,7 @@
               "RelativeToolTip": "src\\layouts\\BaseLayout.astro",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-24T02:02:36.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T02:02:36.43Z"
             },
             {
               "$type": "Document",

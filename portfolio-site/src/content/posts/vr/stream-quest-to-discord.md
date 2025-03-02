@@ -1,5 +1,5 @@
 ---
-title: Streaming Oculus(Meta) Quest 2,3,Pro to Discord
+title: Streaming Meta(Oculus) Quest 2,3,Pro to Discord
 publishDate: 2022-11-02 00:00:00
 img: /assets/posts/quest-stream.jpg
 img_alt: A woman adjusting her VR headset
@@ -7,23 +7,27 @@ description: |
   Struggling to stream your quest feed to discord? This may help.
 tags:
   - VR
+  - Discord
+  - Streaming
 ---
 
-I have started the delve into VR and have been really enjoying playing with my Oculus Quest. There are some handy features on the device allowing you to cast what you are seeing in the headset with others around you. You can cast to the following devices on the same wi-fi network as the Oculus Quest computer, phone, or smart TV.
+I’ve recently started exploring VR and have been enjoying my time with the Meta Quest (previously known as the Oculus Quest). One of its handy features is the ability to cast what you see in the headset to other devices on the same Wi-Fi network, including a computer, phone, or smart TV.
 
-With the use of Oculus Link you can play VR games on your PC. This is what I was doing the other night and wanted to cast what I was playing to my friends on Discord. This ended up with me having an issue that took me a too-long-it’s-embarrassing-to-say amount of time to get working. The problem is when you try to stream SteamVR on Discord only the SteamVR status window shows to your viewers.
+Using Meta Quest Link, you can also play VR games on your PC. The other night, I wanted to share my gameplay with friends on Discord, but I ran into an issue: when trying to stream SteamVR on Discord, only the SteamVR status window was visible to my viewers. It took me an amount of time to figure out a fix, but once I did, streaming worked perfectly.
 
-To fix this issue I did the following:
+## How to Stream Meta Quest to Discord
 
-1. First on your computer open, go to [oculus.com/casting](https://web.archive.org/web/20240313132257/https://oculus.com/casting) with Google Chrome or Microsoft Edge and log in to your Oculus account.
-2. Put your headset on and press Oculus button on your controller to open the universal menu.
-3. Select **Sharing** then select **Cast**.
-4. Select **Computer** then select **Next**.
+Follow these steps to share your Quest gameplay on Discord:
+
+1. First, on your computer, open your preferred browser and go to [oculus.com/casting](https://oculus.com/casting) then log in to your Meta Quest account.
+2. Put on your headset and press the Meta button on your controller to open the universal menu.
+3. Select **Sharing** then choose **Cast**.
+4. Select **Computer** then click **Next**.
 5. Select **Done**. The view of your headset should now be showing in the browser.
-6. Back on your computer open Discord.
-7. Select one of your servers you have permission to cast to.
-8. Select a channel.
-9. Then click on the share screen.
-10. You can select the browser window with the Oculus Quest cast feed.
+6. Back on your computer open **Discord**.
+7. Select one of your **servers** you have permission to cast to.
+8. Select a channel to stream to.
+9. Click Share Screen (found at the bottom of the Discord interface).
+10. Choose the browser window displaying your Meta Quest cast feed.
 
-Congratulations, you are now sharing your headset stream to Discord. I hope you found this helpful.
+That’s it! You are now successfully streaming your VR gameplay to Discord. I hope this guide helps you set up your stream quickly and easily. Happy gaming!

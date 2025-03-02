@@ -3,36 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\layouts\\BaseLayout.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\layouts\\BaseLayout.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\AdSense.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\AdSense.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\GoogleAnalytics.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\GoogleAnalytics.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\pages\\blog.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\blog.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\pages\\index.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\index.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\MainHead.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\MainHead.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\astro.config.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:astro.config.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,99 +27,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-24T02:09:28.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GoogleAnalytics.astro",
-              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\GoogleAnalytics.astro",
-              "RelativeDocumentMoniker": "src\\components\\GoogleAnalytics.astro",
-              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\GoogleAnalytics.astro",
-              "RelativeToolTip": "src\\components\\GoogleAnalytics.astro",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-24T02:03:44.549Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdSense.astro",
-              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\AdSense.astro",
-              "RelativeDocumentMoniker": "src\\components\\AdSense.astro",
-              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\AdSense.astro",
-              "RelativeToolTip": "src\\components\\AdSense.astro",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-24T02:03:39.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "blog.astro",
-              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\pages\\blog.astro",
-              "RelativeDocumentMoniker": "src\\pages\\blog.astro",
-              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\pages\\blog.astro",
-              "RelativeToolTip": "src\\pages\\blog.astro",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-24T02:02:53.622Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BaseLayout.astro",
-              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\layouts\\BaseLayout.astro",
-              "RelativeDocumentMoniker": "src\\layouts\\BaseLayout.astro",
-              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\layouts\\BaseLayout.astro",
-              "RelativeToolTip": "src\\layouts\\BaseLayout.astro",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-24T02:02:36.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainHead.astro",
-              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\MainHead.astro",
-              "RelativeDocumentMoniker": "src\\components\\MainHead.astro",
-              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\MainHead.astro",
-              "RelativeToolTip": "src\\components\\MainHead.astro",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-24T02:02:01.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "astro.config.mjs",
-              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\astro.config.mjs",
-              "RelativeDocumentMoniker": "astro.config.mjs",
-              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\astro.config.mjs",
-              "RelativeToolTip": "astro.config.mjs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-20T06:29:43.416Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "index.astro",
               "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\pages\\index.astro",
               "RelativeDocumentMoniker": "src\\pages\\index.astro",
               "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\pages\\index.astro",
               "RelativeToolTip": "src\\pages\\index.astro",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAADgvxIBAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-11T00:40:30.37Z"
+              "WhenOpened": "2025-03-02T04:06:44.769Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -35,11 +35,11 @@ const formattedDate = new Date(entry.data.publishDate).toLocaleDateString('en-US
 				<div class="wrapper stack gap-2">
 					<a class="back-link" href="/projects/"><Icon icon="arrow-left" /> Projects</a>
 					<Hero title={entry.data.title} align="start">
+						<time class="publish-date" datetime={new Date(entry.data.publishDate).toISOString()}>{formattedDate}</time>
 						<div class="details">
 							<div class="tags max-lg:hidden">
 								{entry.data.tags.map((t: string) => <Pill>{t}</Pill>)}
 							</div>
-							<time class="publish-date" datetime={new Date(entry.data.publishDate).toISOString()}>{formattedDate}</time>
 							<p class="description">{entry.data.description}</p>
 						</div>
 					</Hero>
@@ -138,6 +138,13 @@ const formattedDate = new Date(entry.data.publishDate).toLocaleDateString('en-US
 	.content :global(a:hover),
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
+	}
+
+	.content :global(ul),
+	.content :global(ol) {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
 	}
 
 	@media (min-width: 50em) {
