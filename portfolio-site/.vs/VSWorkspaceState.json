@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\components",
     "\\src\\content",
-    "\\src\\content\\posts",
-    "\\src\\content\\posts\\code",
     "\\src\\content\\posts\\vr",
+    "\\src\\layouts",
     "\\src\\pages",
     "\\src\\pages\\posts",
     "\\src\\pages\\projects",
     "\\src\\styles"
   ],
-  "SelectedNode": "\\astro.config.mjs",
+  "SelectedNode": "\\src\\components\\MainHead.astro",
   "PreviewInSolutionExplorer": false
 }
