@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\MainHead.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\MainHead.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\layouts\\BaseLayout.astro||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\layouts\\BaseLayout.astro||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\code\\vibe-coding-with-ai.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\content\\posts\\code\\vibe-coding-with-ai.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainHead.astro",
-              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\MainHead.astro",
-              "RelativeDocumentMoniker": "src\\components\\MainHead.astro",
-              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\components\\MainHead.astro",
-              "RelativeToolTip": "src\\components\\MainHead.astro",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-23T03:13:22.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BaseLayout.astro",
-              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\layouts\\BaseLayout.astro",
-              "RelativeDocumentMoniker": "src\\layouts\\BaseLayout.astro",
-              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\layouts\\BaseLayout.astro",
-              "RelativeToolTip": "src\\layouts\\BaseLayout.astro",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-23T03:13:08.65Z",
+              "Title": "vibe-coding-with-ai.md",
+              "DocumentMoniker": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\code\\vibe-coding-with-ai.md",
+              "RelativeDocumentMoniker": "src\\content\\posts\\code\\vibe-coding-with-ai.md",
+              "ToolTip": "C:\\Users\\maist\\Documents\\Web Projects\\mattaisthorpe.github.io\\portfolio-site\\src\\content\\posts\\code\\vibe-coding-with-ai.md",
+              "RelativeToolTip": "src\\content\\posts\\code\\vibe-coding-with-ai.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-04-08T01:10:50.724Z",
               "EditorCaption": ""
             }
           ]

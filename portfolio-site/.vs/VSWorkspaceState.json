@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
+    "\\public\\assets",
+    "\\public\\assets\\posts",
     "\\src",
-    "\\src\\components",
     "\\src\\content",
-    "\\src\\content\\posts\\vr",
-    "\\src\\layouts",
+    "\\src\\content\\posts",
+    "\\src\\content\\posts\\code",
     "\\src\\pages",
-    "\\src\\pages\\posts",
-    "\\src\\pages\\projects",
     "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\components\\MainHead.astro",
+  "SelectedNode": "\\src\\content\\posts\\code\\vibe-coding-with-ai.md",
   "PreviewInSolutionExplorer": false
 }
