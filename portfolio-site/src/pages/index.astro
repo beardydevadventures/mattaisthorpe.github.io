@@ -60,13 +60,13 @@ const projects = (await getCollection('projects'))
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-cta">
+			<section class="section with-cta !gap-0">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>Professional Career</h2>
-					<p>Check out my LinkedIn for insights into my professional career.</p>
+					<p>Want a deeper look at my work in Agile leadership, digital transformation, and immersive tech?</p>
 				</header>
 
-				<div class="cta">
+				<div class="cta mt-6 lg:mt-0">
 					<CallToAction href="https://www.linkedin.com/in/matthewaisthorpe/">
 						View My LinkedIn
 						<Icon icon="arrow-right" size="1.2em" />
@@ -127,19 +127,54 @@ const projects = (await getCollection('projects'))
 				</div>
 			</section>
 
-			<!--<section class="section with-background bg-variant">
+			<section class="section with-background">
+
+			  <header class="section-header stack gap-2 lg:gap-4">
+				<h2>Creative Brands</h2>
+				<p>My creative brands where I explore immersive tech and share dev insights.</p>
+			  </header>
+
+			  <div class="gallery creative-brands">
+				  <Grid variant="offset">
+					<li>
+					  <img src="/assets/fovr-logo.png" alt="FoVR Interactive logo" class="h-24 object-contain mb-6 mx-auto" />
+					  <h3 class="text-2xl font-semibold mb-2">FoVR Interactive</h3>
+					  <p class="text-gray-400 mb-6">
+						My experimental playground for immersive experiences in VR, XR, and spatial computing. Projects like
+						<em>Forge of Elements</em> and <em>Smash Room</em> explore new ways we interact, play, and build in virtual spaces.
+					  </p>
+					  <a href="https://fovrinteractive.net/" target="_blank" class="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-700 text-white font-medium shadow-md hover:shadow-lg transition">
+						Visit FoVR Interactive →
+					  </a>
+					</li>
+
+					<li>
+					  <img src="/assets/beardydev-logo.png" alt="Beardy Dev Adventures logo" class="w-24 h-24 object-cover rounded-full mb-6 mx-auto" />
+					  <h3 class="text-2xl font-semibold mb-2">Beardy Dev Adventures</h3>
+					  <p class="text-gray-400 mb-6">
+						A devlog and YouTube series where I share dev experiments, immersive gameplay, and lessons from my experience working in the digital industry.
+					  </p>
+					  <a href="https://www.youtube.com/@beardydevadventures" target="_blank" class="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-700 text-white font-medium shadow-md hover:shadow-lg transition">
+						Explore Beardy Dev Adventures →
+					  </a>
+					</li>
+				  </Grid>
+			  </div>
+
+			</section>
+
+			<section class="section with-background">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
+					<h2>Programs & Features</h2>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+						I’ve been fortunate to take part in a range of programs and platforms that support creative technology and innovation.
 					</p>
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+							['Oculus Start Program', 'Meta Horizon Creator Program', 'XR Hub', 'GovHack Winner', 'Meta App Lab Release'].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>
@@ -147,7 +182,7 @@ const projects = (await getCollection('projects'))
 						}
 					</Grid>
 				</div>
-			</section>-->
+			</section>
 		</main>
 
 		<ContactCTA />
@@ -174,7 +209,7 @@ const projects = (await getCollection('projects'))
 		box-shadow: var(--shadow-md);
 	}
 
-	h2 {
+	.section-header {
 		font-size: var(--text-xl);
 		text-align: center;
 	}
@@ -247,11 +282,11 @@ const projects = (await getCollection('projects'))
 		color: var(--gray-300);
 	}
 
-	.section-header h2 {
-		text-align: left;
+	.creative-brands p {
+		max-width: 50ch;
 	}
 
-	.section-header h3 {
+	.section-header h3, .section-header h2 {
 		font-size: var(--text-2xl);
 	}
 
@@ -271,8 +306,16 @@ const projects = (await getCollection('projects'))
 			font-size: var(--text-lg);
 		}
 
-		.section-header h3 {
+		.creative-brands p {
+			max-width: 100%;
+		}
+
+		.section-header h3, .section-header h2 {
 			font-size: var(--text-4xl);
+		}
+
+		.section:not(.with-cta) .section-header {
+			text-align: center;
 		}
 
 		.with-cta .section-header {
@@ -290,6 +333,19 @@ const projects = (await getCollection('projects'))
 	}
 
 	/* ====================================================== */
+
+	@media (max-width: 50em) {
+	  .creative-brands li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	  }
+
+	  .creative-brands li + li {
+		margin-top: 2rem;
+	  }
+	}
 
 	.mention-card {
 		display: flex;
