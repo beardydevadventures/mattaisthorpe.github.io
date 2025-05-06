@@ -3,14 +3,15 @@
     "",
     "\\public",
     "\\public\\assets",
-    "\\public\\assets\\posts",
     "\\src",
+    "\\src\\components",
     "\\src\\content",
     "\\src\\content\\posts",
     "\\src\\content\\posts\\code",
+    "\\src\\content\\posts\\project-management",
     "\\src\\pages",
     "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\content\\posts\\code\\vibe-coding-with-ai.md",
+  "SelectedNode": "\\public\\assets\\posts",
   "PreviewInSolutionExplorer": false
 }
