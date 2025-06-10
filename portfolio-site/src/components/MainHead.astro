@@ -4,20 +4,39 @@ import '../styles/global.css';
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	url?: string | undefined;
+	image?: string | undefined;
 }
 
 const {
 	title = 'Matthew Aisthorpe: Personal Site',
-	description = 'The personal site of Matthew Aisthorpe',
+	description = 'Matthew Aisthorpe is an Agile Project Manager and former software developer, focused on digital transformation, immersive technology, and building products that make a difference.',
+	url = 'https://matthewaisthorpe.com.au/',
+	image = 'https://matthewaisthorpe.com.au/assets/portrait.jpg',
 } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
+<title>{title}</title>
+<meta name="description" content={description} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <meta name="facebook-domain-verification" content="3bwp7nnbcih2baetmoi8kfgqz0h274" />
-<title>{title}</title>
+
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta property="og:image" content={image} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Matthew Aisthorpe" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:url" content={url} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:site" content="@beardydevadv" />
+<meta name="twitter:creator" content="@beardydevadv" />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
