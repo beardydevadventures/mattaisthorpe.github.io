@@ -1,0 +1,39 @@
+---
+title: Rubik’s Cube Passthrough AI Solver – Mixed Reality Puzzle Assistant
+publishDate: 2025-05-25 00:00:00
+img: /assets/projects/rubiks-cube-solver.jpg
+img_alt: Rubik’s Cube being scanned in VR via passthrough.
+description: |
+  A mixed reality app that scans a real Rubik’s Cube and guides the user through solving them using AI with passthrough visualisation.
+tags:
+  - VR
+  - AI
+  - Passthrough
+featured: true
+---
+import { YouTube } from 'astro-embed';
+
+## Overview
+
+This project uses Unity’s inference system and a YOLOv9 ONNX model to detect Rubik’s Cube faces in passthrough and guide users through solving it in real time. The cube visualises each scanned face, dshows next steps, and provides instructions on how to solve the cube while running natively on the Meta Quest 3.
+
+<YouTube id="EJ0kb_iAUuU" />
+
+## Key Features:
+- ✅ YOLOv9 Detection – Fast object detection using LazyCube dataset.
+- ✅ Unity Inference Runtime – Runs ML models directly in VR.
+- ✅ Cube Face Accumulation – Scans all six sides in order.
+- ✅ Step-by-Step Solver Overlay – Guides users through each move.
+- ✅ Animated Cube UI – 3D cube shows progress and rotations.
+
+## Technology Stack:
+- Engine: Unity
+- ML: YOLOv9 (ONNX export)
+- AI: Unity Inference (Sentis)
+- Programming Language: C#
+- Platform: Meta Quest
+
+## Project Goal & Learning Outcomes:
+- 🤖 Apply real-time object detection to physical puzzles.
+- 🧩 Combine spatial computing and ML for educational uses.
+- 🧠 Design an intuitive, face-by-face UI for guided solving.
