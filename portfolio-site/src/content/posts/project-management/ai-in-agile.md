@@ -1,5 +1,5 @@
 ﻿---
-title: "Integrating AI into Agile Workflows: Making Smarter Sprints"
+title: Integrating AI into Agile Workflows - Making Smarter Sprints
 publishDate: 2025-05-06
 img: /assets/posts/ai-in-agile.png
 img_alt: Abstract image of AI and Agile working together

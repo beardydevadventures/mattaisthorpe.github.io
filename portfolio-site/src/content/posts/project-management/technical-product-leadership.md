@@ -1,5 +1,5 @@
 ﻿---
-title: "Bridging Vision and Execution: How Technical Product Leadership Drives Real Innovation"
+title: Bridging Vision and Execution - How Technical Product Leadership Drives Real Innovation
 publishDate: 2025-06-02
 img: /assets/posts/bridging-vision-execution.png
 img_alt: Abstract image of strategy connecting with implementation

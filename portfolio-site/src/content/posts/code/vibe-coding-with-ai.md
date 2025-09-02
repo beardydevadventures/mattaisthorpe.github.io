@@ -1,5 +1,5 @@
 ﻿---
-title: "Vibe Coding with AI: Why It's a Tool, Not a Shortcut"
+title: Vibe Coding with AI - Why It's a Tool, Not a Shortcut
 publishDate: 2025-04-08
 img: /assets/posts/vibe-coding-with-ai.png
 img_alt: A person looking at code on a screen
