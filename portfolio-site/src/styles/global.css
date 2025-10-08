@@ -34,18 +34,14 @@
 	--gradient-stop-2: var(--accent-regular);
 	--gradient-stop-3: var(--accent-dark);
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 150%);
-	--gradient-accent: linear-gradient(
-		150deg,
-		var(--gradient-stop-1),
-		var(--gradient-stop-2),
-		var(--gradient-stop-3)
-	);
-	--gradient-accent-orange: linear-gradient(
-		150deg,
-		#ca7879,
-		var(--accent-regular),
-		var(--accent-dark)
-	);
+	--gradient-accent: linear-gradient(150deg,
+			var(--gradient-stop-1),
+			var(--gradient-stop-2),
+			var(--gradient-stop-3));
+	--gradient-accent-orange: linear-gradient(150deg,
+			#ca7879,
+			var(--accent-regular),
+			var(--accent-dark));
 	--gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
 
 	/* Shadows */
@@ -103,12 +99,10 @@
 
 	--gradient-stop-1: #4c11c6;
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
-	--gradient-accent-orange: linear-gradient(
-		150deg,
-		#ca7879,
-		var(--accent-regular),
-		var(--accent-light)
-	);
+	--gradient-accent-orange: linear-gradient(150deg,
+			#ca7879,
+			var(--accent-regular),
+			var(--accent-light));
 	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
 
 	--shadow-sm: 0px 6px 3px rgba(255, 255, 255, 0.01), 0px 4px 2px rgba(255, 255, 255, 0.01),
@@ -209,24 +203,31 @@ h5 {
 .gap-2 {
 	gap: 0.5rem;
 }
+
 .gap-4 {
 	gap: 1rem;
 }
+
 .gap-8 {
 	gap: 2rem;
 }
+
 .gap-10 {
 	gap: 2.5rem;
 }
+
 .gap-15 {
 	gap: 3.75rem;
 }
+
 .gap-20 {
 	gap: 5rem;
 }
+
 .gap-30 {
 	gap: 7.5rem;
 }
+
 .gap-48 {
 	gap: 12rem;
 }
@@ -235,24 +236,31 @@ h5 {
 	.lg\:gap-2 {
 		gap: 0.5rem;
 	}
+
 	.lg\:gap-4 {
 		gap: 1rem;
 	}
+
 	.lg\:gap-8 {
 		gap: 2rem;
 	}
+
 	.lg\:gap-10 {
 		gap: 2.5rem;
 	}
+
 	.lg\:gap-15 {
 		gap: 3.75rem;
 	}
+
 	.lg\:gap-20 {
 		gap: 5rem;
 	}
+
 	.lg\:gap-30 {
 		gap: 7.5rem;
 	}
+
 	.lg\:gap-48 {
 		gap: 12rem;
 	}
@@ -260,4 +268,120 @@ h5 {
 
 svg {
 	display: inline;
+}
+
+/* ---- Task list checkboxes (light + dark friendly) ---- */
+:root {
+	--task-accent: #39ff14;
+	/* checked fill */
+	--task-border: rgba(0, 0, 0, 0.28);
+	/* unchecked border (light) */
+	--task-border-hover: rgba(0, 0, 0, 0.48);
+	--task-bg: transparent;
+}
+
+:root.theme-dark {
+	--task-border: rgba(255, 255, 255, 0.28);
+	/* unchecked border (dark) */
+	--task-border-hover: rgba(255, 255, 255, 0.5);
+	--task-bg: transparent;
+}
+
+/* Remove bullets/indent for Markdown task lists */
+.markdown ul.task-list,
+.prose ul.task-list,
+ul.contains-task-list {
+  list-style: none;      /* kill bullets on the <ul> */
+  padding-left: 0;       /* remove default indent */
+  margin-left: 0;
+}
+
+/* Also ensure <li> itself doesn’t render a marker (Safari) */
+.markdown li.task-list-item,
+.prose li.task-list-item,
+.contains-task-list li.task-list-item {
+  list-style: none;
+}
+
+/* Belt-and-braces: suppress ::marker in browsers that still show it */
+.markdown li.task-list-item::marker,
+.prose li.task-list-item::marker,
+.contains-task-list li.task-list-item::marker {
+  content: "";
+}
+
+/* Optional: tidy layout so box + text align nicely */
+.markdown li.task-list-item,
+.prose li.task-list-item,
+.contains-task-list li.task-list-item {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  margin: 0.25rem 0;
+}
+
+/* ---- Task list checkboxes: light + dark tuned ---- */
+:root {
+  --task-accent: #39ff14;                 /* checked fill (brand green) */
+  --task-border: rgba(0,0,0,.38);         /* light: visible border */
+  --task-border-hover: rgba(0,0,0,.55);
+  --task-bg-unchecked: rgba(0,0,0,.04);   /* light: faint fill so it’s visible */
+  --task-check: #fff;                     /* tick colour */
+}
+
+:root.theme-dark {
+  --task-accent: #37ff14d5;  
+  --task-border: rgba(255,255,255,.38);   /* dark: visible border */
+  --task-border-hover: rgba(255,255,255,.6);
+  --task-bg-unchecked: rgba(255,255,255,.06);
+}
+
+/* layout + bullets already handled above; here’s the visual */
+.markdown li.task-list-item > input[type="checkbox"],
+.prose li.task-list-item > input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.1rem;
+  border: 1px solid var(--task-border);
+  border-radius: 0.25rem;
+  background: var(--task-bg-unchecked);
+  position: relative;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+/* Hover/focus affordances that work in both themes */
+.markdown li.task-list-item > input[type="checkbox"]:hover,
+.prose li.task-list-item > input[type="checkbox"]:hover{
+  border-color: var(--task-border-hover);
+}
+.markdown li.task-list-item > input[type="checkbox"]:focus-visible,
+.prose li.task-list-item > input[type="checkbox"]:focus-visible{
+  outline: 2px solid var(--task-accent);
+  outline-offset: 2px;
+}
+
+/* Checked state uses your brand green, not brighter */
+.markdown li.task-list-item > input[type="checkbox"]:checked,
+.prose li.task-list-item > input[type="checkbox"]:checked{
+  background: var(--task-accent);
+  border-color: var(--task-accent);
+}
+.markdown li.task-list-item > input[type="checkbox"]:checked::after,
+.prose li.task-list-item > input[type="checkbox"]:checked::after{
+  content: "";
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'>\
+<path fill='white' d='M5.2 10.2L2.3 7.3l-1 1 3.9 3.9 7.5-7.5-1-1z'/>\
+</svg>") center/70% no-repeat;
+}
+
+/* Keep disabled bright but non-interactive */
+.markdown li.task-list-item > input[type="checkbox"][disabled],
+.prose li.task-list-item > input[type="checkbox"][disabled]{
+  opacity: 1;
+  filter: none;
+  cursor: default;
 }
