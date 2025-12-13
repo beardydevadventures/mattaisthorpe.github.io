@@ -1,7 +1,7 @@
 ---
 title: Embracing the "Yes" Attitude - How Commitment Leads to Innovation and Support in the Workplace
 publishDate: 2024-06-16 00:00:00
-img: /assets/posts/yes-attitude.png
+img: /assets/posts/yes-attitude.jpg
 img_alt: A door in an empty room opens outward to a grassy plain.
 description: Say yes, and you'll figure it out afterward.
 tags:

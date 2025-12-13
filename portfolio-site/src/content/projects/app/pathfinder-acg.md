@@ -1,7 +1,7 @@
 ﻿---
 title: Pathfinder ACG CT - Board Game Companion App
 publishDate: 2016-07-17 00:00:00
-img: /assets/pathfinder-acg-ct.png
+img: /assets/pathfinder-acg-ct.jpg
 img_alt: Pathfinder ACG CT app interface displaying character tracking and game progress.
 description: |
   A companion app for the Pathfinder Adventure Card Game.

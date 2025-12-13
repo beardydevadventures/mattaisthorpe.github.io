@@ -1,7 +1,7 @@
 ---
 title: Embracing the Future - Mixed Reality, VR, and AI in Education
 publishDate: 2024-05-30 00:00:00
-img: /assets/posts/education-vr.png
+img: /assets/posts/education-vr.jpg
 img_alt: A futuristic depiction of virtual reality in a business setting
 description: |
   Exploring how Mixed Reality, VR, and AI are revolutionising education by making learning more immersive, personalised, and engaging.

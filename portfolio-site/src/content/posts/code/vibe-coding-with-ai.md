@@ -1,7 +1,7 @@
 ﻿---
 title: Vibe Coding with AI - Why It's a Tool, Not a Shortcut
 publishDate: 2025-04-08
-img: /assets/posts/vibe-coding-with-ai.png
+img: /assets/posts/vibe-coding-with-ai.jpg
 img_alt: A person looking at code on a screen
 description: Exploring how AI tools like Cursor or ChatGPT can support, but not replace—the creative flow of coding.
 tags:

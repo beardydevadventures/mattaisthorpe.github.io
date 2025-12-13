@@ -1,7 +1,7 @@
 ﻿---
 title: Bridging Vision and Execution - How Technical Product Leadership Drives Real Innovation
 publishDate: 2025-06-02
-img: /assets/posts/bridging-vision-execution.png
+img: /assets/posts/bridging-vision-execution.jpg
 img_alt: Abstract image of strategy connecting with implementation
 description: How combining product thinking with technical skills helps drive real innovation, with insights on AI agents, immersive tech, and staying hands-on with tools like Next.js.
 tags:

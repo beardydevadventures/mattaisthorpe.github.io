@@ -1,7 +1,7 @@
 ---
 title: Redefining Success - The Value of Learning and Completion  
 publishDate: 2025-03-02 00:00:00  
-img: /assets/posts/redefining-success.png  
+img: /assets/posts/redefining-success.jpg  
 img_alt: A winding path leading to a sunrise, symbolising personal growth and achievement.  
 description: Success isn't just about financial gain or perfection. It's about learning, growing, and seeing a project through.
 tags:  

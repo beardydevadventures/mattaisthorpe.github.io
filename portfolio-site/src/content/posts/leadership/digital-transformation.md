@@ -1,7 +1,7 @@
 ---
 title: Digital Transformation That Sticks – Leading Through Questions, Not Control  
 publishDate: 2025-07-24 00:00:00  
-img: /assets/posts/digital-transformation-workshops.png  
+img: /assets/posts/digital-transformation-workshops.jpg  
 img_alt: A digital whiteboard with sticky notes, surrounded by a team collaborating during a workshop.  
 description: Digital transformation isn't just about software or platforms, it's about people, communication, and asking the right questions.  
 tags:  

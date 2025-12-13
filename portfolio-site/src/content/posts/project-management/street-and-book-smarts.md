@@ -1,7 +1,7 @@
 ---
 title: Bridging the Gap Between Street Smarts and Book Smarts in Digital Development
 publishDate: 2024-09-25 00:00:00
-img: /assets/posts/street-vs-book-smarts.png
+img: /assets/posts/street-vs-book-smarts.jpg
 img_alt: A computer screen split between code and a book.
 description: Combining theoretical knowledge and practical skills for success in digital development.
 tags:
