@@ -123,8 +123,9 @@ body {
 	background-color: var(--gray-999);
 	color: var(--gray-200);
 	font-family: var(--font-body);
+	font-size: 1.125rem;
 	-webkit-font-smoothing: antialiased;
-	line-height: 1.5;
+	line-height: 1.6;
 }
 
 *,

@@ -1,11 +1,17 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+import ContactCTA from "../components/ContactCTA.astro";
+import CallToAction from "../components/CallToAction.astro";
+import Icon from "../components/Icon.astro";
+import Hero from "../components/Hero.astro";
+import Pill from "../components/Pill.astro";
 ---
 
-<BaseLayout title="About | Matthew Aisthorpe" description="About Matthew Aisthorpe">
+<BaseLayout
+	title="About | Matthew Aisthorpe"
+	description="About Matthew Aisthorpe"
+>
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
@@ -13,6 +19,7 @@ import Hero from '../components/Hero.astro';
 				tagline="From full-stack developer to Agile leader, crafting impactful digital experiences."
 			>
 				<img
+					class="hero-image"
 					width="1553"
 					height="873"
 					src="/assets/at-work.jpg"
@@ -20,97 +27,302 @@ import Hero from '../components/Hero.astro';
 				/>
 			</Hero>
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						<b>Hello!</b> I'm Matthew, an accomplished professional in the interactive digital industry, with a robust background in software development and agile project management. Over a decade of combined experiences, I've been instrumental in leading teams and projects that streamline processes with innovative technology and user-centric design.
-					</p>
-				</div>
-			</section>
+			<div class="about-grid">
+				<div class="main stack gap-6">
+					<section class="card info-section">
+						<h2 class="section-title">Background</h2>
+						<div class="content">
+							<p>
+								<b>Hello!</b> I'm Matthew, a digital delivery and
+								product leader in the interactive technology space,
+								with a strong foundation in software development and
+								agile project management. I help organisations deliver
+								complex digital products across education, retail,
+								and emerging technology. With over a decade of experience,
+								I've led teams and initiatives that streamline processes
+								through innovative, user-centred solutions.
+							</p>
+							<p>
+								Currently Head of XR & Web Development at 3D
+								Walkabout, leading the delivery of immersive XR
+								experiences and web platforms across enterprise
+								and commercial projects.
+							</p>
+						</div>
+					</section>
 
-			<section>
-				<h2 class="section-title">Career Highlights</h2>
-				<div class="content">
-					<ul>
-						<li><b>Project Leader at CQUniversity:</b> Led critical digital transformation initiatives, including the adoption of AI-driven tools and migration from on-premise software to cloud platforms, improving operational efficiency and digital security.</li>
-						<li><b>Product Owner at EB Games:</b> Managed the successful integration of <i>Uber delivery</i>, allowing real-time delivery tracking and logistics solutions to enhance customer experience and streamline order fulfillment.</li>
-						<li><b>Founder of FoVR Interactive:</b> Established my own VR-focused venture, designing and developing immersive virtual experiences that push the boundaries of spatial computing.</li>
-					</ul>
-				</div>
-			</section>
+					<section class="card info-section">
+						<h2 class="section-title">Career Highlights</h2>
+						<div class="content">
+							<ul>
+								<li>
+									<b>Project Leader at CQUniversity:</b> Led enterprise
+									digital transformation initiatives, including
+									the migration of legacy on-premise systems to
+									cloud platforms, improving operational efficiency,
+									security, and service delivery across multiple
+									directorates.
+								</li>
+								<li>
+									<b>AI Taskforce Lead at CQUniversity:</b> Established
+									and led the Digital Services AI Taskforce, embedding
+									GenAI and automation tools into operational workflows
+									to improve productivity, reporting, and decision-making
+									at scale.
+								</li>
+								<li>
+									<b>Staff Portal Transformation:</b> Delivered
+									the redesign and migration of the university's
+									staff portal to SharePoint Online, increasing
+									staff engagement by 126% through user-centred
+									design and continuous improvement practices.
+								</li>
+								<li>
+									<b>Product Owner at EB Games:</b> Led the delivery
+									of an Uber-integrated checkout and fulfilment
+									platform, enabling real-time delivery tracking
+									and improving customer convenience across the
+									retail ecommerce experience.
+								</li>
+								<li>
+									<b>Founder of FoVR Interactive:</b> Founded and
+									led an XR studio delivering immersive virtual
+									experiences for education and innovation, and
+									selected for Meta's Oculus Start Program supporting
+									advanced spatial computing development.
+								</li>
+							</ul>
+						</div>
+					</section>
 
-			<section>
-				<h2 class="section-title">Specialties</h2>
-				<div class="content">
-					<ul>
-						<li><strong>Project Management</strong>: Proven leadership in project planning, execution, and delivery, ensuring projects stay on time, within budget, and aligned with business goals.</li>
-						<li><strong>Agile and Scrum Methodologies</strong>: Expert in Agile methodologies and Scrum practices, optimizing workflows and improving team performance for efficient project delivery.</li>
-						<li><strong>Full Stack Development</strong>: Skilled in end-to-end software development, seamlessly integrating back-end and front-end technologies to create scalable solutions.</li>
-						<li><strong>UX/UI Design</strong>:  Focused on user-centric design, enhancing usability, accessibility, and engagement to improve digital experiences.</li>
-						<li><strong>Communication</strong>: Strong interpersonal and stakeholder management skills, fostering collaboration across cross-functional teams.</li>
-						<li><strong>Emerging Technologies</strong>: Passionate about Extended Reality (XR) and Artificial Intelligence (AI), leveraging cutting-edge tech to drive innovation.</li>
-					</ul>
-				</div>
-			</section>
+					<section class="card info-section">
+						<h2 class="section-title">Specialties</h2>
+						<div class="content">
+							<ul>
+								<li>
+									<b>Digital Delivery & Project Leadership:</b
+									> Leading complex, multi-stream digital initiatives
+									from discovery through delivery, ensuring alignment
+									to business outcomes, timelines, and organisational
+									priorities.
+								</li>
+								<li>
+									<b>Agile & Scrum Enablement:</b> Applying Agile
+									and Scrum practices to improve delivery maturity,
+									optimise team workflows, and enable consistent,
+									outcome-focused execution across cross-functional
+									teams.
+								</li>
+								<li>
+									<b>AI & Automation Enablement:</b> Embedding practical
+									AI, GenAI, and low-code automation into operational
+									workflows to improve productivity, reporting,
+									and decision-making at scale.
+								</li>
+								<li>
+									<b>Product & Technical Delivery:</b> Bridging
+									product strategy and hands-on technical delivery
+									across full-stack platforms, integrations, and
+									cloud-based systems.
+								</li>
+								<li>
+									<b>User-Centred Design & Experience:</b> Delivering
+									intuitive, accessible digital experiences through
+									close collaboration with UX, stakeholders, and
+									end users.
+								</li>
+								<li>
+									<b>Stakeholder & Team Leadership:</b> Building
+									trust with senior leaders and delivery teams through
+									clear communication, facilitation, and outcome-driven
+									decision-making.
+								</li>
+								<li>
+									<b>XR & Emerging Technology:</b> Designing and
+									delivering immersive XR experiences and exploring
+									applied spatial computing and AI for education,
+									innovation, and real-world use cases.
+								</li>
+							</ul>
+						</div>
+					</section>
 
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<ul>
-						<li><strong>SAE Institute Australia</strong>: Bachelor of Creative Media, Major in Interactive Media</li>
-					</ul>
-				</div>
-			</section>
+					<section class="card info-section">
+						<h2 class="section-title">Education</h2>
+						<div class="content">
+							<ul>
+								<li>
+									<strong>SAE Institute Australia</strong>:
+									Bachelor of Creative Media, Major in
+									Interactive Media
+								</li>
+							</ul>
+						</div>
+					</section>
 
-			<section>
-				<h2 class="section-title">Certifications</h2>
-				<div class="content">
-					<ul>
-						<li><strong>Scrum Certification</strong>: Professional Scrum Master I (PSM I)</li>
-						<li><strong>Product Owner Certification</strong>: Professional Scrum Product Owner I (PSPO I)</li>
-					</ul>
-				</div>
-			</section>
+					<section class="card info-section">
+						<h2 class="section-title">Certifications</h2>
+						<div class="content">
+							<ul>
+								<li>
+									<strong
+										>Professional Scrum Master I (PSM I)</strong
+									>, Scrum.org
+								</li>
+								<li>
+									<strong
+										>Professional Scrum Product Owner I
+										(PSPO I)</strong
+									>, Scrum.org
+								</li>
+								<li>
+									<strong
+										>AgileSHIFT – Enterprise Agility</strong
+									>, PeopleCert
+								</li>
+								<li>
+									<strong>Microsoft AI Product Manager</strong
+									>, Microsoft / Coursera
+								</li>
+								<li>
+									<strong
+										>Introduction to Artificial Intelligence</strong
+									>, Institute of Applied Technology (IAT)
+								</li>
+							</ul>
+						</div>
+					</section>
 
-			<section>
-				<h2 class="section-title">Explore My Professional Journey</h2>
-				<div class="content">
-					<p>My career has taken me from full-stack development to Agile leadership,  
-					working across software development, digital transformation, and emerging technologies.  
-					Want to see the full story? <a href="https://www.linkedin.com/in/matthewaisthorpe/" target="_blank">
-							View My LinkedIn Profile
-						</a></p>
-				</div>
-			</section>
+					<section class="card info-section">
+						<h2 class="section-title">
+							Explore My Professional Journey
+						</h2>
+						<div class="content">
+							<p>
+								My career spans hands-on full-stack development
+								through to senior delivery and product
+								leadership, with experience across software
+								engineering, enterprise digital transformation,
+								and emerging technologies.
+							</p>
+							<div class="cta-row end cta-small">
+								<CallToAction
+									href="https://www.linkedin.com/in/matthewaisthorpe/"
+								>
+									View My LinkedIn Profile
+									<Icon icon="arrow-right" size="1.1em" />
+								</CallToAction>
+							</div>
+						</div>
+					</section>
 
-			<section>
-				<h2 class="section-title">FoVR Interactive</h2>
-				<div class="content">
-					<p>
-						<strong>FoVR Interactive</strong> is my business dedicated to exploring and publishing work in 
-						XR, spatial computing, and immersive technology. It serves as a professional platform where I develop 
-						and showcase interactive applications, virtual collaboration tools, and cutting-edge extended reality experiences.
-					</p>
-					<p>
-						Learn more at <a href="https://fovrinteractive.net/" target="_blank">FoVR Interactive</a>.
-					</p>
-				</div>
-			</section>
+					<section class="card info-section">
+						<h2 class="section-title">FoVR Interactive</h2>
+						<div class="content">
+							<p>
+								<strong>FoVR Interactive</strong> is my business focused
+								on designing and delivering work in XR, spatial computing,
+								and immersive technology. It serves as a professional
+								studio where I build and showcase interactive applications,
+								virtual collaboration tools, and production-ready
+								extended reality experiences for education and innovation
+								use cases.
+							</p>
+							<div class="cta-row end cta-small">
+								<CallToAction
+									href="https://fovrinteractive.net/"
+								>
+									Visit FoVR Interactive
+									<Icon icon="arrow-right" size="1.1em" />
+								</CallToAction>
+							</div>
+						</div>
+					</section>
 
-			<section>
-				<h2 class="section-title">Beardy Dev Adventures</h2>
-				<div class="content">
-					<p>
-						Outside of my professional work, I run <strong>Beardy Dev Adventures</strong>, 
-						where I explore my interestings game development, XR, and emerging technologies through videos, blogs, and projects. 
-						It is a space where I share insights, tutorials, and experiments in game development and interactive media.
-					</p>
-					<p>
-						Check out the <a href="https://www.youtube.com/@beardydevadventures" target="_blank">YouTube channel</a>.
-					</p>
+					<section class="card info-section">
+						<h2 class="section-title">Beardy Dev Adventures</h2>
+						<div class="content">
+							<p>
+								Outside of my professional work, I run <strong
+									>Beardy Dev Adventures</strong
+								>, a personal space where I explore game
+								development, XR, and emerging technologies
+								through videos, blogs, and hands-on experiments.
+								It’s where I share insights, tutorials, and
+								learnings from building and experimenting with
+								interactive and immersive media.
+							</p>
+							<div class="cta-row end cta-small">
+								<CallToAction
+									href="https://www.youtube.com/@beardydevadventures"
+								>
+									Visit the YouTube Channel
+									<Icon icon="arrow-right" size="1.1em" />
+								</CallToAction>
+							</div>
+						</div>
+					</section>
 				</div>
-			</section>
+
+				<aside class="sidebar stack gap-4">
+					<div class="card badge-panel">
+						<h3>Focus Areas</h3>
+						<p class="muted mb-3">
+							Digital transformation, immersive tech, and
+							human-centered delivery.
+						</p>
+						<div class="badge-list">
+							<Pill>Spatial Computing</Pill>
+							<Pill>AI-Augmented Workflows</Pill>
+							<Pill>Delivery Excellence</Pill>
+							<Pill>Team Coaching</Pill>
+						</div>
+					</div>
+
+					<div class="card badge-panel">
+						<h3>Core Skills</h3>
+						<div class="badge-list">
+							<Pill>Agile & Scrum</Pill>
+							<Pill>Project Leadership</Pill>
+							<Pill>Product Ownership</Pill>
+							<Pill>Technical Strategy</Pill>
+							<Pill>System Integration</Pill>
+							<Pill>UX / UI Collaboration</Pill>
+							<Pill>Stakeholder Engagement</Pill>
+							<Pill>XR & AI Innovation</Pill>
+						</div>
+					</div>
+
+					<div class="card badge-panel">
+						<h3>Platforms & Tools</h3>
+						<div class="badge-list">
+							<Pill>Azure</Pill>
+							<Pill>AWS</Pill>
+							<Pill>Power Platform</Pill>
+							<Pill>Microsoft Copilot Studio</Pill>
+							<Pill>ChatGPT / OpenAI API</Pill>
+							<Pill>Azure DevOps</Pill>
+							<Pill>Jira</Pill>
+							<Pill>Confluence</Pill>
+							<Pill>Unity</Pill>
+						</div>
+					</div>
+
+					<div class="card badge-panel">
+						<h3>Programming Languages</h3>
+						<div class="badge-list">
+							<Pill>JavaScript / TypeScript</Pill>
+							<Pill>C#</Pill>
+							<Pill>Python</Pill>
+							<Pill>Kotlin</Pill>
+							<Pill>SQL</Pill>
+							<Pill>HTML & CSS</Pill>
+							<Pill>YAML</Pill>
+							<Pill>JSON</Pill>
+						</div>
+					</div>
+				</aside>
+			</div>
 		</main>
 
 		<ContactCTA />
@@ -121,30 +333,55 @@ import Hero from '../components/Hero.astro';
 	.about {
 		display: flex;
 		flex-direction: column;
-		gap: 3.5rem;
+		gap: 2.5rem;
 	}
 
-	img {
-		margin-top: 1.5rem;
+	.about-grid {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.main {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.card {
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		padding: 1.5rem;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.hero-image {
+		display: block;
+		width: min(70%, 960px);
+		height: clamp(180px, 30vw, 320px);
+		object-fit: cover;
+		object-position: center top;
+		margin: 1rem auto 0;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 	}
 
-	section {
+	.info-section {
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: 0.75rem;
 		color: var(--gray-200);
 	}
 
 	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
+		font-size: var(--text-lg);
 		color: var(--gray-0);
 	}
 
 	.content {
-		grid-column: 2 / 4;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
 	}
 
 	.content :global(a) {
@@ -158,28 +395,93 @@ import Hero from '../components/Hero.astro';
 		text-decoration-color: currentColor;
 	}
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+	.cta-row {
+		display: flex;
+	}
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+	.cta-row.start {
+		justify-content: flex-start;
+	}
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
+	.cta-row.center {
+		justify-content: center;
+	}
+
+	.cta-row.end {
+		justify-content: flex-end;
+	}
+
+	.cta-small :global(a) {
+		padding: 0.65rem 1.25rem;
+		gap: 0.5rem;
+		font-size: var(--text-md);
 	}
 
 	.content ul {
-		list-style-type: disc;  /* Ensures bullet points */
-		padding-left: 1.5rem;  /* Adds space for bullets */
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 0.75rem;
 	}
 
-	.content p, .content ul li {
-		margin-bottom: 0.5rem;  /* Adds spacing between list items */
+	.content ul li {
+		position: relative;
+		padding: 0.25rem 0.25rem 0.25rem 1.5rem;
+		line-height: 1.6;
+	}
+
+	.content ul li::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0.7em;
+		width: 0.55rem;
+		height: 0.55rem;
+		border-radius: 999px;
+		background: var(--accent-regular);
+		box-shadow: 0 0 0 6px var(--accent-subtle-overlay);
+	}
+
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.badge-panel h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+	}
+
+	.badge-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.muted {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.about-grid {
+			grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+			align-items: start;
+		}
+
+		.sidebar {
+			position: sticky;
+			top: 2rem;
+		}
+
+		.card {
+			padding: 1.75rem;
+		}
+
+		.section-title {
+			font-size: var(--text-xl);
+		}
 	}
 </style>
