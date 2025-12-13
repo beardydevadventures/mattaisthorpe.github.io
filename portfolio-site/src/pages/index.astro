@@ -1,30 +1,30 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Component Imports
-import CallToAction from '../components/CallToAction.astro';
-import Grid from '../components/Grid.astro';
-import Hero from '../components/Hero.astro';
-import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
-import PostPreview from '../components/PostPreview.astro';
+import CallToAction from "../components/CallToAction.astro";
+import Grid from "../components/Grid.astro";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+import Pill from "../components/Pill.astro";
+import PortfolioPreview from "../components/PortfolioPreview.astro";
+import PostPreview from "../components/PostPreview.astro";
 
 // Page section components
-import ContactCTA from '../components/ContactCTA.astro';
-import Skills from '../components/Skills.astro';
+import ContactCTA from "../components/ContactCTA.astro";
+import Skills from "../components/Skills.astro";
 
 // Content Fetching: List four most recent blog posts
-const posts = (await getCollection('posts'))
+const posts = (await getCollection("posts"))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
 // Content Fetching: List four most recent work projects
-const projects = (await getCollection('projects'))
-	.filter(p => p.data.featured) // Only keep featured projects
+const projects = (await getCollection("projects"))
+	.filter((p) => p.data.featured) // Only keep featured projects
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()) // Sort by date
 	.slice(0, 4); // Show only 4
 
@@ -33,18 +33,27 @@ const projects = (await getCollection('projects'))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
+	<div class="stack gap-14 lg:gap-28">
+		<div class="wrapper stack gap-8 lg:gap-16">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Matthew Aisthorpe"
-					tagline="Welcome to my little corner of the internet. I am an Agile Project Manager with a background in Software development."
+					title="Hello, I'm Matthew Aisthorpe"
+					tagline="I’m a digital delivery and product leader specialising in XR, AI-enabled platforms, and modern web systems. Currently Head of XR & Web Development at 3D Walkabout."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="strategy" size="1.33em" /> Leader</Pill>
-						<Pill><Icon icon="code" size="1.33em" /> Innovator</Pill>
-						<Pill><Icon icon="users-three" size="1.33em" /> Collaborator</Pill>
+						<Pill
+							><Icon icon="strategy" size="1.33em" />Delivery
+							Leader</Pill
+						>
+						<Pill
+							><Icon icon="code" size="1.33em" />Product &
+							Platform Builder</Pill
+						>
+						<Pill
+							><Icon icon="users-three" size="1.33em" />XR & AI
+							Practitioner</Pill
+						>
 					</div>
 				</Hero>
 
@@ -57,27 +66,37 @@ const projects = (await getCollection('projects'))
 			</header>
 
 			<Skills />
-		</div>
 
-		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-cta !gap-0">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h2>Professional Career</h2>
-					<p>Want a deeper look at my work in Agile leadership, digital transformation, and immersive tech?</p>
-				</header>
+				<div class="surface card-block stack gap-4 lg:gap-6">
+					<header class="stack gap-2 lg:gap-4">
+						<h2>Professional Career</h2>
+						<p>
+							Want a deeper look at my work in Agile leadership,
+							digital transformation, and immersive tech?
+						</p>
+					</header>
 
-				<div class="cta mt-6 lg:mt-0">
-					<CallToAction href="https://www.linkedin.com/in/matthewaisthorpe/">
-						View My LinkedIn
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
+					<div class="cta career-cta mt-2 lg:mt-0">
+						<CallToAction
+							href="https://www.linkedin.com/in/matthewaisthorpe/"
+						>
+							View My LinkedIn
+							<Icon icon="arrow-right" size="1.1em" />
+						</CallToAction>
+					</div>
 				</div>
 			</section>
+		</div>
 
-			<section class="section with-background with-cta">
+		<main class="wrapper stack gap-16 lg:gap-24">
+			<section class="section with-background with-cta centered">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>Blog Posts</h2>
-					<p>Check out my most recent blog posts, where I share insights, experiences, and ideas.</p>
+					<p>
+						Check out my most recent blog posts, where I share
+						insights, experiences, and ideas.
+					</p>
 				</header>
 
 				<div class="gallery">
@@ -100,11 +119,12 @@ const projects = (await getCollection('projects'))
 				</div>
 			</section>
 
-			<section class="section with-background with-cta">
-
+			<section class="section with-background with-cta centered">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>Personal Project Highlights</h2>
-					<p>A look at some of my favorite projects from recent years.</p>
+					<p>
+						A selection of projects showcasing delivery across AI, XR, and modern web systems.
+					</p>
 				</header>
 
 				<div class="gallery">
@@ -127,54 +147,88 @@ const projects = (await getCollection('projects'))
 				</div>
 			</section>
 
-			<section class="section with-background">
+			<section class="section with-background compact">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h2>Creative Brands</h2>
+					<p>
+						My creative brands where I explore immersive tech and
+						share dev insights.
+					</p>
+				</header>
 
-			  <header class="section-header stack gap-2 lg:gap-4">
-				<h2>Creative Brands</h2>
-				<p>My creative brands where I explore immersive tech and share dev insights.</p>
-			  </header>
+				<div class="gallery creative-brands">
+					<Grid variant="offset">
+						<li>
+							<img
+								src="/assets/fovr-logo.png"
+								alt="FoVR Interactive logo"
+								class="h-24 object-contain mb-6 mx-auto"
+							/>
+							<h3 class="text-2xl font-semibold mb-2">
+								FoVR Interactive
+							</h3>
+							<p class="text-gray-400 mb-6">
+								My experimental playground for immersive
+								experiences in VR, XR, and spatial computing.
+								Projects like
+								<em>Forge of Elements</em> and <em
+									>Smash Room</em
+								> explore new ways we interact, play, and build in
+								virtual spaces.
+							</p>
+							<CallToAction href="https://fovrinteractive.net/">
+								Visit FoVR Interactive
+								<Icon icon="arrow-right" size="1.1em" />
+							</CallToAction>
+						</li>
 
-			  <div class="gallery creative-brands">
-				  <Grid variant="offset">
-					<li>
-					  <img src="/assets/fovr-logo.png" alt="FoVR Interactive logo" class="h-24 object-contain mb-6 mx-auto" />
-					  <h3 class="text-2xl font-semibold mb-2">FoVR Interactive</h3>
-					  <p class="text-gray-400 mb-6">
-						My experimental playground for immersive experiences in VR, XR, and spatial computing. Projects like
-						<em>Forge of Elements</em> and <em>Smash Room</em> explore new ways we interact, play, and build in virtual spaces.
-					  </p>
-					  <a href="https://fovrinteractive.net/" target="_blank" class="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-700 text-white font-medium shadow-md hover:shadow-lg transition">
-						Visit FoVR Interactive →
-					  </a>
-					</li>
-
-					<li>
-					  <img src="/assets/beardydev-logo.png" alt="Beardy Dev Adventures logo" class="w-24 h-24 object-cover rounded-full mb-6 mx-auto" />
-					  <h3 class="text-2xl font-semibold mb-2">Beardy Dev Adventures</h3>
-					  <p class="text-gray-400 mb-6">
-						A devlog and YouTube series where I share dev experiments, immersive gameplay, and lessons from my experience working in the digital industry.
-					  </p>
-					  <a href="https://www.youtube.com/@beardydevadventures" target="_blank" class="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-700 text-white font-medium shadow-md hover:shadow-lg transition">
-						Explore Beardy Dev Adventures →
-					  </a>
-					</li>
-				  </Grid>
-			  </div>
-
+						<li>
+							<img
+								src="/assets/beardydev-logo.png"
+								alt="Beardy Dev Adventures logo"
+								class="w-24 h-24 object-cover rounded-full mb-6 mx-auto"
+							/>
+							<h3 class="text-2xl font-semibold mb-2">
+								Beardy Dev Adventures
+							</h3>
+							<p class="text-gray-400 mb-6">
+								A devlog and YouTube series where I share dev
+								experiments, immersive gameplay, and lessons
+								from my experience working in the digital
+								industry.
+							</p>
+							<CallToAction
+								href="https://www.youtube.com/@beardydevadventures"
+							>
+								Explore Beardy Dev Adventures
+								<Icon icon="arrow-right" size="1.1em" />
+							</CallToAction>
+						</li>
+					</Grid>
+				</div>
 			</section>
 
-			<section class="section with-background">
+			<section class="section with-background compact">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h2>Programs & Features</h2>
+					<h2>Programs & Recognition</h2>
 					<p>
-						I’ve been fortunate to take part in a range of programs and platforms that support creative technology and innovation.
+						I've been fortunate to take part in a range of programs
+						and platforms supporting immersive technology, digital
+						innovation, and creative development.
 					</p>
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Oculus Start Program', 'Meta Horizon Creator Program', 'QLD XR Hub Member', 'GovHack Winner', 'Meta App Store Release'].map((brand) => (
+							[
+								"Meta Horizon Start Program - Start Partner",
+								"Multi-Platform App Releases (Meta, Android, iOS, Steam)",
+								"Meta Horizon Creator Program",
+								"Meta Connect 2025 - Invited Start Partner",
+								"GovHack Winner (2019, 2022) & Runner-Up (2021)",
+								"QLD XR Hub Member",
+							].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>
@@ -198,7 +252,11 @@ const projects = (await getCollection('projects'))
 	}
 
 	.roles {
-		display: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
+		margin-top: 0.5rem;
 	}
 
 	.hero img {
@@ -222,12 +280,6 @@ const projects = (await getCollection('projects'))
 			gap: 3.75rem;
 		}
 
-		.roles {
-			margin-top: 0.5rem;
-			display: flex;
-			gap: 0.5rem;
-		}
-
 		.hero img {
 			aspect-ratio: 3 / 4;
 			border-radius: 4.5rem;
@@ -246,6 +298,52 @@ const projects = (await getCollection('projects'))
 		gap: 2rem;
 	}
 
+	.section.centered .section-header {
+		justify-self: center;
+		text-align: center;
+	}
+
+	.section.compact {
+		gap: 1.25rem;
+	}
+
+	.section.with-cta {
+		display: block;
+	}
+
+	.surface {
+		position: relative;
+		background-color: var(--gray-999_40);
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		padding: 1.25rem;
+		box-shadow: var(--shadow-sm);
+		overflow: hidden;
+	}
+
+	.card-block {
+		max-width: 100%;
+		margin-inline: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.cta {
+		display: flex;
+		justify-content: center;
+	}
+
+	.career-cta {
+		margin-left: auto;
+	}
+
+	.career-cta :global(a) {
+		padding: 0.65rem 1.25rem;
+		gap: 0.5rem;
+		font-size: var(--text-md);
+	}
+
 	.with-background {
 		position: relative;
 	}
@@ -253,7 +351,7 @@ const projects = (await getCollection('projects'))
 	.with-background::before {
 		--hero-bg: var(--bg-image-subtle-2);
 
-		content: '';
+		content: "";
 		position: absolute;
 		pointer-events: none;
 		left: 50%;
@@ -262,7 +360,7 @@ const projects = (await getCollection('projects'))
 		top: 0;
 		transform: translateY(-75%) translateX(-50%);
 		background:
-			url('/assets/backgrounds/noise.png') top center/220px repeat,
+			url("/assets/backgrounds/noise.png") top center/220px repeat,
 			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
 			var(--gray-999);
 		background-blend-mode: overlay, normal, normal, normal;
@@ -277,7 +375,7 @@ const projects = (await getCollection('projects'))
 	.section-header {
 		justify-self: center;
 		text-align: center;
-		max-width: 50ch;
+		max-width: 70ch;
 		font-size: var(--text-md);
 		color: var(--gray-300);
 	}
@@ -286,19 +384,50 @@ const projects = (await getCollection('projects'))
 		max-width: 50ch;
 	}
 
-	.section-header h3, .section-header h2 {
+	.creative-brands li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 0.75rem;
+	}
+
+	.section.with-background .gallery {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.section.compact .section-header {
+		gap: 0.5rem;
+	}
+
+	.section.compact .gallery {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.section-header h3,
+	.section-header h2 {
 		font-size: var(--text-2xl);
+	}
+
+	.section.with-cta .section-header h2 {
+		font-size: var(--text-2xl);
+	}
+
+	.card-block header h2 {
+		font-size: var(--text-xl);
 	}
 
 	@media (min-width: 50em) {
 		.section {
 			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
+			grid-template-areas: "header header header header" "gallery gallery gallery gallery";
 			gap: 5rem;
 		}
 
 		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
+			grid-template-areas: "header header header cta" "gallery gallery gallery gallery";
 		}
 
 		.section-header {
@@ -310,8 +439,17 @@ const projects = (await getCollection('projects'))
 			max-width: 100%;
 		}
 
-		.section-header h3, .section-header h2 {
+		.section-header h3,
+		.section-header h2 {
 			font-size: var(--text-4xl);
+		}
+
+		.section.with-cta .section-header h2 {
+			font-size: var(--text-4xl);
+		}
+
+		.card-block header h2 {
+			font-size: var(--text-3xl);
 		}
 
 		.section:not(.with-cta) .section-header {
@@ -321,6 +459,25 @@ const projects = (await getCollection('projects'))
 		.with-cta .section-header {
 			justify-self: flex-start;
 			text-align: left;
+		}
+
+		.section.centered.with-cta .section-header {
+			justify-self: center;
+			text-align: center;
+		}
+
+		.card-block {
+			flex-direction: row;
+			align-items: center;
+			column-gap: 2rem;
+		}
+
+		.card-block header {
+			flex: 1;
+		}
+
+		.career-cta {
+			justify-content: flex-end;
 		}
 
 		.gallery {
@@ -333,19 +490,6 @@ const projects = (await getCollection('projects'))
 	}
 
 	/* ====================================================== */
-
-	@media (max-width: 50em) {
-	  .creative-brands li {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	  }
-
-	  .creative-brands li + li {
-		margin-top: 2rem;
-	  }
-	}
 
 	.mention-card {
 		display: flex;
@@ -365,5 +509,13 @@ const projects = (await getCollection('projects'))
 			border-radius: 1.5rem;
 			height: 9.5rem;
 		}
+	}
+
+	.creative-brands :global(a) {
+		padding: 0.65rem 1.25rem;
+		gap: 0.5rem;
+		font-size: var(--text-md);
+		width: fit-content;
+		align-self: center;
 	}
 </style>
