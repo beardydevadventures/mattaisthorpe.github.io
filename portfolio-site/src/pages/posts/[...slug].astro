@@ -170,6 +170,30 @@ const fullImage = image?.startsWith('http')
 		list-style-type: decimal;
 	}
 
+	.content :global(table) {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 1.5rem 0;
+		font-size: 0.95rem;
+		line-height: 1.4;
+	}
+
+	.content :global(th) {
+		text-align: left;
+		font-weight: 600;
+		border-bottom: 1px solid var(--border, #e5e7eb);
+		padding: 0.75rem 1rem;
+	}
+
+	.content :global(td) {
+		border-bottom: 1px solid var(--border, #e5e7eb);
+		padding: 0.75rem 1rem;
+	}
+
+	.content :global(tr:last-child td) {
+		border-bottom: none;
+	}
+
 	@media (min-width: 50em) {
 		.back-link {
 			display: block;
