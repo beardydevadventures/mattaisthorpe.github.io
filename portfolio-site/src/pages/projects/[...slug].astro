@@ -101,10 +101,12 @@ const fullImage = image?.startsWith('http')
 	.content {
 		max-width: 65ch;
 		margin-inline: auto;
+		font-size: var(--text-lg);
+		line-height: 1.7;
 	}
 
 	.content > :global(* + *) {
-		margin-top: 1rem;
+		margin-top: 1.2rem;
 	}
 
 	.content :global(h1),
@@ -112,7 +114,18 @@ const fullImage = image?.startsWith('http')
 	.content :global(h3),
 	.content :global(h4),
 	.content :global(h5) {
-		margin: 1.5rem 0;
+		margin: 2rem 0 1rem;
+		line-height: 1.2;
+	}
+
+	.content :global(p) {
+		margin: 0.9rem 0;
+	}
+
+	.content :global(hr) {
+		border: none;
+		border-top: 1px solid var(--gray-800);
+		margin: 2rem 0;
 	}
 
 	.content :global(img) {
@@ -123,12 +136,14 @@ const fullImage = image?.startsWith('http')
 	}
 
 	.content :global(blockquote) {
-		font-size: var(--text-lg);
+		font-size: var(--text-xl);
 		font-family: var(--font-brand);
 		font-weight: 600;
-		line-height: 1.1;
-		padding-inline-start: 1.5rem;
-		border-inline-start: 0.25rem solid var(--accent-dark);
+		line-height: 1.2;
+		padding: 1rem 1.5rem;
+		border-radius: 1rem;
+		border: 1px solid var(--gray-800);
+		background: var(--gradient-subtle);
 		color: var(--gray-0);
 	}
 
@@ -148,9 +163,20 @@ const fullImage = image?.startsWith('http')
 
 	.content :global(ul),
 	.content :global(ol) {
+		list-style: initial;
+		padding-left: 1.5rem;
 		display: flex;
 		flex-direction: column;
-		gap: 0.6rem;
+		gap: 0.5rem;
+		margin: 1rem 0;
+	}
+
+	.content :global(ol) {
+		list-style-type: decimal;
+	}
+
+	.content :global(li) {
+		line-height: 1.6;
 	}
 
 	@media (min-width: 50em) {
