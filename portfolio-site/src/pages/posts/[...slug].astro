@@ -365,15 +365,19 @@ if (relatedPosts.length < 2) {
 	}
 
 	.related-link {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr);
+		display: flex;
+		flex-direction: column;
 		text-decoration: none;
 		color: inherit;
 	}
 
+	.related-media {
+		background: var(--gradient-subtle);
+	}
+
 	.related-media img {
 		width: 100%;
-		height: 100%;
+		height: auto;
 		max-height: 14rem;
 		object-fit: cover;
 		display: block;
@@ -431,10 +435,6 @@ if (relatedPosts.length < 2) {
 
 		.related-grid {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
-		}
-
-		.related-link {
-			height: 100%;
 		}
 
 		.related-media img {
