@@ -1,4 +1,4 @@
-﻿---
+---
 title: Nature’s Call – Traveling Utility App
 publishDate: 2015-08-01 00:00:00
 img: /assets/natures-call.jpg
@@ -6,9 +6,9 @@ img_alt: Mobile app interface for Nature’s Call, showing nearby rest stops and
 description: |
   A mobile app built with Ionic to help travelers find nearby rest stops.
 tags:
-  - Application
-  - Outdoor Utility
-  - API Development
+  - App
+  - Utility
+  - API
 ---
 
 > 8000+ Downloads across Android & iOS

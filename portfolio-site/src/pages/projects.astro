@@ -1,18 +1,33 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import CallToAction from '../components/CallToAction.astro';
-import Icon from '../components/Icon.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
-import Hero from '../components/Hero.astro';
-import Grid from '../components/Grid.astro';
+import CallToAction from "../components/CallToAction.astro";
+import Icon from "../components/Icon.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import PortfolioPreview from "../components/PortfolioPreview.astro";
+import Hero from "../components/Hero.astro";
+import Grid from "../components/Grid.astro";
+import Pill from "../components/Pill.astro";
+import { slugifyTag } from "../utils/slug";
 
-const projects = (await getCollection('projects')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+const projects = (await getCollection("projects")).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
 );
+const tagSet = new Set<string>();
+const tagCounts = new Map<string, number>();
+projects.forEach((project) => {
+	project.data.tags?.forEach((tag: string) => {
+		tagSet.add(tag);
+		tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+	});
+});
+const projectTags = Array.from(tagSet).sort((a, b) => a.localeCompare(b));
+const totalCount = projects.length;
+const primaryTags = projectTags.filter((tag) => (tagCounts.get(tag) ?? 0) >= 2);
+const secondaryTags = projectTags.filter((tag) => (tagCounts.get(tag) ?? 0) < 2);
+const tagsToShow = primaryTags.length ? primaryTags : projectTags;
 ---
 
 <BaseLayout
@@ -32,10 +47,57 @@ const projects = (await getCollection('projects')).sort(
 				tagline="Explore projects spanning web and app development, XR, AI, and real-time applications."
 			/>
 
-			<Grid variant="offset">
+			<div class="tag-filter" data-filter-group>
+				<button class="tag-pill is-active" type="button" data-tag="all">
+					<Pill>All · {totalCount}</Pill>
+				</button>
+				{
+					tagsToShow.map((tag: string) => (
+						<button
+							class="tag-pill"
+							type="button"
+							data-tag={slugifyTag(tag)}
+						>
+							<Pill>
+								{tag} · {tagCounts.get(tag) ?? 0}
+							</Pill>
+						</button>
+					))
+				}
+				{secondaryTags.length > 0 && (
+					<div class="tag-more">
+						<button class="tag-more-toggle" type="button" data-toggle-tags>
+							More filters ({secondaryTags.length})
+						</button>
+						<div class="tag-more-panel" data-more-panel>
+							{
+								secondaryTags.map((tag: string) => (
+									<button
+										class="tag-pill"
+										type="button"
+										data-tag={slugifyTag(tag)}
+									>
+										<Pill>
+											{tag} · {tagCounts.get(tag) ?? 0}
+										</Pill>
+									</button>
+								))
+							}
+						</div>
+					</div>
+				)}
+			</div>
+
+			<Grid variant="offset" class="project-grid" id="projectGrid">
 				{
 					projects.map((project) => (
-						<li>
+						<li
+							class="project-card"
+							data-project-card
+							data-tags={project.data.tags
+								?.map((tag: string) => slugifyTag(tag))
+								.join("|")}
+						>
 							<PortfolioPreview project={project} />
 						</li>
 					))
@@ -45,3 +107,159 @@ const projects = (await getCollection('projects')).sort(
 		<ContactCTA />
 	</div>
 </BaseLayout>
+
+<script type="module">
+	const grid = document.getElementById("projectGrid");
+	const buttons = Array.from(
+		document.querySelectorAll(".tag-pill"),
+	);
+	const cards = Array.from(
+		document.querySelectorAll("[data-project-card]"),
+	);
+	const toggle = document.querySelector("[data-toggle-tags]");
+	const panel = document.querySelector("[data-more-panel]");
+
+	const setActive = (tag) => {
+		buttons.forEach((button) => {
+			button.classList.toggle("is-active", button.dataset.tag === tag);
+		});
+	};
+
+	const applyFilter = (tag) => {
+		if (!grid) return;
+		setActive(tag);
+
+		const before = new Map(
+			cards.map((card) => [card, card.getBoundingClientRect()]),
+		);
+
+		cards.forEach((card) => {
+			const tags = card.dataset.tags?.split("|") ?? [];
+			const isMatch = tag === "all" || tags.includes(tag);
+			card.dataset.match = isMatch ? "true" : "false";
+			card.classList.toggle("is-dimmed", !isMatch);
+		});
+
+		const matched = cards.filter((card) => card.dataset.match === "true");
+		const rest = cards.filter((card) => card.dataset.match !== "true");
+		[...matched, ...rest].forEach((card) => grid.appendChild(card));
+
+		const after = new Map(
+			cards.map((card) => [card, card.getBoundingClientRect()]),
+		);
+
+		cards.forEach((card) => {
+			const first = before.get(card);
+			const last = after.get(card);
+			if (!first || !last) return;
+			const dx = first.left - last.left;
+			const dy = first.top - last.top;
+			if (!dx && !dy) return;
+			card.animate(
+				[
+					{ transform: `translate(${dx}px, ${dy}px)` },
+					{ transform: "translate(0, 0)" },
+				],
+				{ duration: 380, easing: "cubic-bezier(0.2, 0.8, 0.2, 1)" },
+			);
+		});
+	};
+
+	buttons.forEach((button) => {
+		button.addEventListener("click", () => {
+			applyFilter(button.dataset.tag || "all");
+		});
+	});
+
+	if (toggle && panel) {
+		toggle.addEventListener("click", () => {
+			const isOpen = panel.classList.toggle("is-open");
+			toggle.setAttribute("aria-expanded", String(isOpen));
+		});
+	}
+</script>
+
+<style>
+	.tag-filter {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		align-items: center;
+	}
+
+	.tag-pill {
+		padding: 0;
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		transition: transform var(--theme-transition),
+			filter var(--theme-transition);
+	}
+
+	.tag-pill.is-active {
+		transform: translateY(-2px);
+		filter: brightness(1.05);
+	}
+
+	.tag-pill:focus-visible {
+		outline: 2px solid var(--accent-regular);
+		outline-offset: 4px;
+		border-radius: 999rem;
+	}
+
+	.project-grid {
+		margin: 0;
+	}
+
+	.project-card {
+		transition: opacity var(--theme-transition),
+			transform var(--theme-transition);
+	}
+
+	.project-card.is-dimmed {
+		opacity: 0.3;
+	}
+
+	.tag-more {
+		position: relative;
+		display: inline-flex;
+	}
+
+	.tag-more-toggle {
+		background: transparent;
+		border: 1px solid var(--gray-800);
+		color: var(--gray-200);
+		border-radius: 999rem;
+		padding: 0.4rem 1rem;
+		font-family: var(--font-brand);
+		cursor: pointer;
+		transition: border-color var(--theme-transition),
+			color var(--theme-transition);
+	}
+
+	.tag-more-toggle:hover,
+	.tag-more-toggle:focus-visible {
+		border-color: var(--accent-regular);
+		color: var(--gray-0);
+	}
+
+	.tag-more-panel {
+		position: absolute;
+		top: calc(100% + 0.75rem);
+		left: 0;
+		z-index: 10;
+		display: none;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+		padding: 0.9rem;
+		min-width: min(24rem, 80vw);
+		background: var(--gray-999);
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	.tag-more-panel.is-open {
+		display: flex;
+	}
+</style>

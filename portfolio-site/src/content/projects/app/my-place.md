@@ -1,4 +1,4 @@
-﻿---
+---
 title: My Place - Mixed Reality Language Preservation App
 publishDate: 2019-09-08 00:00:00
 img: /assets/my-place.jpg
@@ -6,9 +6,9 @@ img_alt: A person holding a phone with My Place displayed on the screen.
 description: |
   I led a team to develop a immersive mixed reality application.
 tags:
-  - Application
+  - App
   - Leadership
-  - Govhack
+  - Hackathon
 ---
 > Winner of Govhack 2019 - Aboriginal and Torres Strait Islander Languages
 

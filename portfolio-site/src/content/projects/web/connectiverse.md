@@ -1,4 +1,4 @@
-﻿---
+---
 title: Connectiverse - Skill-Sharing & Learning Platform
 publishDate: 2022-08-02 00:00:00
 img: /assets/connectiverse.jpg
@@ -6,9 +6,9 @@ img_alt: A hand holding a phone with connectiverse home page displayed on the sc
 description: |
   A web-based platform designed to connect individuals based on their skills, enabling peer-to-peer learning and career development.
 tags:
-  - Application
+  - App
   - Design
-  - Govhack
+  - Hackathon
 ---
 > Winner of Govhack 2022 - Digital Skills Challenge
 

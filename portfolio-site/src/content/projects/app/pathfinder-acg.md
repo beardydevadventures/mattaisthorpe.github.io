@@ -6,9 +6,9 @@ img_alt: Pathfinder ACG CT app interface displaying character tracking and game 
 description: |
   A companion app for the Pathfinder Adventure Card Game.
 tags:
-  - Application
-  - Game Companion
-  - Tabletop Gaming
+  - App
+  - Game
+  - Tabletop
 ---
 > 16,000+ Downloads across Android & iOS
 

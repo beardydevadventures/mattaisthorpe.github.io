@@ -1,4 +1,4 @@
-﻿---
+---
 title: Find My Home - Data-Driven Relocation Assistance App
 publishDate: 2021-08-22 00:00:00
 img: /assets/find-my-home.jpg
@@ -6,9 +6,9 @@ img_alt: A hand holding a phone with connectiverse home page displayed on the sc
 description: |
   A web-based application designed to help users find their ideal place to live by matching their preferences with regional data from the ABS Data API.
 tags:
-  - Application
-  - Data Analysis
-  - Govhack
+  - App
+  - Data
+  - Hackathon
 ---
 > Runner Up of Govhack 2021 - Create a solution to a customer need using the ABS Data API
 
