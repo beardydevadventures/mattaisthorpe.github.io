@@ -68,6 +68,3 @@ As tech evolves, roles will keep shifting. AI agents will write specs, XR will c
 
 Whether you're leading a product team or building your own project from scratch, the goal is the same: connect the vision to execution and make something people actually want to use.
 
----
-
-*Thanks for reading. If you're exploring similar spaces or wrestling with how to lead tech-forward teams, I'd love to connect. You can find me on [LinkedIn](https://www.linkedin.com/in/matthewaisthorpe/) or check out more of my work at [matthewaisthorpe.com.au](https://matthewaisthorpe.com.au).*

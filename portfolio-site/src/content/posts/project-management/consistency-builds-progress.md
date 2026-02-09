@@ -89,6 +89,3 @@ You don't need massive bursts of productivity. You just need to keep showing up,
 
 Building on the side while working full-time isn't about sacrifice or waiting for the right conditions. It's about making the most of the time you have, staying realistic, and enjoying the process.
 
----
-
-*Thanks for reading. If you’re exploring VR, side projects, or digital product ideas, let’s connect. Find me on [LinkedIn](https://www.linkedin.com/in/matthewaisthorpe/) or check out more of my work at [matthewaisthorpe.com.au](https://matthewaisthorpe.com.au).*

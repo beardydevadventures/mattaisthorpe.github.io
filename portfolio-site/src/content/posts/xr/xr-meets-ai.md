@@ -77,7 +77,3 @@ For teams building the next wave of products, this convergence isn’t a gimmick
 Whether you’re building digital products, leading a team, or just curious about what is next, it is worth paying attention to how these technologies are coming together.
 
 If you are working in this space (or want to) I’d love to hear what you're building.
-
----
-
-*Thanks for reading. If you're exploring intelligent immersive tech or navigating digital transformation in your organisation, let’s connect. Find me on [LinkedIn](https://www.linkedin.com/in/matthewaisthorpe/) or check out more of my work at [matthewaisthorpe.com.au](https://matthewaisthorpe.com.au).*

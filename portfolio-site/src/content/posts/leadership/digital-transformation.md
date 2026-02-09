@@ -71,6 +71,3 @@ In every project I've led the same approach has helped: talk to people, understa
 
 You don't need all the answers on day one. Just start with the right questions, and go from there.
 
----
-
-*Thanks for reading. If you're exploring similar spaces or wrestling with how to lead tech-forward teams, I'd love to connect. You can find me on [LinkedIn](https://www.linkedin.com/in/matthewaisthorpe/) or check out more of my work at [matthewaisthorpe.com.au](https://matthewaisthorpe.com.au).*

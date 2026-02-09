@@ -79,6 +79,3 @@ Good XR design comes from understanding those differences and making deliberate 
 
 As VR matures, the focus will continue to shift away from what looks futuristic and toward what works reliably in real-world conditions.
 
----
-
-*Thanks for reading. If you are building XR experiences or navigating interaction design decisions, feel free to connect with me on LinkedIn or explore more of my work at matthewaisthorpe.com.au.*

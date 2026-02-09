@@ -92,6 +92,3 @@ Your time is limited, and once it is spent, you can't get it back. Spend it on t
 
 Next time you sit down to work on a project, ask yourself one simple question: What is this time worth?
 
----
-
-*Thanks for reading. If you're exploring XR, side projects, or digital product ideas, let's connect. Find me on [LinkedIn](https://www.linkedin.com/in/matthewaisthorpe/) or check out more of my work at [matthewaisthorpe.com.au](https://matthewaisthorpe.com.au).*
