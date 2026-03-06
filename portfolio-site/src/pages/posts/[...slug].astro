@@ -30,6 +30,17 @@ const formattedDate = new Date(entry.data.publishDate).toLocaleDateString(
 	"en-US",
 	{ year: "numeric", month: "long", day: "numeric" },
 );
+const WORDS_PER_MINUTE = 225;
+const plainText = entry.body
+	.replace(/```[\s\S]*?```/g, " ")
+	.replace(/`[^`]*`/g, " ")
+	.replace(/!\[[^\]]*]\([^)]+\)/g, " ")
+	.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+	.replace(/<[^>]*>/g, " ")
+	.replace(/[#>*_~\-]+/g, " ");
+const wordCount = plainText.trim().split(/\s+/).filter(Boolean).length;
+const readingTimeMinutes = Math.max(1, Math.ceil(wordCount / WORDS_PER_MINUTE));
+const readTimeLabel = `${readingTimeMinutes} min read`;
 const pathname = Astro.url?.pathname ?? `/blog/${entry.slug}`;
 const fullUrl = `https://matthewaisthorpe.com.au${pathname}`;
 const image = entry.data.img;
@@ -87,12 +98,15 @@ if (relatedPosts.length < 2) {
 						><Icon icon="arrow-left" /> Blog</a
 					>
 					<Hero title={entry.data.title} align="start">
-						<time
-							class="publish-date"
-							datetime={new Date(
-								entry.data.publishDate,
-							).toISOString()}>{formattedDate}</time
-						>
+						<div class="post-meta">
+							<time
+								class="publish-date"
+								datetime={new Date(
+									entry.data.publishDate,
+								).toISOString()}>{formattedDate}</time
+							>
+							<span class="read-time">{readTimeLabel}</span>
+						</div>
 						<div class="details">
 							<div class="tags max-lg:hidden">
 								{
@@ -226,6 +240,23 @@ if (relatedPosts.length < 2) {
 		font-size: var(--text-md);
 		color: var(--gray-400);
 		margin-top: 0.25rem;
+	}
+
+	.post-meta {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		color: var(--gray-400);
+	}
+
+	.read-time {
+		font-size: var(--text-md);
+		margin-top: 0.25rem;
+	}
+
+	.read-time::before {
+		content: "|";
+		margin-right: 0.6rem;
 	}
 
 	.tags {
@@ -442,3 +473,4 @@ if (relatedPosts.length < 2) {
 		}
 	}
 </style>
+

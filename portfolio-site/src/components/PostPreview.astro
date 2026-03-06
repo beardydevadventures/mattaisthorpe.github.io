@@ -3,16 +3,32 @@ import type { CollectionEntry } from 'astro:content';
 
 interface Props {
 	post: CollectionEntry<'posts'>;
+	showReadTime?: boolean;
 }
 
-const { data, slug } = Astro.props.post;
+const { post, showReadTime = false } = Astro.props;
+const { data, slug, body } = post;
 const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const WORDS_PER_MINUTE = 225;
+const plainText = body
+	.replace(/```[\s\S]*?```/g, ' ')
+	.replace(/`[^`]*`/g, ' ')
+	.replace(/!\[[^\]]*]\([^)]+\)/g, ' ')
+	.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+	.replace(/<[^>]*>/g, ' ')
+	.replace(/[#>*_~\-]+/g, ' ');
+const wordCount = plainText.trim().split(/\s+/).filter(Boolean).length;
+const readingTimeMinutes = Math.max(1, Math.ceil(wordCount / WORDS_PER_MINUTE));
+const readTimeLabel = `${readingTimeMinutes} min read`;
 ---
 
 <a class="card" href={`/posts/${slug}`}>
 	<div class="info">
 		<span class="title">{data.title}</span>
-		<time class="date" datetime={new Date(data.publishDate).toISOString()}>{formattedDate}</time>
+		<div class="meta">
+			<time class="date" datetime={new Date(data.publishDate).toISOString()}>{formattedDate}</time>
+			{showReadTime && <span class="read-time">{readTimeLabel}</span>}
+		</div>
 	</div>
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 </a>
@@ -53,6 +69,22 @@ const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { y
 	.date {
 		font-size: var(--text-sm);
 		color: var(--gray-400);
+	}
+
+	.meta {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+	}
+
+	.read-time {
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+	}
+
+	.read-time::before {
+		content: '|';
+		margin-right: 0.4rem;
 	}
 
 	img {
