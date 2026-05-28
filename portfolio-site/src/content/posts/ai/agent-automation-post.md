@@ -1,5 +1,5 @@
 ---
-title: Agent Automation in Practice: An AI Agent Writes This Post
+title: "Agent Automation in Practice: An AI Agent Writes This Post"
 publishDate: 2026-05-28 00:00:00
 img: /assets/posts/agent-automation-post.jpg
 img_alt: Laptop screen displaying a blog post being assembled by an AI agent in a code editor
