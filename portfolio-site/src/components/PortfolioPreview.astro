@@ -46,7 +46,8 @@ const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { y
 		z-index: 0;
 		background:
 			linear-gradient(180deg, rgba(9, 11, 17, 0.02), rgba(9, 11, 17, 0.5)),
-			radial-gradient(circle at 82% 16%, rgba(255, 140, 107, 0.24), transparent 30%);
+			radial-gradient(circle at 82% 16%, rgba(240, 122, 58, 0.24), transparent 30%),
+			radial-gradient(circle at 12% 0%, rgba(110, 107, 255, 0.14), transparent 28%);
 		opacity: 0.9;
 		pointer-events: none;
 	}
@@ -65,9 +66,9 @@ const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { y
 		z-index: 2;
 		margin: 0.5rem;
 		padding: 0.5rem 1rem;
-		background: hsla(var(--gray-999-basis), 0.72);
+		background: var(--card-info-bg);
 		color: var(--gray-200);
-		border: 1px solid hsla(var(--gray-999-basis), 0.5);
+		border: 1px solid var(--brand-border);
 		border-radius: 0.75rem;
 		box-shadow: 0 12px 32px rgba(9, 11, 17, 0.14);
 		backdrop-filter: blur(18px);

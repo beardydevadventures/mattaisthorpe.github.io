@@ -62,7 +62,8 @@ const readTimeLabel = `${readingTimeMinutes} min read`;
 		z-index: 0;
 		background:
 			linear-gradient(180deg, rgba(9, 11, 17, 0.02), rgba(9, 11, 17, 0.55)),
-			radial-gradient(circle at 18% 18%, rgba(35, 199, 217, 0.28), transparent 32%);
+			radial-gradient(circle at 18% 18%, rgba(198, 90, 46, 0.26), transparent 32%),
+			radial-gradient(circle at 88% 0%, rgba(110, 107, 255, 0.16), transparent 28%);
 		opacity: 0.86;
 		pointer-events: none;
 	}
@@ -81,9 +82,9 @@ const readTimeLabel = `${readingTimeMinutes} min read`;
 		z-index: 2;
 		margin: 0.5rem;
 		padding: 0.5rem 1rem;
-		background: hsla(var(--gray-999-basis), 0.72);
+		background: var(--card-info-bg);
 		color: var(--gray-200);
-		border: 1px solid hsla(var(--gray-999-basis), 0.5);
+		border: 1px solid var(--brand-border);
 		border-radius: 0.75rem;
 		box-shadow: 0 12px 32px rgba(9, 11, 17, 0.14);
 		backdrop-filter: blur(18px);

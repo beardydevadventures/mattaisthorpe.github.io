@@ -37,22 +37,23 @@ const projects = (await getCollection("projects"))
 		<div class="wrapper stack gap-8 lg:gap-16">
 			<header class="hero">
 				<Hero
-					title="Hey there, I'm Matthew Aisthorpe"
-					tagline="I lead technical teams delivering AI-enabled platforms, XR experiences, and modern digital systems from strategy through production."
+					title="Matthew Aisthorpe"
+					subheading="Technical Delivery Leader across AI, XR and Digital Platforms"
+					tagline="I lead cross-functional teams delivering AI-enabled platforms, immersive XR experiences, and modern digital systems from strategy through production."
 					align="start"
 				>
 					<div class="roles">
 						<Pill
 							><Icon icon="strategy" size="1.33em" />Delivery
-							Leader</Pill
+							Leadership</Pill
 						>
 						<Pill
-							><Icon icon="code" size="1.33em" />Product &
-							Platform Builder</Pill
+							><Icon icon="code" size="1.33em" />Solution
+							Architecture</Pill
 						>
 						<Pill
-							><Icon icon="users-three" size="1.33em" />XR & AI
-							Practitioner</Pill
+							><Icon icon="users-three" size="1.33em" />AI, XR &
+							Software Delivery</Pill
 						>
 					</div>
 				</Hero>
@@ -253,25 +254,19 @@ const projects = (await getCollection("projects"))
 		padding: 1.25rem;
 		border: 1px solid color-mix(in srgb, var(--gray-800), transparent 18%);
 		border-radius: 1.5rem;
-		background:
-			radial-gradient(circle at 20% 12%, rgba(35, 199, 217, 0.2), transparent 31%),
-			radial-gradient(circle at 82% 24%, rgba(255, 140, 107, 0.16), transparent 29%),
-			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.7), hsla(var(--gray-999-basis), 0.34));
+		background: var(--surface-panel-strong);
 		box-shadow: var(--shadow-premium);
 		overflow: hidden;
-		backdrop-filter: blur(18px);
 	}
 
 	.hero::before {
 		content: "";
 		position: absolute;
-		inset: auto -8rem -11rem auto;
-		width: 24rem;
-		aspect-ratio: 1;
-		border-radius: 999rem;
-		background: conic-gradient(from 160deg, rgba(35, 199, 217, 0.2), rgba(197, 97, 246, 0.24), rgba(255, 140, 107, 0.18), rgba(35, 199, 217, 0.2));
-		filter: blur(10px);
-		opacity: 0.72;
+		inset: 0;
+		background:
+			radial-gradient(circle at 18% 14%, var(--surface-glow-primary), transparent 36%),
+			radial-gradient(circle at 86% 18%, var(--surface-glow-accent), transparent 34%);
+		opacity: 0.9;
 		pointer-events: none;
 	}
 
@@ -295,7 +290,7 @@ const projects = (await getCollection("projects"))
 		object-fit: cover;
 		object-position: top;
 		border-radius: 1.25rem;
-		border: 1px solid hsla(var(--gray-999-basis), 0.52);
+		border: 1px solid var(--brand-border);
 		box-shadow: 0 28px 70px rgba(9, 11, 17, 0.18);
 		filter: saturate(1.04) contrast(1.03);
 	}
@@ -348,15 +343,12 @@ const projects = (await getCollection("projects"))
 
 	.surface {
 		position: relative;
-		background:
-			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.76), hsla(var(--gray-999-basis), 0.4)),
-			var(--gradient-premium);
+		background: var(--surface-panel);
 		border: 1px solid color-mix(in srgb, var(--gray-800), transparent 18%);
 		border-radius: 1.25rem;
 		padding: 1.5rem;
 		box-shadow: var(--shadow-premium);
 		overflow: hidden;
-		backdrop-filter: blur(18px);
 	}
 
 	.surface::before {
@@ -364,7 +356,7 @@ const projects = (await getCollection("projects"))
 		position: absolute;
 		inset: 0;
 		pointer-events: none;
-		background: radial-gradient(circle at 94% 20%, rgba(35, 199, 217, 0.16), transparent 28%);
+		background: radial-gradient(circle at 94% 20%, var(--surface-glow-accent), transparent 28%);
 	}
 
 	.card-block {
@@ -395,28 +387,25 @@ const projects = (await getCollection("projects"))
 	}
 
 	.with-background::before {
-		--hero-bg: var(--bg-image-subtle-2);
-
 		content: "";
 		position: absolute;
 		pointer-events: none;
 		left: 50%;
 		width: 100vw;
-		aspect-ratio: calc(2.25 / var(--bg-scale));
+		height: clamp(18rem, 42vw, 34rem);
 		top: 0;
 		transform: translateY(-75%) translateX(-50%);
 		background:
-			url("/assets/backgrounds/noise.png") top center/220px repeat,
-			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
-			var(--gray-999);
-		background-blend-mode: overlay, normal, normal, normal;
-		mix-blend-mode: var(--bg-blend-mode);
+			radial-gradient(circle at 50% 45%, var(--surface-glow-primary), transparent 46%),
+			radial-gradient(circle at 74% 30%, var(--surface-glow-accent), transparent 38%);
 		z-index: -2;
-		opacity: 0.72;
+		opacity: 0.55;
 	}
 
 	.with-background.bg-variant::before {
-		--hero-bg: var(--bg-image-subtle-1);
+		background:
+			radial-gradient(circle at 46% 38%, var(--surface-glow-primary), transparent 46%),
+			radial-gradient(circle at 20% 42%, var(--surface-glow-accent), transparent 38%);
 	}
 
 	.section-header {
@@ -442,9 +431,7 @@ const projects = (await getCollection("projects"))
 		padding: 1.5rem;
 		border: 1px solid var(--gray-800);
 		border-radius: 1.25rem;
-		background:
-			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.72), hsla(var(--gray-999-basis), 0.34)),
-			var(--gradient-subtle);
+		background: var(--surface-panel);
 		box-shadow: var(--shadow-sm);
 		overflow: hidden;
 		transition:
@@ -570,9 +557,7 @@ const projects = (await getCollection("projects"))
 		border: 1px solid var(--gray-800);
 		border-radius: 1rem;
 		color: var(--gray-300);
-		background:
-			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.68), hsla(var(--gray-999-basis), 0.3)),
-			var(--gradient-premium);
+		background: var(--surface-panel);
 		box-shadow: var(--shadow-sm);
 		padding: 1rem;
 		overflow: hidden;
@@ -586,7 +571,7 @@ const projects = (await getCollection("projects"))
 		content: "";
 		position: absolute;
 		inset: 0;
-		background: radial-gradient(circle at 50% 0%, rgba(35, 199, 217, 0.12), transparent 42%);
+		background: radial-gradient(circle at 50% 0%, var(--surface-glow-primary), transparent 42%);
 		opacity: 0;
 		transition: opacity var(--theme-transition);
 	}

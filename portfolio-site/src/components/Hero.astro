@@ -1,16 +1,18 @@
 ---
 interface Props {
 	title: string;
+	subheading?: string;
 	tagline?: string;
 	align?: 'start' | 'center';
 }
 
-const { align = 'center', tagline, title } = Astro.props;
+const { align = 'center', subheading, tagline, title } = Astro.props;
 ---
 
 <div class:list={['hero stack gap-4', align]}>
 	<div class="stack gap-2">
 		<h1 class="title">{title}</h1>
+		{subheading && <p class="subheading">{subheading}</p>}
 		{tagline && <p class="tagline">{tagline}</p>}
 	</div>
 	<slot />
@@ -23,6 +25,7 @@ const { align = 'center', tagline, title } = Astro.props;
 	}
 
 	.title,
+	.subheading,
 	.tagline {
 		max-width: 37ch;
 		margin-inline: auto;
@@ -39,6 +42,15 @@ const { align = 'center', tagline, title } = Astro.props;
 		text-wrap: pretty;
 	}
 
+	.subheading {
+		color: var(--brand-warm);
+		font-family: var(--font-brand);
+		font-size: var(--text-lg);
+		font-weight: 500;
+		line-height: 1.25;
+		text-wrap: balance;
+	}
+
 	@media (min-width: 50em) {
 		.hero {
 			font-size: var(--text-xl);
@@ -49,6 +61,7 @@ const { align = 'center', tagline, title } = Astro.props;
 		}
 
 		.start .title,
+		.start .subheading,
 		.start .tagline {
 			margin-inline: unset;
 		}
@@ -56,6 +69,11 @@ const { align = 'center', tagline, title } = Astro.props;
 		.title {
 			font-size: var(--text-5xl);
 			max-width: 12ch;
+		}
+
+		.subheading {
+			font-size: var(--text-xl);
+			max-width: 28ch;
 		}
 	}
 </style>

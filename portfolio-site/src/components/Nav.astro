@@ -193,9 +193,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		padding: 0.5rem;
 		font-size: 1.5rem;
 		color: var(--gray-300);
-		background:
-			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.78), hsla(var(--gray-999-basis), 0.44)),
-			var(--gradient-premium);
+		background: var(--surface-menu);
 		box-shadow: var(--shadow-md);
 	}
 
@@ -319,9 +317,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			border-radius: 999rem;
 			border: 1px solid hsla(var(--gray-999-basis), 0.5);
 			padding: 0.5rem 0.5625rem;
-			background:
-				linear-gradient(135deg, hsla(var(--gray-999-basis), 0.72), hsla(var(--gray-999-basis), 0.38)),
-				var(--gradient-premium);
+			background: var(--surface-menu);
 			box-shadow: 0 14px 42px rgba(9, 11, 17, 0.08);
 			backdrop-filter: blur(18px);
 		}
@@ -330,7 +326,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			position: absolute;
 			inset: -1px;
 			content: '';
-			background: linear-gradient(135deg, rgba(35, 199, 217, 0.28), rgba(197, 97, 246, 0.34), rgba(255, 140, 107, 0.18));
+			background: linear-gradient(135deg, rgba(240, 122, 58, 0.36), rgba(198, 90, 46, 0.24), rgba(110, 107, 255, 0.22));
 			border-radius: 999rem;
 			z-index: -1;
 		}
@@ -353,7 +349,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		.link.active {
 			color: var(--accent-text-over);
 			background: var(--gradient-accent-orange);
-			box-shadow: 0 8px 18px rgba(118, 17, 166, 0.18);
+			box-shadow: 0 8px 18px rgba(198, 90, 46, 0.24);
 		}
 
 		.menu-footer {
