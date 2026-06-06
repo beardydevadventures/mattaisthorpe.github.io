@@ -245,26 +245,59 @@ const projects = (await getCollection("projects"))
 
 <style>
 	.hero {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2rem;
+		gap: 2.5rem;
+		padding: 1.25rem;
+		border: 1px solid color-mix(in srgb, var(--gray-800), transparent 18%);
+		border-radius: 1.5rem;
+		background:
+			radial-gradient(circle at 20% 12%, rgba(35, 199, 217, 0.2), transparent 31%),
+			radial-gradient(circle at 82% 24%, rgba(255, 140, 107, 0.16), transparent 29%),
+			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.7), hsla(var(--gray-999-basis), 0.34));
+		box-shadow: var(--shadow-premium);
+		overflow: hidden;
+		backdrop-filter: blur(18px);
+	}
+
+	.hero::before {
+		content: "";
+		position: absolute;
+		inset: auto -8rem -11rem auto;
+		width: 24rem;
+		aspect-ratio: 1;
+		border-radius: 999rem;
+		background: conic-gradient(from 160deg, rgba(35, 199, 217, 0.2), rgba(197, 97, 246, 0.24), rgba(255, 140, 107, 0.18), rgba(35, 199, 217, 0.2));
+		filter: blur(10px);
+		opacity: 0.72;
+		pointer-events: none;
+	}
+
+	.hero > :global(.hero),
+	.hero img {
+		position: relative;
+		z-index: 1;
 	}
 
 	.roles {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 0.5rem;
-		margin-top: 0.5rem;
+		gap: 0.65rem;
+		margin-top: 0.75rem;
 	}
 
 	.hero img {
+		width: min(100%, 28rem);
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
 		object-position: top;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
+		border-radius: 1.25rem;
+		border: 1px solid hsla(var(--gray-999-basis), 0.52);
+		box-shadow: 0 28px 70px rgba(9, 11, 17, 0.18);
+		filter: saturate(1.04) contrast(1.03);
 	}
 
 	.section-header {
@@ -275,15 +308,16 @@ const projects = (await getCollection("projects"))
 	@media (min-width: 50em) {
 		.hero {
 			display: grid;
-			grid-template-columns: 6fr 4fr;
-			padding-inline: 2.5rem;
-			gap: 3.75rem;
+			grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.82fr);
+			padding: clamp(2rem, 4vw, 3.5rem);
+			gap: clamp(2.5rem, 6vw, 5rem);
 		}
 
 		.hero img {
 			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
+			border-radius: 2rem;
 			object-fit: cover;
+			justify-self: end;
 		}
 
 		h2 {
@@ -295,7 +329,8 @@ const projects = (await getCollection("projects"))
 
 	.section {
 		display: grid;
-		gap: 2rem;
+		gap: 2.5rem;
+		position: relative;
 	}
 
 	.section.centered .section-header {
@@ -313,12 +348,23 @@ const projects = (await getCollection("projects"))
 
 	.surface {
 		position: relative;
-		background-color: var(--gray-999_40);
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		padding: 1.25rem;
-		box-shadow: var(--shadow-sm);
+		background:
+			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.76), hsla(var(--gray-999-basis), 0.4)),
+			var(--gradient-premium);
+		border: 1px solid color-mix(in srgb, var(--gray-800), transparent 18%);
+		border-radius: 1.25rem;
+		padding: 1.5rem;
+		box-shadow: var(--shadow-premium);
 		overflow: hidden;
+		backdrop-filter: blur(18px);
+	}
+
+	.surface::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background: radial-gradient(circle at 94% 20%, rgba(35, 199, 217, 0.16), transparent 28%);
 	}
 
 	.card-block {
@@ -365,7 +411,8 @@ const projects = (await getCollection("projects"))
 			var(--gray-999);
 		background-blend-mode: overlay, normal, normal, normal;
 		mix-blend-mode: var(--bg-blend-mode);
-		z-index: -1;
+		z-index: -2;
+		opacity: 0.72;
 	}
 
 	.with-background.bg-variant::before {
@@ -378,6 +425,7 @@ const projects = (await getCollection("projects"))
 		max-width: 70ch;
 		font-size: var(--text-md);
 		color: var(--gray-300);
+		text-wrap: pretty;
 	}
 
 	.creative-brands p {
@@ -385,11 +433,30 @@ const projects = (await getCollection("projects"))
 	}
 
 	.creative-brands li {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
 		gap: 0.75rem;
+		padding: 1.5rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1.25rem;
+		background:
+			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.72), hsla(var(--gray-999-basis), 0.34)),
+			var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+		overflow: hidden;
+		transition:
+			transform var(--theme-transition),
+			box-shadow var(--theme-transition),
+			border-color var(--theme-transition);
+	}
+
+	.creative-brands li:hover {
+		transform: translateY(-4px);
+		border-color: color-mix(in srgb, var(--accent-dark), var(--gray-800) 58%);
+		box-shadow: var(--shadow-premium);
 	}
 
 	.section.with-background .gallery {
@@ -409,6 +476,7 @@ const projects = (await getCollection("projects"))
 	.section-header h3,
 	.section-header h2 {
 		font-size: var(--text-2xl);
+		text-wrap: balance;
 	}
 
 	.section.with-cta .section-header h2 {
@@ -423,7 +491,7 @@ const projects = (await getCollection("projects"))
 		.section {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas: "header header header header" "gallery gallery gallery gallery";
-			gap: 5rem;
+			gap: 4.5rem;
 		}
 
 		.section.with-cta {
@@ -470,6 +538,7 @@ const projects = (await getCollection("projects"))
 			flex-direction: row;
 			align-items: center;
 			column-gap: 2rem;
+			padding: 2rem;
 		}
 
 		.card-block header {
@@ -492,16 +561,49 @@ const projects = (await getCollection("projects"))
 	/* ====================================================== */
 
 	.mention-card {
+		position: relative;
 		display: flex;
 		height: 7rem;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
+		border-radius: 1rem;
 		color: var(--gray-300);
-		background: var(--gradient-subtle);
+		background:
+			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.68), hsla(var(--gray-999-basis), 0.3)),
+			var(--gradient-premium);
 		box-shadow: var(--shadow-sm);
+		padding: 1rem;
+		overflow: hidden;
+		transition:
+			transform var(--theme-transition),
+			border-color var(--theme-transition),
+			box-shadow var(--theme-transition);
+	}
+
+	.mention-card::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at 50% 0%, rgba(35, 199, 217, 0.12), transparent 42%);
+		opacity: 0;
+		transition: opacity var(--theme-transition);
+	}
+
+	.mention-card:hover {
+		transform: translateY(-3px);
+		border-color: color-mix(in srgb, var(--accent-dark), var(--gray-800) 62%);
+		box-shadow: var(--shadow-md);
+	}
+
+	.mention-card:hover::before {
+		opacity: 1;
+	}
+
+	.mention-card p {
+		position: relative;
+		z-index: 1;
 	}
 
 	@media (min-width: 50em) {

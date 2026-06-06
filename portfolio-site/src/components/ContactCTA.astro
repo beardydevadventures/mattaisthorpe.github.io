@@ -13,6 +13,7 @@ import Icon from './Icon.astro';
 
 <style>
 	aside {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -20,14 +21,19 @@ import Icon from './Icon.astro';
 		border-top: 1px solid var(--gray-800);
 		border-bottom: 1px solid var(--gray-800);
 		padding: 5rem 1.5rem;
-		background-color: var(--gray-999_40);
+		background:
+			radial-gradient(circle at 18% 10%, rgba(35, 199, 217, 0.14), transparent 34%),
+			radial-gradient(circle at 84% 90%, rgba(255, 140, 107, 0.14), transparent 30%),
+			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.66), hsla(var(--gray-999-basis), 0.32));
 		box-shadow: var(--shadow-sm);
+		overflow: hidden;
 	}
 
 	h2 {
 		font-size: var(--text-xl);
 		text-align: center;
-		max-width: 50%;
+		max-width: min(48rem, 100%);
+		text-wrap: balance;
 	}
 
 	@media (min-width: 50em) {
@@ -41,6 +47,7 @@ import Icon from './Icon.astro';
 		h2 {
 			font-size: var(--text-3xl);
 			text-align: left;
+			max-width: 54%;
 		}
 	}
 </style>

@@ -23,11 +23,27 @@ import Icon from './Icon.astro';
 
 <style>
 	.box {
+		position: relative;
 		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
+		border-radius: 1.25rem;
 		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
+		background:
+			linear-gradient(135deg, hsla(var(--gray-999-basis), 0.72), hsla(var(--gray-999-basis), 0.34)),
+			var(--gradient-premium);
+		box-shadow: var(--shadow-premium);
+		overflow: hidden;
+		backdrop-filter: blur(18px);
+	}
+
+	.box::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background:
+			radial-gradient(circle at 12% 0%, rgba(35, 199, 217, 0.16), transparent 30%),
+			radial-gradient(circle at 88% 100%, rgba(255, 140, 107, 0.14), transparent 34%);
+		opacity: 0.85;
 	}
 
 	.skills {
@@ -36,24 +52,49 @@ import Icon from './Icon.astro';
 		gap: 3rem;
 	}
 
+	.skills > div {
+		position: relative;
+		z-index: 1;
+		padding: 0.25rem;
+	}
+
 	.skills h2 {
 		font-size: var(--text-lg);
+		text-wrap: balance;
 	}
 
 	.skills p {
 		color: var(--gray-400);
+		text-wrap: pretty;
+	}
+
+	.skills :global(svg) {
+		filter: drop-shadow(0 10px 22px rgba(118, 17, 166, 0.18));
 	}
 
 	@media (min-width: 50em) {
 		.box {
 			border-radius: 1.5rem;
-			padding: 2.5rem;
+			padding: 2.25rem;
 		}
 
 		.skills {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
+			gap: 2rem;
+		}
+
+		.skills > div {
+			padding: 1rem;
+			border-radius: 1rem;
+			transition:
+				background-color var(--theme-transition),
+				transform var(--theme-transition);
+		}
+
+		.skills > div:hover {
+			background-color: hsla(var(--gray-999-basis), 0.28);
+			transform: translateY(-3px);
 		}
 
 		.skills h2 {
