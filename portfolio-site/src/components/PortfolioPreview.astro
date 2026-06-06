@@ -5,11 +5,11 @@ interface Props {
 	project: CollectionEntry<'projects'>;
 }
 
-const { data, slug } = Astro.props.project;
+const { data, id } = Astro.props.project;
 const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 
-<a class="card" href={`/projects/${slug}`}>
+<a class="card" href={`/projects/${id}`}>
 	<div class="info">
 		<span class="title">{data.title}</span>
 		<time class="date" datetime={new Date(data.publishDate).toISOString()}>{formattedDate}</time>

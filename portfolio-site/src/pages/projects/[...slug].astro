@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
@@ -18,15 +18,15 @@ interface Props {
 export async function getStaticPaths() {
 	const projects = await getCollection('projects');
 	return projects.map((entry) => ({
-		params: { slug: entry.slug },
+		params: { slug: entry.id },
 		props: { entry },
 	}));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 const formattedDate = new Date(entry.data.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-const pathname = Astro.url?.pathname ?? `/projects/${entry.slug}`;
+const pathname = Astro.url?.pathname ?? `/projects/${entry.id}`;
 const fullUrl = `https://matthewaisthorpe.com.au${pathname}`;
 const image = entry.data.img;
 const fullImage = image?.startsWith('http')
@@ -202,6 +202,19 @@ const projectSchema = {
 	}
 
 	@media (min-width: 50em) {
+		header .wrapper {
+			max-width: none;
+		}
+
+		header :global(.hero),
+		header :global(.hero .title) {
+			width: 100%;
+		}
+
+		header :global(.hero .title) {
+			max-width: 100%;
+		}
+
 		.back-link {
 			display: block;
 			align-self: flex-start;

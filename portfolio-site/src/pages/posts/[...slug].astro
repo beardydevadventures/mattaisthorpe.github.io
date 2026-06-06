@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
@@ -19,19 +19,19 @@ interface Props {
 export async function getStaticPaths() {
 	const posts = await getCollection("posts");
 	return posts.map((entry: CollectionEntry<"posts">) => ({
-		params: { slug: entry.slug },
+		params: { slug: entry.id },
 		props: { entry },
 	}));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 const formattedDate = new Date(entry.data.publishDate).toLocaleDateString(
 	"en-US",
 	{ year: "numeric", month: "long", day: "numeric" },
 );
 const WORDS_PER_MINUTE = 225;
-const plainText = entry.body
+const plainText = (entry.body ?? "")
 	.replace(/```[\s\S]*?```/g, " ")
 	.replace(/`[^`]*`/g, " ")
 	.replace(/!\[[^\]]*]\([^)]+\)/g, " ")
@@ -41,7 +41,7 @@ const plainText = entry.body
 const wordCount = plainText.trim().split(/\s+/).filter(Boolean).length;
 const readingTimeMinutes = Math.max(1, Math.ceil(wordCount / WORDS_PER_MINUTE));
 const readTimeLabel = `${readingTimeMinutes} min read`;
-const pathname = Astro.url?.pathname ?? `/blog/${entry.slug}`;
+const pathname = Astro.url?.pathname ?? `/posts/${entry.id}`;
 const fullUrl = `https://matthewaisthorpe.com.au${pathname}`;
 const image = entry.data.img;
 const fullImage = image?.startsWith("http")
@@ -76,7 +76,7 @@ type PostEntry = CollectionEntry<"posts">;
 const allPosts = await getCollection("posts");
 const entryTags = entry.data.tags ?? [];
 const relatedByTags = allPosts
-	.filter((post: PostEntry) => post.slug !== entry.slug)
+	.filter((post: PostEntry) => post.id !== entry.id)
 	.map((post: PostEntry) => ({
 		post,
 		score:
@@ -95,10 +95,10 @@ const relatedByTags = allPosts
 const relatedPosts: PostEntry[] = [...relatedByTags];
 if (relatedPosts.length < 2) {
 	const fallbackPosts = allPosts
-		.filter((post: PostEntry) => post.slug !== entry.slug)
+		.filter((post: PostEntry) => post.id !== entry.id)
 		.filter(
 			(post: PostEntry) =>
-				!relatedPosts.some((item) => item.slug === post.slug),
+				!relatedPosts.some((item) => item.id === post.id),
 		)
 		.sort(
 			(a: PostEntry, b: PostEntry) =>
@@ -199,7 +199,7 @@ if (relatedPosts.length < 2) {
 				<ul class="related-grid">
 					{relatedPosts.map((post) => (
 						<li class="related-card">
-							<a class="related-link" href={`/posts/${post.slug}`}>
+							<a class="related-link" href={`/posts/${post.id}`}>
 								<div class="related-media">
 									<img
 										src={post.data.img}
@@ -472,6 +472,19 @@ if (relatedPosts.length < 2) {
 	}
 
 	@media (min-width: 50em) {
+		header .wrapper {
+			max-width: none;
+		}
+
+		header :global(.hero),
+		header :global(.hero .title) {
+			width: 100%;
+		}
+
+		header :global(.hero .title) {
+			max-width: 100%;
+		}
+
 		.back-link {
 			display: block;
 			align-self: flex-start;

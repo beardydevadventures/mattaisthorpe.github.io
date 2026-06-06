@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { post, showReadTime = false } = Astro.props;
-const { data, slug, body } = post;
+const { data, id, body = '' } = post;
 const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 const WORDS_PER_MINUTE = 225;
 const plainText = body
@@ -22,7 +22,7 @@ const readingTimeMinutes = Math.max(1, Math.ceil(wordCount / WORDS_PER_MINUTE));
 const readTimeLabel = `${readingTimeMinutes} min read`;
 ---
 
-<a class="card" href={`/posts/${slug}`}>
+<a class="card" href={`/posts/${id}`}>
 	<div class="info">
 		<span class="title">{data.title}</span>
 		<div class="meta">
