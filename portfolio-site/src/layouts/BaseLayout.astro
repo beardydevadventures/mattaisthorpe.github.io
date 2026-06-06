@@ -14,14 +14,23 @@ interface Props {
 	description?: string | undefined;
 	url?: string | undefined;
 	image?: string | undefined;
+	type?: string | undefined;
+	schema?: Record<string, unknown> | Record<string, unknown>[] | undefined;
 }
 
-const { title, description, url, image } = Astro.props;
+const { title, description, url, image, type, schema } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<MainHead title={title} description={description} url={url} image={image} />
+		<MainHead
+			title={title}
+			description={description}
+			url={url}
+			image={image}
+			type={type}
+			schema={schema}
+		/>
 		<GoogleAnalytics />
 		<AdSense />
 	</head>

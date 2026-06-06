@@ -6,14 +6,21 @@ interface Props {
 	description?: string | undefined;
 	url?: string | undefined;
 	image?: string | undefined;
+	type?: string | undefined;
+	schema?: Record<string, unknown> | Record<string, unknown>[] | undefined;
 }
 
 const {
-	title = 'Matthew Aisthorpe: Personal Site',
-	description = 'Matthew Aisthorpe is an Agile Project Manager and former software developer, focused on digital transformation, immersive technology, and building products that make a difference.',
+	title = 'Matthew Aisthorpe | Technical Delivery Leader in AI, XR & Digital Platforms',
+	description = 'Matthew Aisthorpe is a Brisbane-based technical delivery leader working across AI-enabled platforms, XR experiences, solution architecture, software delivery, and digital transformation.',
 	url = 'https://matthewaisthorpe.com.au/',
 	image = 'https://matthewaisthorpe.com.au/assets/portrait.jpg',
+	type = 'website',
+	schema,
 } = Astro.props;
+const schemaJson = schema
+	? JSON.stringify(Array.isArray(schema) ? schema : [schema]).replace(/</g, '\\u003c')
+	: undefined;
 ---
 
 <meta charset="UTF-8" />
@@ -22,12 +29,13 @@ const {
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <meta name="facebook-domain-verification" content="3bwp7nnbcih2baetmoi8kfgqz0h274" />
+<link rel="canonical" href={url} />
 
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={url} />
 <meta property="og:image" content={image} />
-<meta property="og:type" content="website" />
+<meta property="og:type" content={type} />
 <meta property="og:site_name" content="Matthew Aisthorpe" />
 
 <meta name="twitter:card" content="summary_large_image" />
@@ -37,6 +45,7 @@ const {
 <meta name="twitter:image" content={image} />
 <meta name="twitter:site" content="@beardydevadv" />
 <meta name="twitter:creator" content="@beardydevadv" />
+{schemaJson && <script is:inline type="application/ld+json" set:html={schemaJson} />}
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />

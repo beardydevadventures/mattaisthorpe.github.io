@@ -56,11 +56,71 @@ const recognitions: { title: string; icon: keyof typeof iconPaths }[] = [
 	},
 ];
 
+const homepageTitle =
+	"Matthew Aisthorpe | Technical Delivery Leader in AI, XR & Digital Platforms";
+const homepageDescription =
+	"Matthew Aisthorpe is a Brisbane-based technical delivery leader working across AI-enabled platforms, XR experiences, solution architecture, software delivery, and digital transformation.";
+const homepageUrl = "https://matthewaisthorpe.com.au/";
+const homepageImage = "https://matthewaisthorpe.com.au/assets/portrait.jpg";
+const personSchema = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	name: "Matthew Aisthorpe",
+	url: homepageUrl,
+	image: homepageImage,
+	jobTitle: "Technical Delivery Leader",
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Brisbane",
+		addressRegion: "Queensland",
+		addressCountry: "Australia",
+	},
+	sameAs: [
+		"https://www.linkedin.com/in/matthewaisthorpe/",
+		"https://github.com/beardydevadventures",
+		"https://www.youtube.com/@beardydevadventures",
+	],
+	knowsAbout: [
+		"Technical Delivery",
+		"Solution Architecture",
+		"AI-enabled platforms",
+		"XR",
+		"Spatial Computing",
+		"Software Delivery",
+		"Digital Transformation",
+		"Agile Delivery",
+		"Product Delivery",
+	],
+};
+const websiteSchema = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	name: "Matthew Aisthorpe",
+	url: homepageUrl,
+	author: {
+		"@type": "Person",
+		name: "Matthew Aisthorpe",
+		url: homepageUrl,
+	},
+	publisher: {
+		"@type": "Person",
+		name: "Matthew Aisthorpe",
+		url: homepageUrl,
+	},
+};
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
 
-<BaseLayout>
+<BaseLayout
+	title={homepageTitle}
+	description={homepageDescription}
+	url={homepageUrl}
+	image={homepageImage}
+	type="website"
+	schema={[personSchema, websiteSchema]}
+>
 	<div class="stack gap-14 lg:gap-28">
 		<div class="wrapper stack gap-8 lg:gap-16">
 			<header class="hero">
@@ -94,16 +154,19 @@ const recognitions: { title: string; icon: keyof typeof iconPaths }[] = [
 				/>
 			</header>
 
-			<Skills />
+			<section class="delivery-section stack gap-8 centered">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h2>How I Lead Technical Delivery</h2>
+					<p>Practical delivery leadership across solution design, team execution, governance, and production-ready digital products.</p>
+				</header>
+				<Skills />
+			</section>
 
 			<section class="section with-cta !gap-0">
 				<div class="surface card-block stack gap-4 lg:gap-6">
 					<header class="stack gap-2 lg:gap-4">
 						<h2>Professional Career</h2>
-						<p>
-							Want a deeper look at my work in Agile leadership,
-							digital transformation, and immersive tech?
-						</p>
+						<p>Want a deeper look at my work across technical leadership, digital transformation, AI, XR, and delivery governance?</p>
 					</header>
 
 					<div class="cta career-cta mt-2 lg:mt-0">
@@ -181,7 +244,7 @@ const recognitions: { title: string; icon: keyof typeof iconPaths }[] = [
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>Creative Brands</h2>
 					<p>
-						Creative brands where I explore immersive technology, product ideas, and practical software delivery.
+						Creative brands where I explore immersive technology, product ideas, and hands-on software delivery.
 					</p>
 				</header>
 
@@ -362,6 +425,12 @@ const recognitions: { title: string; icon: keyof typeof iconPaths }[] = [
 
 	.section.centered .section-header {
 		justify-self: center;
+		text-align: center;
+	}
+
+	.delivery-section .section-header {
+		align-items: center;
+		margin-inline: auto;
 		text-align: center;
 	}
 

@@ -47,6 +47,31 @@ const image = entry.data.img;
 const fullImage = image?.startsWith("http")
 	? image
 	: `https://matthewaisthorpe.com.au${image}`;
+const postSchema = {
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	headline: entry.data.title,
+	description: entry.data.description,
+	image: fullImage,
+	url: fullUrl,
+	datePublished: new Date(entry.data.publishDate).toISOString(),
+	dateModified: new Date(entry.data.publishDate).toISOString(),
+	author: {
+		"@type": "Person",
+		name: "Matthew Aisthorpe",
+		url: "https://matthewaisthorpe.com.au/",
+	},
+	publisher: {
+		"@type": "Person",
+		name: "Matthew Aisthorpe",
+		url: "https://matthewaisthorpe.com.au/",
+	},
+	mainEntityOfPage: {
+		"@type": "WebPage",
+		"@id": fullUrl,
+	},
+	keywords: entry.data.tags,
+};
 type PostEntry = CollectionEntry<"posts">;
 const allPosts = await getCollection("posts");
 const entryTags = entry.data.tags ?? [];
@@ -89,6 +114,8 @@ if (relatedPosts.length < 2) {
 	description={entry.data.description}
 	url={fullUrl}
 	image={fullImage}
+	type="article"
+	schema={postSchema}
 >
 	<div class="stack gap-20">
 		<div class="stack gap-15">

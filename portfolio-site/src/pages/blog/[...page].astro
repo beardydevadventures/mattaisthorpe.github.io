@@ -33,8 +33,9 @@ const pageHref = (pageNumber: number) =>
 ---
 
 <BaseLayout
-	title="My Blog | Matthew Aisthorpe"
-	description="Read more from my blog"
+	title="Blog | Matthew Aisthorpe on AI, XR & Technical Delivery"
+	description="Articles from Matthew Aisthorpe on AI-enabled platforms, XR, technical delivery, software delivery, product leadership, and digital transformation."
+	url={currentPage === 1 ? "https://matthewaisthorpe.com.au/blog/" : `https://matthewaisthorpe.com.au/blog/${currentPage}/`}
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
