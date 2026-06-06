@@ -9,6 +9,7 @@ import CallToAction from "../components/CallToAction.astro";
 import Grid from "../components/Grid.astro";
 import Hero from "../components/Hero.astro";
 import Icon from "../components/Icon.astro";
+import type { iconPaths } from "../components/IconPaths";
 import Pill from "../components/Pill.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
 import PostPreview from "../components/PostPreview.astro";
@@ -28,6 +29,33 @@ const projects = (await getCollection("projects"))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()) // Sort by date
 	.slice(0, 4); // Show only 4
 
+const recognitions: { title: string; icon: keyof typeof iconPaths }[] = [
+	{
+		title: "XRCC 2026 Finalist",
+		icon: "trophy",
+	},
+	{
+		title: "Meta Horizon Start Program, Start Partner",
+		icon: "planet",
+	},
+	{
+		title: "Meta Connect 2025 - Invited Start Partner",
+		icon: "seal-check",
+	},
+	{
+		title: "Multi-Platform App Releases (Meta Quest, Android, iOS, Steam)",
+		icon: "rocket-launch",
+	},
+	{
+		title: "GovHack Winner (2019, 2022) & Runner-Up (2021)",
+		icon: "medal",
+	},
+	{
+		title: "QLD XR Hub Member",
+		icon: "nodes",
+	},
+];
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
@@ -44,15 +72,15 @@ const projects = (await getCollection("projects"))
 				>
 					<div class="roles">
 						<Pill
-							><Icon icon="strategy" size="1.33em" />Delivery
+							><Icon icon="target" size="1.33em" />Delivery
 							Leadership</Pill
 						>
 						<Pill
-							><Icon icon="code" size="1.33em" />Solution
+							><Icon icon="tree-structure" size="1.33em" />Solution
 							Architecture</Pill
 						>
 						<Pill
-							><Icon icon="users-three" size="1.33em" />AI, XR &
+							><Icon icon="sparkle" size="1.33em" />AI, XR &
 							Software Delivery</Pill
 						>
 					</div>
@@ -122,9 +150,10 @@ const projects = (await getCollection("projects"))
 
 			<section class="section with-background with-cta centered">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h2>Personal Project Highlights</h2>
+					<h2>Selected Technical Projects</h2>
 					<p>
-						A selection of projects showcasing delivery across AI, XR, and modern web systems.
+						A selection of projects showcasing delivery across AI,
+						XR, and modern web systems.
 					</p>
 				</header>
 
@@ -152,8 +181,7 @@ const projects = (await getCollection("projects"))
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>Creative Brands</h2>
 					<p>
-						My creative brands where I explore immersive tech and
-						share dev insights.
+						Creative brands where I explore immersive technology, product ideas, and practical software delivery.
 					</p>
 				</header>
 
@@ -211,27 +239,23 @@ const projects = (await getCollection("projects"))
 
 			<section class="section with-background compact">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h2>Programs & Recognition</h2>
+					<h2>Recognition, Programs & Platforms</h2>
 					<p>
-						I've been fortunate to take part in a range of programs
-						and platforms supporting immersive technology, digital
-						innovation, and creative development.
+						Selected programs, releases, and recognition across
+						immersive technology, software delivery, and digital
+						innovation.
 					</p>
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							[
-								"Meta Horizon Start Program - Start Partner",
-								"Multi-Platform App Releases (Meta, Android, iOS, Steam)",
-								"Meta Horizon Creator Program",
-								"Meta Connect 2025 - Invited Start Partner",
-								"GovHack Winner (2019, 2022) & Runner-Up (2021)",
-								"QLD XR Hub Member",
-							].map((brand) => (
+							recognitions.map((item) => (
 								<li class="mention-card">
-									<p>{brand}</p>
+									<span class="mention-icon" aria-hidden="true">
+										<Icon icon={item.icon} size="1.55rem" />
+									</span>
+									<p>{item.title}</p>
 								</li>
 							))
 						}
@@ -264,8 +288,16 @@ const projects = (await getCollection("projects"))
 		position: absolute;
 		inset: 0;
 		background:
-			radial-gradient(circle at 18% 14%, var(--surface-glow-primary), transparent 36%),
-			radial-gradient(circle at 86% 18%, var(--surface-glow-accent), transparent 34%);
+			radial-gradient(
+				circle at 18% 14%,
+				var(--surface-glow-primary),
+				transparent 36%
+			),
+			radial-gradient(
+				circle at 86% 18%,
+				var(--surface-glow-accent),
+				transparent 34%
+			);
 		opacity: 0.9;
 		pointer-events: none;
 	}
@@ -356,7 +388,11 @@ const projects = (await getCollection("projects"))
 		position: absolute;
 		inset: 0;
 		pointer-events: none;
-		background: radial-gradient(circle at 94% 20%, var(--surface-glow-accent), transparent 28%);
+		background: radial-gradient(
+			circle at 94% 20%,
+			var(--surface-glow-accent),
+			transparent 28%
+		);
 	}
 
 	.card-block {
@@ -396,16 +432,32 @@ const projects = (await getCollection("projects"))
 		top: 0;
 		transform: translateY(-75%) translateX(-50%);
 		background:
-			radial-gradient(circle at 50% 45%, var(--surface-glow-primary), transparent 46%),
-			radial-gradient(circle at 74% 30%, var(--surface-glow-accent), transparent 38%);
+			radial-gradient(
+				circle at 50% 45%,
+				var(--surface-glow-primary),
+				transparent 46%
+			),
+			radial-gradient(
+				circle at 74% 30%,
+				var(--surface-glow-accent),
+				transparent 38%
+			);
 		z-index: -2;
 		opacity: 0.55;
 	}
 
 	.with-background.bg-variant::before {
 		background:
-			radial-gradient(circle at 46% 38%, var(--surface-glow-primary), transparent 46%),
-			radial-gradient(circle at 20% 42%, var(--surface-glow-accent), transparent 38%);
+			radial-gradient(
+				circle at 46% 38%,
+				var(--surface-glow-primary),
+				transparent 46%
+			),
+			radial-gradient(
+				circle at 20% 42%,
+				var(--surface-glow-accent),
+				transparent 38%
+			);
 	}
 
 	.section-header {
@@ -442,7 +494,11 @@ const projects = (await getCollection("projects"))
 
 	.creative-brands li:hover {
 		transform: translateY(-4px);
-		border-color: color-mix(in srgb, var(--accent-dark), var(--gray-800) 58%);
+		border-color: color-mix(
+			in srgb,
+			var(--accent-dark),
+			var(--gray-800) 58%
+		);
 		box-shadow: var(--shadow-premium);
 	}
 
@@ -550,16 +606,18 @@ const projects = (await getCollection("projects"))
 	.mention-card {
 		position: relative;
 		display: flex;
-		height: 7rem;
+		min-height: 8.25rem;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 0.85rem;
 		text-align: center;
 		border: 1px solid var(--gray-800);
 		border-radius: 1rem;
-		color: var(--gray-300);
+		color: var(--gray-200);
 		background: var(--surface-panel);
 		box-shadow: var(--shadow-sm);
-		padding: 1rem;
+		padding: 1.1rem;
 		overflow: hidden;
 		transition:
 			transform var(--theme-transition),
@@ -571,14 +629,22 @@ const projects = (await getCollection("projects"))
 		content: "";
 		position: absolute;
 		inset: 0;
-		background: radial-gradient(circle at 50% 0%, var(--surface-glow-primary), transparent 42%);
+		background: radial-gradient(
+			circle at 50% 0%,
+			var(--surface-glow-primary),
+			transparent 42%
+		);
 		opacity: 0;
 		transition: opacity var(--theme-transition);
 	}
 
 	.mention-card:hover {
 		transform: translateY(-3px);
-		border-color: color-mix(in srgb, var(--accent-dark), var(--gray-800) 62%);
+		border-color: color-mix(
+			in srgb,
+			var(--accent-dark),
+			var(--gray-800) 62%
+		);
 		box-shadow: var(--shadow-md);
 	}
 
@@ -586,15 +652,47 @@ const projects = (await getCollection("projects"))
 		opacity: 1;
 	}
 
+	.mention-icon {
+		position: relative;
+		z-index: 1;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		margin-inline: auto;
+		border-radius: 999rem;
+		color: var(--brand-primary);
+		background:
+			radial-gradient(circle at 50% 0%, var(--brand-primary-soft), transparent 68%),
+			var(--surface-menu);
+		border: 1px solid var(--brand-border);
+		box-shadow: var(--shadow-sm);
+		transition:
+			color var(--theme-transition),
+			transform var(--theme-transition),
+			box-shadow var(--theme-transition);
+	}
+
+	.mention-card:hover .mention-icon {
+		color: var(--brand-primary-bright);
+		transform: translateY(-1px);
+		box-shadow: 0 12px 26px var(--brand-primary-soft);
+	}
+
 	.mention-card p {
 		position: relative;
 		z-index: 1;
+		width: 100%;
+		font-weight: 600;
+		line-height: 1.35;
 	}
 
 	@media (min-width: 50em) {
 		.mention-card {
 			border-radius: 1.5rem;
-			height: 9.5rem;
+			min-height: 10.5rem;
+			padding: 1.35rem;
 		}
 	}
 
