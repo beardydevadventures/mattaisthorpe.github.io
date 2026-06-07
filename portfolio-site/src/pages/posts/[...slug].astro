@@ -316,6 +316,28 @@ if (relatedPosts.length < 2) {
 	.content :global(h4),
 	.content :global(h5) {
 		margin: 1.5rem 0;
+		line-height: 1.2;
+		text-wrap: balance;
+	}
+
+	.content :global(h1) {
+		font-size: var(--text-3xl);
+	}
+
+	.content :global(h2) {
+		font-size: var(--text-2xl);
+	}
+
+	.content :global(h3) {
+		font-size: var(--text-xl);
+	}
+
+	.content :global(h4) {
+		font-size: var(--text-lg);
+	}
+
+	.content :global(h5) {
+		font-size: var(--text-md);
 	}
 
 	.content :global(img) {
@@ -404,6 +426,12 @@ if (relatedPosts.length < 2) {
 	.related {
 		border-top: 1px solid var(--gray-800);
 		padding-top: 2.5rem;
+	}
+
+	.related h2 {
+		font-size: var(--text-2xl);
+		line-height: 1.2;
+		text-wrap: balance;
 	}
 
 	.related-grid {
@@ -499,6 +527,18 @@ if (relatedPosts.length < 2) {
 			font-size: var(--text-2xl);
 		}
 
+		.content :global(h1) {
+			font-size: var(--text-4xl);
+		}
+
+		.content :global(h2) {
+			font-size: var(--text-3xl);
+		}
+
+		.content :global(h3) {
+			font-size: var(--text-2xl);
+		}
+
 		.tags {
 			display: flex;
 			gap: 0.5rem;
@@ -506,6 +546,10 @@ if (relatedPosts.length < 2) {
 
 		.related-grid {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+
+		.related h2 {
+			font-size: var(--text-3xl);
 		}
 
 		.related-media img {

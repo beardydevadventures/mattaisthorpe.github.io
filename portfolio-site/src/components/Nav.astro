@@ -116,6 +116,14 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 </nav>
 
 <script>
+	const nav = document.querySelector('nav');
+	const syncNavSurface = () => {
+		nav?.classList.toggle('scrolled', window.scrollY > 8);
+	};
+
+	syncNavSurface();
+	addEventListener('scroll', syncNavSurface, { passive: true });
+
 	class MenuButton extends HTMLElement {
 		constructor() {
 			super();
@@ -155,12 +163,33 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 <style>
 	nav {
 		z-index: 9999;
-		position: sticky;
+		position: fixed;
 		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		align-self: stretch;
 		font-family: var(--font-brand);
 		font-weight: 500;
-		margin-bottom: 3.5rem;
+		margin-bottom: 0;
+		background-color: hsla(var(--gray-999-basis), 0);
+		border-bottom: 1px solid transparent;
+		box-shadow: 0 12px 34px rgba(9, 11, 17, 0);
 		backdrop-filter: blur(18px);
+		transition:
+			background-color 0.22s ease,
+			border-color 0.22s ease,
+			box-shadow 0.22s ease;
+	}
+
+	nav.scrolled {
+		background-color: hsla(var(--gray-999-basis), 0.78);
+		border-bottom-color: var(--brand-border);
+		box-shadow: 0 12px 34px rgba(9, 11, 17, 0.08);
+	}
+
+	:global(.backgrounds) {
+		padding-top: 8.25rem;
 	}
 
 	.menu-header {
@@ -295,7 +324,11 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			align-items: center;
 			padding: 1.25rem clamp(1.5rem, 5vw, 5rem);
 			gap: 1rem;
-			margin-bottom: 4.5rem;
+			margin-bottom: 0;
+		}
+
+		:global(.backgrounds) {
+			padding-top: 8.75rem;
 		}
 
 		.menu-header {

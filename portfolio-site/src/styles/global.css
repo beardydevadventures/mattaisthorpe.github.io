@@ -68,7 +68,7 @@
 	--surface-menu: linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(246, 232, 220, 0.72));
 	--surface-glow-primary: rgba(184, 79, 38, 0.13);
 	--surface-glow-accent: rgba(87, 83, 217, 0.08);
-	--card-info-bg: rgba(255, 255, 255, 0.82);
+	--card-info-bg: rgba(255, 255, 255, 0.68);
 
 	/* Shadows */
 	--shadow-sm: 0 8px 22px rgba(74, 48, 34, 0.08), 0 1px 0 rgba(255, 255, 255, 0.75);
@@ -158,7 +158,7 @@
 	--surface-menu: linear-gradient(135deg, rgba(13, 11, 10, 0.74), rgba(33, 24, 20, 0.68));
 	--surface-glow-primary: rgba(198, 90, 46, 0.18);
 	--surface-glow-accent: rgba(110, 107, 255, 0.12);
-	--card-info-bg: rgba(13, 11, 10, 0.72);
+	--card-info-bg: rgba(13, 11, 10, 0.56);
 
 	--shadow-sm: 0 8px 22px rgba(0, 0, 0, 0.16), 0 1px 0 rgba(255, 247, 240, 0.04);
 	--shadow-md: 0 20px 54px rgba(0, 0, 0, 0.26), 0 8px 20px rgba(198, 90, 46, 0.06);

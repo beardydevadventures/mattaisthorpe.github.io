@@ -310,7 +310,7 @@ const websiteSchema = {
 					</p>
 				</header>
 
-				<div class="gallery">
+				<div class="gallery recognition-gallery">
 					<Grid variant="small">
 						{
 							recognitions.map((item) => (
@@ -583,6 +583,16 @@ const websiteSchema = {
 	.section.compact .gallery {
 		margin-top: 1rem;
 		margin-bottom: 1rem;
+	}
+
+	.recognition-gallery :global(.grid.small) {
+		width: 100%;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 1rem;
+	}
+
+	.recognition-gallery :global(.grid.small > :last-child:nth-child(odd)) {
+		grid-column: auto;
 	}
 
 	.section-header h3,

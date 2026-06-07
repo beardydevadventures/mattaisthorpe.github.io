@@ -367,6 +367,11 @@ import Pill from "../components/Pill.astro";
 		gap: 1.5rem;
 	}
 
+	.about-grid > * {
+		min-width: 0;
+		width: 100%;
+	}
+
 	.main {
 		display: flex;
 		flex-direction: column;
@@ -477,6 +482,8 @@ import Pill from "../components/Pill.astro";
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		min-width: 0;
+		width: 100%;
 	}
 
 	.snapshot-card {
@@ -552,6 +559,12 @@ import Pill from "../components/Pill.astro";
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.5rem;
+		min-width: 0;
+	}
+
+	.badge-list :global(.pill) {
+		max-width: 100%;
+		white-space: normal;
 	}
 
 	.muted {
