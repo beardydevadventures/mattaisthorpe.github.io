@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import Icon from './Icon.astro';
 
 interface Props {
 	project: CollectionEntry<'projects'>;
@@ -7,6 +8,16 @@ interface Props {
 
 const { data, id } = Astro.props.project;
 const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const awardLabels = {
+	winner: 'Winner',
+	finalist: 'Finalist',
+} as const;
+const awardIcons = {
+	winner: 'trophy',
+	finalist: 'medal',
+} as const;
+const awardLabel = data.awardStatus ? awardLabels[data.awardStatus] : undefined;
+const awardIcon = data.awardStatus ? awardIcons[data.awardStatus] : undefined;
 ---
 
 <a class="card" href={`/projects/${id}`}>
@@ -14,6 +25,12 @@ const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { y
 		<span class="title">{data.title}</span>
 		<time class="date" datetime={new Date(data.publishDate).toISOString()}>{formattedDate}</time>
 	</div>
+	{awardLabel && awardIcon && (
+		<span class:list={['award-badge', `is-${data.awardStatus}`]}>
+			<Icon icon={awardIcon} size="1em" />
+			{awardLabel}
+		</span>
+	)}
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 </a>
 
@@ -79,6 +96,35 @@ const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { y
 		color: var(--gray-400);
 	}
 
+	.award-badge {
+		position: absolute;
+		right: 0.75rem;
+		bottom: 0.75rem;
+		z-index: 2;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		padding: 0.42rem 0.7rem;
+		border: 1px solid color-mix(in srgb, currentColor, transparent 72%);
+		border-radius: 999rem;
+		background: rgba(9, 11, 17, 0.72);
+		color: var(--gray-0);
+		box-shadow: 0 12px 28px rgba(9, 11, 17, 0.22);
+		backdrop-filter: blur(16px);
+		font-size: var(--text-sm);
+		font-weight: 700;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	.award-badge.is-winner {
+		color: #f7c948;
+	}
+
+	.award-badge.is-finalist {
+		color: #9dd7ff;
+	}
+
 	img {
 		grid-area: 1 / 1 / 3 / 3;
 		width: 100%;
@@ -103,6 +149,11 @@ const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', { y
 			border-radius: 0.9375rem;
 			margin: 0.75rem;
 			padding: 0.75rem 1rem;
+		}
+
+		.award-badge {
+			right: 1rem;
+			bottom: 1rem;
 		}
 	}
 </style>

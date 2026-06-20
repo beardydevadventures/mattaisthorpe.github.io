@@ -26,6 +26,16 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const formattedDate = new Date(entry.data.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const awardLabels = {
+	winner: 'Winner',
+	finalist: 'Finalist',
+} as const;
+const awardIcons = {
+	winner: 'trophy',
+	finalist: 'medal',
+} as const;
+const awardLabel = entry.data.awardStatus ? awardLabels[entry.data.awardStatus] : undefined;
+const awardIcon = entry.data.awardStatus ? awardIcons[entry.data.awardStatus] : undefined;
 const pathname = Astro.url?.pathname ?? `/projects/${entry.id}`;
 const fullUrl = `https://matthewaisthorpe.com.au${pathname}`;
 const image = entry.data.img;
@@ -40,6 +50,7 @@ const projectSchema = {
 	image: fullImage,
 	url: fullUrl,
 	datePublished: new Date(entry.data.publishDate).toISOString(),
+	...(awardLabel ? { award: awardLabel } : {}),
 	author: {
 		'@type': 'Person',
 		name: 'Matthew Aisthorpe',
@@ -63,7 +74,15 @@ const projectSchema = {
 				<div class="wrapper stack gap-2">
 					<a class="back-link" href="/projects/"><Icon icon="arrow-left" /> Projects</a>
 					<Hero title={entry.data.title} align="start">
-						<time class="publish-date" datetime={new Date(entry.data.publishDate).toISOString()}>{formattedDate}</time>
+						<div class="meta-row">
+							<time class="publish-date" datetime={new Date(entry.data.publishDate).toISOString()}>{formattedDate}</time>
+							{awardLabel && awardIcon && (
+								<span class:list={['award-badge', `is-${entry.data.awardStatus}`]}>
+									<Icon icon={awardIcon} size="1em" />
+									{awardLabel}
+								</span>
+							)}
+						</div>
 						<div class="details">
 							<div class="tags max-lg:hidden">
 								{entry.data.tags.map((t: string) => <Pill>{t}</Pill>)}
@@ -109,6 +128,36 @@ const projectSchema = {
 		font-size: var(--text-md);
 		color: var(--gray-400);
 		margin-top: 0.25rem;
+	}
+
+	.meta-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.award-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		padding: 0.42rem 0.7rem;
+		border: 1px solid color-mix(in srgb, currentColor, transparent 72%);
+		border-radius: 999rem;
+		background: var(--surface-panel-strong);
+		box-shadow: var(--shadow-sm);
+		font-size: var(--text-sm);
+		font-weight: 700;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	.award-badge.is-winner {
+		color: #f7c948;
+	}
+
+	.award-badge.is-finalist {
+		color: #9dd7ff;
 	}
 
 	.tags {

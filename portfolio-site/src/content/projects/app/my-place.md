@@ -9,6 +9,7 @@ tags:
   - App
   - Leadership
   - Hackathon
+awardStatus: winner
 ---
 > Winner of Govhack 2019 - Aboriginal and Torres Strait Islander Languages
 

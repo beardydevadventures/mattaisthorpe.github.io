@@ -15,6 +15,7 @@ const projects = defineCollection({
 		img: z.string(),
 		img_alt: z.string().optional(),
 		featured: z.boolean().optional(),
+		awardStatus: z.enum(["winner", "finalist"]).optional(),
 	}),
 });
 

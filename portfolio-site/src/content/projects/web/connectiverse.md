@@ -9,6 +9,7 @@ tags:
   - App
   - Design
   - Hackathon
+awardStatus: winner
 ---
 > Winner of Govhack 2022 - Digital Skills Challenge
 

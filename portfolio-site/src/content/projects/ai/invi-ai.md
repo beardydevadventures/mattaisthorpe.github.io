@@ -13,6 +13,7 @@ tags:
   - Next.js
   - XRCC Finalist
 featured: true
+awardStatus: finalist
 ---
 
 ## Overview
