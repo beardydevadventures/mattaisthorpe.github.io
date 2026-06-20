@@ -1,7 +1,7 @@
 ---
 title: InVi AI – XR + AI Claim Inspections for Smart Glasses
 publishDate: 2026-06-20 00:00:00
-img: /images/projects/invi-ai-cover.jpg
+img: /assets/projects/invi-ai-cover.jpg
 img_alt: Field inspector using smart glasses with AI-assisted damage detection overlays during a property claim inspection.
 description: |
   An XRCC finalist project exploring how Meta Ray-Ban Display, Snap Specs, a companion Android app, and AI-assisted workflows can make insurance claim inspections faster and easier.

@@ -1,7 +1,7 @@
 ---
 title: Cybersecurity Check – AI-Powered Website Security Reports
 publishDate: 2026-06-20 00:00:00
-img: /images/projects/cybersecurity-check-cover.jpg
+img: /assets/projects/cybersecurity-check-cover.jpg
 img_alt: Cybersecurity dashboard showing a website scan summary, risk score, security checklist, and recommended actions.
 description: |
   A Brisbane-based SaaS project that uses generative AI to turn website security scan results into plain-English reports for small businesses.
