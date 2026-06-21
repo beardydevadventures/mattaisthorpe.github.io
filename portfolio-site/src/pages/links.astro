@@ -174,12 +174,6 @@ const profileSchema = {
 				tagline="A curated list of where to find my work across technical delivery, XR, AI, games, prototypes, and creative projects."
 			/>
 
-			<section class="intro-card">
-				<p>
-					This page keeps the footprint simple: Matthew Aisthorpe as the main hub, FoVR Interactive as the XR studio, and Beardy Dev Adventures as the devlog and prototype shelf.
-				</p>
-			</section>
-
 			<div class="section-list">
 				{
 					sections.map((section) => (
@@ -216,25 +210,11 @@ const profileSchema = {
 		max-width: 72rem;
 	}
 
-	.intro-card,
 	.link-section {
 		background: var(--gradient-subtle);
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-sm);
-	}
-
-	.intro-card {
-		padding: clamp(1.25rem, 3vw, 2rem);
-		color: var(--gray-200);
-		font-size: var(--text-lg);
-		line-height: 1.7;
-		text-align: center;
-	}
-
-	.intro-card p {
-		max-width: 65ch;
-		margin-inline: auto;
 	}
 
 	.section-list {
