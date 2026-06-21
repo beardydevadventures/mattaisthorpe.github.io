@@ -1,0 +1,409 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+
+type LinkItem = {
+	label: string;
+	href: string;
+	note?: string;
+};
+
+type LinkSection = {
+	title: string;
+	description: string;
+	links: LinkItem[];
+};
+
+const sections: LinkSection[] = [
+	{
+		title: "Matthew Aisthorpe",
+		description:
+			"My main professional identity, writing, project archive, and technical delivery work.",
+		links: [
+			{
+				label: "Website",
+				href: "https://matthewaisthorpe.com.au/",
+				note: "Main hub",
+			},
+			{
+				label: "LinkedIn",
+				href: "https://www.linkedin.com/in/matthewaisthorpe/",
+				note: "Professional updates",
+			},
+			{
+				label: "GitHub",
+				href: "https://github.com/beardydevadventures",
+				note: "Code and prototypes",
+			},
+			{
+				label: "Credly",
+				href: "https://www.credly.com/users/matthew-aisthorpe",
+				note: "Certifications",
+			},
+			{
+				label: "Devpost",
+				href: "https://devpost.com/MatthewAisthorpe",
+				note: "Hackathons and prototypes",
+			},
+		],
+	},
+	{
+		title: "FoVR Interactive",
+		description:
+			"My immersive technology studio and creative label for XR, VR, games, spatial computing experiments, and released projects.",
+		links: [
+			{
+				label: "Website",
+				href: "https://fovrinteractive.net/",
+				note: "Studio hub",
+			},
+			{
+				label: "LinkedIn",
+				href: "https://www.linkedin.com/company/fovr-interactive",
+				note: "Main studio social",
+			},
+			{
+				label: "YouTube",
+				href: "https://www.youtube.com/@fovrinteractive",
+				note: "Trailers and demos",
+			},
+			{
+				label: "Facebook",
+				href: "https://www.facebook.com/fovr.interactive",
+				note: "Secondary updates",
+			},
+			{
+				label: "X",
+				href: "https://x.com/FovrInteractive",
+				note: "Reposts and updates",
+			},
+			{
+				label: "QLD XR Hub",
+				href: "https://qldxrhub.com/our-network/fovr-interactive",
+				note: "XR network profile",
+			},
+		],
+	},
+	{
+		title: "Beardy Dev Adventures",
+		description:
+			"My devlog and creator channel for prototypes, experiments, maker projects, XR builds, and behind-the-scenes development.",
+		links: [
+			{
+				label: "YouTube",
+				href: "https://www.youtube.com/@beardydevadventures",
+				note: "Main creator channel",
+			},
+			{
+				label: "X",
+				href: "https://x.com/beardydevadv",
+				note: "Devlog reposts",
+			},
+			{
+				label: "GitHub Pages",
+				href: "https://beardydevadventures.github.io/",
+				note: "Lightweight creator hub",
+			},
+			{
+				label: "itch.io",
+				href: "https://beardydevadventures.itch.io/",
+				note: "Playable experiments",
+			},
+			{
+				label: "GitHub",
+				href: "https://github.com/beardydevadventures",
+				note: "Repos and prototypes",
+			},
+			{
+				label: "Sketchfab",
+				href: "https://sketchfab.com/BeardyDevAdventures",
+				note: "3D work",
+			},
+			{
+				label: "Meta Horizon",
+				href: "https://horizon.meta.com/profile/BeardyDev/",
+				note: "XR social presence",
+			},
+			{
+				label: "Thingiverse",
+				href: "https://www.thingiverse.com/beardydevadventures/makes",
+				note: "Maker archive",
+			},
+			{
+				label: "Cults3D",
+				href: "https://cults3d.com/en/users/BeardyDevAdventures/makes",
+				note: "3D print archive",
+			},
+		],
+	},
+	{
+		title: "Projects & Released Work",
+		description:
+			"Selected public projects, released products, and project pages.",
+		links: [
+			{
+				label: "Project Archive",
+				href: "https://matthewaisthorpe.com.au/projects/",
+				note: "Selected work",
+			},
+			{
+				label: "Valve Tutorial",
+				href: "https://www.meta.com/en-gb/experiences/valve-tutorial/8298310513542583",
+				note: "Meta Quest release",
+			},
+			{
+				label: "Forge of Elements",
+				href: "https://www.meta.com/en-gb/experiences/forge-of-elements/7956388831140201/",
+				note: "Meta Quest release",
+			},
+			{
+				label: "Smash Room",
+				href: "https://www.meta.com/en-gb/experiences/smash-room/5525534314159952/",
+				note: "Meta Quest release",
+			},
+			{
+				label: "Smash Room on Steam",
+				href: "https://store.steampowered.com/app/2370100/Smash_Room/",
+				note: "Steam release",
+			},
+			{
+				label: "Chrono Team Go",
+				href: "https://chronoteamgo.com/",
+				note: "Board game project",
+			},
+			{
+				label: "Chrono Team Go on BoardGameGeek",
+				href: "https://boardgamegeek.com/boardgame/438844/chrono-team-go",
+				note: "Board game listing",
+			},
+		],
+	},
+	{
+		title: "Community & Personal Profiles",
+		description:
+			"Personal or community profiles rather than primary professional channels.",
+		links: [
+			{
+				label: "BoardGameGeek",
+				href: "https://boardgamegeek.com/user/mattyais",
+				note: "Board game profile",
+			},
+			{
+				label: "Reddit",
+				href: "https://www.reddit.com/user/mattyais/",
+				note: "Community profile",
+			},
+			{
+				label: "Steam",
+				href: "https://steamcommunity.com/id/mattyace",
+				note: "Gaming profile",
+			},
+			{
+				label: "Twitch",
+				href: "https://www.twitch.tv/mattyais",
+				note: "Streaming profile",
+			},
+		],
+	},
+];
+
+const pageTitle = "Links | Matthew Aisthorpe";
+const pageDescription =
+	"A curated list of Matthew Aisthorpe's professional profiles, FoVR Interactive links, Beardy Dev Adventures channels, released projects, and community profiles.";
+const pageUrl = "https://matthewaisthorpe.com.au/links/";
+const profileSchema = {
+	"@context": "https://schema.org",
+	"@type": "ProfilePage",
+	name: pageTitle,
+	description: pageDescription,
+	url: pageUrl,
+	mainEntity: {
+		"@type": "Person",
+		name: "Matthew Aisthorpe",
+		url: "https://matthewaisthorpe.com.au/",
+		sameAs: sections.flatMap((section) => section.links.map((link) => link.href)),
+	},
+};
+---
+
+<BaseLayout
+	title={pageTitle}
+	description={pageDescription}
+	url={pageUrl}
+	type="profile"
+	schema={profileSchema}
+>
+	<div class="stack gap-20">
+		<main class="wrapper links-page stack gap-12">
+			<Hero
+				title="Links"
+				subheading="Digital footprint"
+				tagline="A curated list of where to find my work across technical delivery, XR, AI, games, prototypes, and creative projects."
+			/>
+
+			<section class="intro-card">
+				<p>
+					This page keeps the footprint simple: Matthew Aisthorpe as the main hub, FoVR Interactive as the XR studio, and Beardy Dev Adventures as the devlog and prototype shelf.
+				</p>
+			</section>
+
+			<div class="section-list">
+				{
+					sections.map((section) => (
+						<section class="link-section">
+							<header class="section-header stack gap-2">
+								<h2>{section.title}</h2>
+								<p>{section.description}</p>
+							</header>
+
+							<ul class="link-grid" aria-label={`${section.title} links`}>
+								{section.links.map((link) => (
+									<li>
+										<a href={link.href} target="_blank" rel="noopener noreferrer">
+											<span class="link-label">{link.label}</span>
+											{link.note && <span class="link-note">{link.note}</span>}
+											<span class="link-url">{link.href}</span>
+											<Icon icon="arrow-right" size="1.05em" />
+										</a>
+									</li>
+								))}
+							</ul>
+						</section>
+					))
+				}
+			</div>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.links-page {
+		max-width: 72rem;
+	}
+
+	.intro-card,
+	.link-section {
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.intro-card {
+		padding: clamp(1.25rem, 3vw, 2rem);
+		color: var(--gray-200);
+		font-size: var(--text-lg);
+		line-height: 1.7;
+		text-align: center;
+	}
+
+	.intro-card p {
+		max-width: 65ch;
+		margin-inline: auto;
+	}
+
+	.section-list {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.link-section {
+		display: grid;
+		gap: 1.5rem;
+		padding: clamp(1.25rem, 3vw, 2rem);
+	}
+
+	.section-header h2 {
+		color: var(--gray-0);
+		font-size: var(--text-xl);
+	}
+
+	.section-header p {
+		max-width: 68ch;
+		color: var(--gray-300);
+		line-height: 1.65;
+	}
+
+	.link-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 0.9rem;
+	}
+
+	.link-grid a {
+		position: relative;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 0.25rem 0.75rem;
+		align-items: center;
+		min-height: 100%;
+		padding: 1rem;
+		border: 1px solid color-mix(in srgb, var(--gray-800), transparent 12%);
+		border-radius: 1rem;
+		background: color-mix(in srgb, var(--gray-999), transparent 18%);
+		color: var(--gray-0);
+		text-decoration: none;
+		box-shadow: 0 14px 32px rgba(9, 11, 17, 0.08);
+		transition:
+			border-color var(--theme-transition),
+			transform var(--theme-transition),
+			background-color var(--theme-transition);
+	}
+
+	.link-grid a:hover,
+	.link-grid a:focus-visible {
+		transform: translateY(-2px);
+		border-color: var(--brand-primary);
+		background: color-mix(in srgb, var(--gray-999), var(--brand-primary) 8%);
+	}
+
+	.link-label {
+		font-family: var(--font-brand);
+		font-size: var(--text-md);
+		font-weight: 700;
+		line-height: 1.25;
+	}
+
+	.link-note,
+	.link-url {
+		grid-column: 1 / -1;
+		line-height: 1.4;
+	}
+
+	.link-note {
+		color: var(--brand-warm);
+		font-size: var(--text-sm);
+	}
+
+	.link-url {
+		overflow: hidden;
+		color: var(--gray-400);
+		font-size: var(--text-xs);
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.link-grid :global(svg) {
+		grid-column: 2;
+		grid-row: 1;
+		color: var(--accent-regular);
+	}
+
+	@media (min-width: 42em) {
+		.link-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (min-width: 66em) {
+		.link-grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+</style>
