@@ -162,6 +162,7 @@ if (relatedPosts.length < 2) {
 					<div class="content markdown">
 						<Content />
 						<div class="post-signoff">
+							<hr />
 							<p>
 								<em>
 									Thanks for reading. If you’re interested in
@@ -421,6 +422,12 @@ if (relatedPosts.length < 2) {
 
 	.post-signoff {
 		margin-top: 2rem;
+	}
+
+	.post-signoff hr {
+		border: 0;
+		border-top: 1px solid currentColor;
+		margin: 0 0 1.5rem;
 	}
 
 	.related {
