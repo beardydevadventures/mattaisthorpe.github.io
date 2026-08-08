@@ -10,24 +10,26 @@ import PortfolioPreview from "../components/PortfolioPreview.astro";
 import Hero from "../components/Hero.astro";
 import Grid from "../components/Grid.astro";
 import Pill from "../components/Pill.astro";
-import { slugifyTag } from "../utils/slug";
+import {
+	getProjectCategorySlugs,
+	projectCategories,
+} from "../utils/projectCategories";
 
 const projects = (await getCollection("projects")).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
 );
-const tagSet = new Set<string>();
-const tagCounts = new Map<string, number>();
-projects.forEach((project) => {
-	project.data.tags?.forEach((tag: string) => {
-		tagSet.add(tag);
-		tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
-	});
-});
-const projectTags = Array.from(tagSet).sort((a, b) => a.localeCompare(b));
 const totalCount = projects.length;
-const primaryTags = projectTags.filter((tag) => (tagCounts.get(tag) ?? 0) >= 2);
-const secondaryTags = projectTags.filter((tag) => (tagCounts.get(tag) ?? 0) < 2);
-const tagsToShow = primaryTags.length ? primaryTags : projectTags;
+const categoriesByProject = new Map(
+	projects.map((project) => [project.id, getProjectCategorySlugs(project)]),
+);
+const categoryCounts = new Map(
+	projectCategories.map((category) => [
+		category.slug,
+		projects.filter((project) =>
+			categoriesByProject.get(project.id)?.includes(category.slug),
+		).length,
+	]),
+);
 ---
 
 <BaseLayout
@@ -49,44 +51,22 @@ const tagsToShow = primaryTags.length ? primaryTags : projectTags;
 			/>
 
 			<div class="tag-filter" data-filter-group>
-				<button class="tag-pill is-active" type="button" data-tag="all">
+				<button class="tag-pill is-active" type="button" data-category="all">
 					<Pill>All · {totalCount}</Pill>
 				</button>
 				{
-					tagsToShow.map((tag: string) => (
+					projectCategories.map((category) => (
 						<button
 							class="tag-pill"
 							type="button"
-							data-tag={slugifyTag(tag)}
+							data-category={category.slug}
 						>
 							<Pill>
-								{tag} · {tagCounts.get(tag) ?? 0}
+								{category.label} · {categoryCounts.get(category.slug) ?? 0}
 							</Pill>
 						</button>
 					))
 				}
-				{secondaryTags.length > 0 && (
-					<div class="tag-more">
-						<button class="tag-more-toggle" type="button" data-toggle-tags>
-							More filters ({secondaryTags.length})
-						</button>
-						<div class="tag-more-panel" data-more-panel>
-							{
-								secondaryTags.map((tag: string) => (
-									<button
-										class="tag-pill"
-										type="button"
-										data-tag={slugifyTag(tag)}
-									>
-										<Pill>
-											{tag} · {tagCounts.get(tag) ?? 0}
-										</Pill>
-									</button>
-								))
-							}
-						</div>
-					</div>
-				)}
 			</div>
 
 			<Grid variant="offset" class="project-grid" id="projectGrid">
@@ -95,9 +75,9 @@ const tagsToShow = primaryTags.length ? primaryTags : projectTags;
 						<li
 							class="project-card"
 							data-project-card
-							data-tags={project.data.tags
-								?.map((tag: string) => slugifyTag(tag))
-								.join("|")}
+							data-categories={categoriesByProject
+								.get(project.id)
+								?.join("|")}
 						>
 							<PortfolioPreview project={project} />
 						</li>
@@ -117,26 +97,24 @@ const tagsToShow = primaryTags.length ? primaryTags : projectTags;
 	const cards = Array.from(
 		document.querySelectorAll("[data-project-card]"),
 	);
-	const toggle = document.querySelector("[data-toggle-tags]");
-	const panel = document.querySelector("[data-more-panel]");
 
-	const setActive = (tag) => {
+	const setActive = (category) => {
 		buttons.forEach((button) => {
-			button.classList.toggle("is-active", button.dataset.tag === tag);
+			button.classList.toggle("is-active", button.dataset.category === category);
 		});
 	};
 
-	const applyFilter = (tag) => {
+	const applyFilter = (category) => {
 		if (!grid) return;
-		setActive(tag);
+		setActive(category);
 
 		const before = new Map(
 			cards.map((card) => [card, card.getBoundingClientRect()]),
 		);
 
 		cards.forEach((card) => {
-			const tags = card.dataset.tags?.split("|") ?? [];
-			const isMatch = tag === "all" || tags.includes(tag);
+			const categories = card.dataset.categories?.split("|") ?? [];
+			const isMatch = category === "all" || categories.includes(category);
 			card.dataset.match = isMatch ? "true" : "false";
 			card.classList.toggle("is-dimmed", !isMatch);
 		});
@@ -168,16 +146,9 @@ const tagsToShow = primaryTags.length ? primaryTags : projectTags;
 
 	buttons.forEach((button) => {
 		button.addEventListener("click", () => {
-			applyFilter(button.dataset.tag || "all");
+			applyFilter(button.dataset.category || "all");
 		});
 	});
-
-	if (toggle && panel) {
-		toggle.addEventListener("click", () => {
-			const isOpen = panel.classList.toggle("is-open");
-			toggle.setAttribute("aria-expanded", String(isOpen));
-		});
-	}
 </script>
 
 <style>
@@ -197,9 +168,23 @@ const tagsToShow = primaryTags.length ? primaryTags : projectTags;
 			filter var(--theme-transition);
 	}
 
+	.tag-pill :global(.pill) {
+		transition:
+			color var(--theme-transition),
+			border-color var(--theme-transition),
+			background var(--theme-transition),
+			box-shadow var(--theme-transition);
+	}
+
 	.tag-pill.is-active {
 		transform: translateY(-2px);
-		filter: brightness(1.05);
+	}
+
+	.tag-pill.is-active :global(.pill) {
+		color: var(--accent-text-over);
+		border-color: transparent;
+		background: var(--gradient-accent);
+		box-shadow: 0 12px 28px var(--accent-overlay);
 	}
 
 	.tag-pill:focus-visible {
@@ -221,46 +206,4 @@ const tagsToShow = primaryTags.length ? primaryTags : projectTags;
 		opacity: 0.3;
 	}
 
-	.tag-more {
-		position: relative;
-		display: inline-flex;
-	}
-
-	.tag-more-toggle {
-		background: transparent;
-		border: 1px solid var(--gray-800);
-		color: var(--gray-200);
-		border-radius: 999rem;
-		padding: 0.4rem 1rem;
-		font-family: var(--font-brand);
-		cursor: pointer;
-		transition: border-color var(--theme-transition),
-			color var(--theme-transition);
-	}
-
-	.tag-more-toggle:hover,
-	.tag-more-toggle:focus-visible {
-		border-color: var(--accent-regular);
-		color: var(--gray-0);
-	}
-
-	.tag-more-panel {
-		position: absolute;
-		top: calc(100% + 0.75rem);
-		left: 0;
-		z-index: 10;
-		display: none;
-		flex-wrap: wrap;
-		gap: 0.6rem;
-		padding: 0.9rem;
-		min-width: min(24rem, 80vw);
-		background: var(--gray-999);
-		border: 1px solid var(--gray-800);
-		border-radius: 1rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	.tag-more-panel.is-open {
-		display: flex;
-	}
 </style>
