@@ -136,8 +136,10 @@ const websiteSchema = {
 							Leadership</Pill
 						>
 						<Pill
-							><Icon icon="tree-structure" size="1.33em" />Solution
-							Architecture</Pill
+							><Icon
+								icon="tree-structure"
+								size="1.33em"
+							/>Solution Architecture</Pill
 						>
 						<Pill
 							><Icon icon="sparkle" size="1.33em" />AI, XR &
@@ -157,7 +159,11 @@ const websiteSchema = {
 			<section class="delivery-section stack gap-8 centered">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>How I Lead Technical Delivery</h2>
-					<p>Practical delivery leadership across solution design, team execution, governance, and production-ready digital products.</p>
+					<p>
+						Practical delivery leadership across solution design,
+						team execution, governance, and production-ready digital
+						products.
+					</p>
 				</header>
 				<Skills />
 			</section>
@@ -166,16 +172,26 @@ const websiteSchema = {
 				<div class="surface card-block stack gap-4 lg:gap-6">
 					<header class="stack gap-2 lg:gap-4">
 						<h2>Professional Career</h2>
-						<p>Want a deeper look at my work across technical leadership, digital transformation, AI, XR, and delivery governance?</p>
+						<p>
+							Want a deeper look at my experience across technical
+							leadership, digital transformation, AI, XR, and
+							delivery governance?
+						</p>
 					</header>
 
 					<div class="cta career-cta mt-2 lg:mt-0">
-						<CallToAction
-							href="https://www.linkedin.com/in/matthewaisthorpe/"
-						>
-							View My LinkedIn
+						<CallToAction href="/about/">
+							Explore My Experience
 							<Icon icon="arrow-right" size="1.1em" />
 						</CallToAction>
+
+						<a
+							href="https://www.linkedin.com/in/matthewaisthorpe/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							View LinkedIn
+						</a>
 					</div>
 				</div>
 			</section>
@@ -242,9 +258,39 @@ const websiteSchema = {
 
 			<section class="section with-background compact">
 				<header class="section-header stack gap-2 lg:gap-4">
+					<h2>Recognition, Programs & Platforms</h2>
+					<p>
+						Selected programs, releases, and recognition across
+						immersive technology, software delivery, and digital
+						innovation.
+					</p>
+				</header>
+
+				<div class="gallery recognition-gallery">
+					<Grid variant="small">
+						{
+							recognitions.map((item) => (
+								<li class="mention-card">
+									<span
+										class="mention-icon"
+										aria-hidden="true"
+									>
+										<Icon icon={item.icon} size="1.55rem" />
+									</span>
+									<p>{item.title}</p>
+								</li>
+							))
+						}
+					</Grid>
+				</div>
+			</section>
+
+			<section class="section with-background compact">
+				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>Creative Brands</h2>
 					<p>
-						Creative brands where I explore immersive technology, product ideas, and hands-on software delivery.
+						Creative brands where I explore immersive technology,
+						product ideas, and hands-on software delivery.
 					</p>
 				</header>
 
@@ -296,32 +342,6 @@ const websiteSchema = {
 								<Icon icon="arrow-right" size="1.1em" />
 							</CallToAction>
 						</li>
-					</Grid>
-				</div>
-			</section>
-
-			<section class="section with-background compact">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h2>Recognition, Programs & Platforms</h2>
-					<p>
-						Selected programs, releases, and recognition across
-						immersive technology, software delivery, and digital
-						innovation.
-					</p>
-				</header>
-
-				<div class="gallery recognition-gallery">
-					<Grid variant="small">
-						{
-							recognitions.map((item) => (
-								<li class="mention-card">
-									<span class="mention-icon" aria-hidden="true">
-										<Icon icon={item.icon} size="1.55rem" />
-									</span>
-									<p>{item.title}</p>
-								</li>
-							))
-						}
 					</Grid>
 				</div>
 			</section>
@@ -743,7 +763,11 @@ const websiteSchema = {
 		border-radius: 999rem;
 		color: var(--brand-primary);
 		background:
-			radial-gradient(circle at 50% 0%, var(--brand-primary-soft), transparent 68%),
+			radial-gradient(
+				circle at 50% 0%,
+				var(--brand-primary-soft),
+				transparent 68%
+			),
 			var(--surface-menu);
 		border: 1px solid var(--brand-border);
 		box-shadow: var(--shadow-sm);
