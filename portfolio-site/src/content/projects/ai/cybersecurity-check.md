@@ -4,7 +4,7 @@ publishDate: 2026-06-20 00:00:00
 img: /assets/projects/cybersecurity-check-cover.jpg
 img_alt: Cybersecurity dashboard showing a website scan summary, risk score, security checklist, and recommended actions.
 description: |
-  A Brisbane-based SaaS project that uses generative AI to turn website security scan results into plain-English reports for small businesses.
+  A Brisbane-based SaaS platform using structured security scanning and generative AI to turn technical website findings into clear, actionable reports for small businesses.
 tags:
   - SaaS
   - Cybersecurity
@@ -16,47 +16,90 @@ featured: true
 
 ## Overview
 
-Cybersecurity Check is being developed by a small Brisbane-based team focused on helping small businesses understand and improve their website security.
+Cybersecurity Check is a Brisbane-based SaaS project focused on helping small businesses understand and improve their website security without needing deep technical knowledge.
 
-I lead the technology and development side of the project, shaping the platform architecture, AI-assisted reporting workflow, scanning capability, and technical roadmap.
+I lead the technology and development side of the project, shaping the platform architecture, scanning capability, AI-assisted reporting workflow, product direction, and technical roadmap.
 
 [Visit Cybersecurity Check](https://cybersecuritycheck.com.au/)
 
+## The Problem
+
+Small businesses are increasingly expected to understand their cybersecurity risk, but many existing security tools are designed for technical users.
+
+A traditional website scan can produce a long list of headers, configuration issues, DNS findings, certificate information, and other technical results without clearly explaining what any of it means to the business.
+
+Cybersecurity Check is designed to bridge that gap.
+
+The goal is not simply to find issues, but to turn technical findings into clear answers:
+
+- What did we find?
+- Why does it matter?
+- How serious is it?
+- What should the business do next?
+
+## My Role
+
+I lead the technical direction and development of the platform, working across product decisions, architecture, implementation, and delivery.
+
+My responsibilities include:
+
+- Defining the platform and application architecture
+- Shaping the website scanning and assessment workflow
+- Designing the AI-assisted reporting approach
+- Leading development priorities and the technical roadmap
+- Balancing automated analysis with reliable, deterministic security checks
+
+## AI and Architecture Approach
+
+One of the key design decisions has been separating **security detection from AI interpretation**.
+
+The generative AI layer is not responsible for deciding whether a security issue exists. Website scanning and assessment produce structured findings first.
+
+Those results can then be provided to the AI layer as context so it can help turn technical information into:
+
+- Plain-English summaries
+- Risk explanations
+- Recommended actions
+- Business-friendly report content
+
+This keeps the underlying assessment grounded in real scan data while using AI where it is strongest: explaining, summarising, and making technical information easier to act on.
+
+The project is also exploring tool-connected AI workflows that allow models to work with scanning tools and structured report data rather than relying on prompts alone.
+
+## Architecture Principles
+
+A few principles have guided the platform as it has developed:
+
+**Keep security findings deterministic.**  
+The underlying checks should come from the scanning and assessment layer rather than relying on generative AI to identify security findings.
+
+**Use AI for interpretation, not authority.**  
+AI helps communicate findings and recommendations, but the report needs to remain grounded in structured evidence.
+
+**Design for non-technical users.**  
+Technical accuracy matters, but a report is only useful if a business owner can understand what the issue means and what to do next.
+
+**Build the scanning and reporting workflow as a platform.**  
+The longer-term architecture is being designed around reusable scanning capabilities, structured findings, report generation, and tool-connected AI workflows rather than a single one-off report.
+
 ## What It Does
 
-Cybersecurity Check scans a business website, identifies common security gaps, and turns the results into a clear report that non-technical business owners can understand and act on.
+Cybersecurity Check scans a business website for common security and configuration issues and turns those findings into a clear, business-friendly report.
 
-The project is designed to sit between raw technical scan data and a business-friendly report. Instead of only listing security findings, it explains what the issues mean, how risky they are, and what the business should do next.
+Current areas include:
 
-## AI Approach
-
-The AI layer is generative. It uses structured website scan results and turns them into plain-English summaries, risk explanations, and recommended actions.
-
-The project also explores an MCP-style direction for connecting AI to scanning tools and report generation workflows. The goal is not to make the AI guess, but to give it useful tool-driven context so the final report is clearer, more consistent, and more actionable.
-
-## Key Features
-
-- Website security scan summary
-- Plain-English risk report
-- AI-assisted recommendations
+- Website security scan summaries
 - Security checklist and issue detection
-- Business-friendly explanations for non-technical users
-- Lead capture and report workflow
-- Technical roadmap for tool-connected AI reporting
+- Plain-English risk reporting
+- AI-assisted explanations and recommendations
+- Business-focused next steps
+- Report and lead capture workflows
+- Structured findings that can support future AI and automation workflows
 
-## Technology Stack
+## Product Direction
 
-- Web platform: modern SaaS-style website and app workflow
-- AI: generative AI report writing and recommendation support
-- Product focus: website security reports for small businesses
-- Delivery focus: platform architecture, scanning capability, reporting, and technical roadmap
+The longer-term direction is to build Cybersecurity Check into a practical security assessment platform for organisations without dedicated security expertise. The focus is on connecting structured scanning, reporting, automation, and AI while keeping the underlying assessment grounded in reliable technical checks.
 
-## Project Goal
+## Current Status
 
-Small businesses often do not know whether their website is secure, and many security tools are written for technical users. Cybersecurity Check explores how AI can make website security easier to understand and act on.
-
-The goal is to make cybersecurity feel practical, approachable, and useful for business owners who need clear next steps rather than technical noise.
-
-## Status
-
-Live site / SaaS concept in development.
+The Cybersecurity Check website is live, with the SaaS platform and scanning/reporting capabilities in active development.
