@@ -16,6 +16,9 @@ That conversation made me realise that many developers, especially those new to 
 
 ---
 
+:::ad
+:::
+
 ## What is JSON?
 
 JSON stands for **JavaScript Object Notation**, this is a syntax used for storing and exchanging data. 

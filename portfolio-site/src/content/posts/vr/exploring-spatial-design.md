@@ -19,6 +19,9 @@ Early last year, I built a VR streaming room as a bit of an experiment. The idea
 
 ---
 
+:::ad
+:::
+
 ## The Limits of Traditional Streaming
 
 If you've ever tried to record video content, you'll know it's not always easy to get things looking polished. Real-world setups often involve:

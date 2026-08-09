@@ -15,6 +15,9 @@ I’ve recently started exploring VR and have been enjoying my time with the Met
 
 Using Meta Quest Link, you can also play VR games on your PC. The other night, I wanted to share my gameplay with friends on Discord, but I ran into an issue: when trying to stream SteamVR on Discord, only the SteamVR status window was visible to my viewers. It took me an amount of time to figure out a fix, but once I did, streaming worked perfectly.
 
+:::ad
+:::
+
 ## How to Stream Meta Quest to Discord
 
 Follow these steps to share your Quest gameplay on Discord:

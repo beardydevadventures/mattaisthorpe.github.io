@@ -17,6 +17,9 @@ Unlike VR, which fully transports you into a digital environment, AR adds digita
 
 ---
 
+:::ad
+:::
+
 ## Lighting, Occlusion, and the Challenge of the Real World
 
 In VR, we control everything, from the lighting to the shadows to the way the world reacts. AR? Not so much.

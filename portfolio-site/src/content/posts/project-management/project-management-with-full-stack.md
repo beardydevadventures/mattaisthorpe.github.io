@@ -12,6 +12,9 @@ tags:
 
 Transitioning from full-stack development to project management might seem like a shift away from hands-on coding, but in reality, it provides an invaluable foundation for leading technical projects effectively. Having walked the path of both development and management, I’ve found that my background as a full-stack developer has significantly enhanced my ability to manage teams, make informed decisions, and ensure project success.
 
+:::ad
+:::
+
 ## Bridging the Gap Between Teams
 
 One of the biggest advantages of being a project manager with full-stack development experience is the ability to communicate fluently with both front-end and back-end developers. This technical knowledge fosters better collaboration, as I can understand and address challenges from both perspectives. Rather than acting as a middleman relaying information, I can engage in meaningful conversations with the team, ensuring that roadblocks are identified early and solutions are practical.

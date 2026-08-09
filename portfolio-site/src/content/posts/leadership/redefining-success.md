@@ -10,6 +10,9 @@ tags:
   - Mindset 
 ---
 
+:::ad
+:::
+
 ## Redefining Success: The Value of Learning and Completion
 
 Success is often measured in financial gain or perfection, but for me, it's about something much simpler: **learning, growing, and seeing a project through**. In my work leading teams, managing projects, and developing interactive experiences, I've realised that success isn't just about the final outcome, it's about the process, the challenges overcome, and the attempt itself.

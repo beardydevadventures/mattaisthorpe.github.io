@@ -13,6 +13,9 @@ tags:
 ### Introduction
 In the rapidly evolving world of digital technology, the lines between theoretical knowledge and practical application are increasingly blurred. The age-old debate between "book smarts" and "street smarts" takes on a new dimension in digital development. Are coders who learned from textbooks superior to self-taught programmers who learned by doing? This exploration delves into how both forms of intelligence are crucial in the digital realm and how combining them can lead to innovation and success.
 
+:::ad
+:::
+
 ### Understanding the Terms in a Digital Context 
 *Book Smarts* in digital development refer to formal education and theoretical understanding of computer science principles. This includes knowledge gained from university degrees, online courses, and reading technical documentation. It's about grasping algorithms, data structures, and the foundational concepts that underpin technology.
 

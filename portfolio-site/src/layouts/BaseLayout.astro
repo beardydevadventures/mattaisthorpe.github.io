@@ -7,7 +7,7 @@ import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
-import AdSense from '../components/AdSense.astro';
+import AdSenseScript from '../components/AdSenseScript.astro';
 
 interface Props {
 	title?: string | undefined;
@@ -16,9 +16,10 @@ interface Props {
 	image?: string | undefined;
 	type?: string | undefined;
 	schema?: Record<string, unknown> | Record<string, unknown>[] | undefined;
+	enableAds?: boolean;
 }
 
-const { title, description, url, image, type, schema } = Astro.props;
+const { title, description, url, image, type, schema, enableAds = false } = Astro.props;
 ---
 
 <html lang="en">
@@ -32,7 +33,7 @@ const { title, description, url, image, type, schema } = Astro.props;
 			schema={schema}
 		/>
 		<GoogleAnalytics />
-		<AdSense />
+		{enableAds && <AdSenseScript />}
 	</head>
 	<body>
 		<div class="stack backgrounds">

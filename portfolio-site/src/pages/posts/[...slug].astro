@@ -7,6 +7,7 @@ import ContactCTA from "../../components/ContactCTA.astro";
 import Hero from "../../components/Hero.astro";
 import Icon from "../../components/Icon.astro";
 import Pill from "../../components/Pill.astro";
+import AdSense from "../../components/AdSense.astro";
 import { slugifyTag } from "../../utils/slug";
 
 interface Props {
@@ -116,6 +117,7 @@ if (relatedPosts.length < 2) {
 	image={fullImage}
 	type="article"
 	schema={postSchema}
+	enableAds={true}
 >
 	<div class="stack gap-20">
 		<div class="stack gap-15">
@@ -182,6 +184,7 @@ if (relatedPosts.length < 2) {
 								</em>
 							</p>
 						</div>
+						<AdSense />
 					</div>
 				</div>
 			</main>

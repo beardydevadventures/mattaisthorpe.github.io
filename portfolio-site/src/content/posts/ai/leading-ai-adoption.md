@@ -28,6 +28,9 @@ Today, I use a lot of the same lessons across software delivery, product managem
 
 For me, successful AI adoption is as much about people as it is about technology. You can give an organisation access to some of the best AI tools available, but if people don't understand how to use them, don't trust them, or can't see how they fit into their work, adoption is going to be difficult.
 
+:::ad
+:::
+
 ## Start with the problem, not the technology
 
 One of the things we started doing in our AI workshops was asking people a really simple question:

@@ -13,6 +13,9 @@ tags:
 
 In the world of XR (extended reality), creating immersive experiences isn't just about visuals or interactions, it's about drawing users into a world that feels alive and intuitive. One of the most transformative elements in XR design is the use of **diegetic user interfaces (UIs)**. By embedding interfaces directly into the virtual or augmented environment, diegetic UIs blur the line between functionality and narrative, allowing users to interact naturally and intuitively within the experience.
 
+:::ad
+:::
+
 ## What is a Diegetic UI?
 
 Diegetic UIs are user interfaces that exist entirely within the context of a virtual or augmented environment. Unlike traditional 2D overlays or heads-up displays (HUDs), diegetic UIs are part of the scene itself. Imagine a holographic map projected from a device in a VR game or controls on a robot in an AR training simulation. These interfaces:

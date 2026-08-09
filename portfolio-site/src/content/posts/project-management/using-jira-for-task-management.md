@@ -15,6 +15,9 @@ Managing tasks effectively is crucial for the success of any project. During my 
 
 ---
 
+:::ad
+:::
+
 ### Lessons from Working Across Industries and Forming Teams
 
 Leading teams at Ladbrokes and EB Games, and forming a new team at CQUniversity, taught me that clarity and structure are vital for driving productivity and fostering collaboration. While each environment presented unique challenges, a consistent takeaway was the importance of:

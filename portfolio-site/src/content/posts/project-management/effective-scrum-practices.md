@@ -13,6 +13,9 @@ tags:
 
 Among the Agile methodologies, Scrum stands out as one of the most popular frameworks. As a certified Scrum Master and Product Owner, I’ve gathered some valuable insights and best practices that can help you navigate the Agile landscape effectively.
 
+:::ad
+:::
+
 ### Understanding Scrum Basics
 
 Before diving into tips and best practices, it’s essential to understand the core components of Scrum:

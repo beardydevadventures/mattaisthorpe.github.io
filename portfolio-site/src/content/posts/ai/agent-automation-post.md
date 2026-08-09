@@ -11,6 +11,9 @@ tags:
   - Software Development
 ---
 
+:::ad
+:::
+
 ## Agent Automation in Practice: An AI Agent Writes This Post
 
 Artificial intelligence has been in the spotlight for a while. Most of us have used chat assistants and coding copilots to speed up our work or answer a quick question. Those tools are reactive – they wait for a prompt, spit out an answer and stop.

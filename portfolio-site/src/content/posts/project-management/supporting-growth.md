@@ -10,6 +10,9 @@ tags:
   - Mentorship  
 ---
 
+:::ad
+:::
+
 ## Supporting Others: Building a Foundation for Growth
 
 In the fast-paced and ever-evolving landscape of work and life, the support we give to others can be the key to unlocking their potential. Whether it's in a professional setting or our personal lives, fostering an environment of encouragement and trust is essential for growth, not just for others but for ourselves as well.

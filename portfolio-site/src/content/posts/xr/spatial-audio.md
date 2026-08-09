@@ -13,6 +13,9 @@ tags:
 
 In XR (extended reality), immersion goes beyond just visuals and interactions. Sound plays a critical role in making digital environments feel lifelike and believable. Spatial audio, also known as 3D audio, creates a dynamic auditory landscape that responds to the user's position and movements, enhancing both realism and engagement.
 
+:::ad
+:::
+
 ## What is Spatial Audio?
 
 Spatial audio refers to the simulation of sound directionality, distance, and depth in a virtual or augmented environment. Unlike traditional stereo audio, which delivers sound in a flat left-right space, spatial audio enables sounds to come from above, below, behind, and around the user. This creates an experience that closely mirrors how we perceive sound in the real world.

@@ -1,0 +1,27 @@
+<script
+	is:inline
+	async
+	src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2573721355823332"
+	crossorigin="anonymous"
+></script>
+
+<script is:inline>
+	if (!window.initializeAdSense) {
+		window.initializeAdSense = () => {
+			document.querySelectorAll('.adsbygoogle').forEach((ad) => {
+				if (ad.dataset.adsbygoogleStatus || ad.dataset.adInitialized) return;
+
+				ad.dataset.adInitialized = 'true';
+				try {
+					(window.adsbygoogle = window.adsbygoogle || []).push({});
+				} catch (error) {
+					delete ad.dataset.adInitialized;
+					console.warn('AdSense was not initialized.', error);
+				}
+			});
+		};
+
+		document.addEventListener('DOMContentLoaded', window.initializeAdSense, { once: true });
+		document.addEventListener('astro:page-load', window.initializeAdSense);
+	}
+</script>

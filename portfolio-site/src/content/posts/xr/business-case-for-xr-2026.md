@@ -18,6 +18,9 @@ XR is still framed publicly as emerging, but many teams have already moved past 
 
 ---
 
+:::ad
+:::
+
 ## Speaking in ROI Terms
 
 When XR projects stall, it is rarely because the technology did not work. More often, the problem is how the value was explained.

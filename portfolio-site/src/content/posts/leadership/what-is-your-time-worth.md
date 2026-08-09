@@ -16,6 +16,9 @@ But in reality, every hour you spend is still costing something, even when no mo
 
 ---
 
+:::ad
+:::
+
 ## The Myth of Free Time
 
 When you are working on your own project it is easy to loose track of time. You convince yourself you are learning or experimenting, which is true, but it can also distract you from what that time is worth.

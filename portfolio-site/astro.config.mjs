@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import mdx from "@astrojs/mdx";
 import partytown from '@astrojs/partytown'
 
 import sitemap from "@astrojs/sitemap";
+import remarkAdSense from "./src/plugins/remark-adsense.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,6 +34,7 @@ export default defineConfig({
         }
     },
     markdown: {
+		processor: unified({ remarkPlugins: [remarkAdSense] }),
         shikiConfig: {
             theme: 'github-dark',
             showLineNumbers: true,

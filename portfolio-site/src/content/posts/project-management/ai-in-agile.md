@@ -18,6 +18,9 @@ Over the last year, I’ve been experimenting with integrating AI tools like Cha
 
 Let’s break down where AI fits in, what to watch out for, and how to keep Agile human.
 
+:::ad
+:::
+
 ## Where AI Fits in the Agile Cycle
 
 AI isn't just for writing code or generating content. It’s becoming useful across the full Agile workflow:

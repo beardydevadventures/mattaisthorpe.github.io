@@ -10,6 +10,9 @@ tags:
   - Creativity
 ---
 
+:::ad
+:::
+
 ## Looking Back at 2025: A Year of Building With Intention
 
 Here we are in December and as the year comes to a close, I have been looking back on everything that happened in 2025. It was a full on year that went by way too fast. A year that really challenged me and taught me a lot about how I create and how I lead.

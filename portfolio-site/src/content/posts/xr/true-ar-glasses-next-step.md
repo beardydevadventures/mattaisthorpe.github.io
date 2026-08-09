@@ -17,6 +17,9 @@ While I was wearing them, what really clicked for me was not just the glasses th
 
 That is what made me start thinking about AR glasses properly.
 
+:::ad
+:::
+
 ## Quest MR has already shown the behaviour
 
 A big reason this felt so real to me is because Quest MR has already shown a lot of the behaviour that makes this useful.

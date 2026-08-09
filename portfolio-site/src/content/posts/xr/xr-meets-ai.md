@@ -12,6 +12,9 @@ tags:
 
 There is a shift happening in tech right now, one that blends what we see and what we know in real time. Extended Reality (XR) are getting mroe powerful, and Artificial Intelligence (AI) is becoming more smarter. Together, they’re reshaping how we interact with digital environments. Improving how we learn, play and generally interact with technology.
 
+:::ad
+:::
+
 ### When Immersion Gets Intelligent
 
 XR—covering Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR) has already proven its worth in areas like gaming, training, and design. But its true potential starts to unlock when it's powered by AI. That is where experiences become *responsive*, *adaptive*, and *personal*.

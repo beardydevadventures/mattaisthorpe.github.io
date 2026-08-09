@@ -17,6 +17,9 @@ I'm seeing this shift firsthand. Whether it's crafting immersive training experi
 
 ---
 
+:::ad
+:::
+
 ## What is Passthrough XR?
 
 Passthrough XR refers to the ability of a headset to use outward facing cameras to show the user's real environment and then overlay digital content on top. Think of it as AR (augmented reality) through a VR headset but more dynamic, more immersive, and increasingly mainstream.

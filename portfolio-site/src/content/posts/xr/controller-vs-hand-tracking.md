@@ -16,6 +16,9 @@ In practice, most VR experiences still rely on controllers. Not because hand tra
 
 This post compares controller tracking and hand tracking from a practical perspective, based on how they hold up once you move beyond demos and into real use.
 
+:::ad
+:::
+
 ### Controller Tracking in Practice
 
 Controller tracking remains the foundation for most production VR applications. Physical buttons, triggers, and joysticks create deliberate input, making it clear when an action begins and when it ends.

@@ -18,6 +18,9 @@ This post is about how I balance full-time work with side projects, and why **co
 
 ---
 
+:::ad
+:::
+
 ### Why Side Projects Matter
 
 I use my side projects as a way to test new ideas, experiment with emerging tech and keep in touch with my creative side. Having the freedom to create was one of my biggest drives to get into the digital space.

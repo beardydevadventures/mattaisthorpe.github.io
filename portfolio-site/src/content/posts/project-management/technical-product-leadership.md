@@ -18,6 +18,9 @@ Today's landscape adds new dimensions to that challenge. AI agents can support b
 
 In this post, I'll unpack how I approach this blend of strategy and execution from shipping features, like when I led the Uber checkout at EB Games to building AI-powered prototypes in XR, and share some practical ideas for product leaders navigating the same space.
 
+:::ad
+:::
+
 ## Where Ideas Break Down
 
 Every team starts with the best intentions: a compelling idea, a sprint plan, and a goal to deliver something meaningful. But somewhere between the strategy meeting and the release, things can fall apart.

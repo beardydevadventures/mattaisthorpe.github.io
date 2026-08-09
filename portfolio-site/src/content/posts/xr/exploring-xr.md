@@ -13,6 +13,9 @@ tags:
 
 In an era where technology continues to blur the lines between the physical and digital worlds, Extended Reality (XR) is leading the charge. As a transformative force, XR encompasses a spectrum of immersive technologies that are redefining how we interact with the world around us. From enhancing entertainment to revolutionising education and beyond, XR is more than just a buzzword, it's a gateway to new experiences.
 
+:::ad
+:::
+
 ## Understanding XR: The Building Blocks
 
 ### Virtual Reality (VR)

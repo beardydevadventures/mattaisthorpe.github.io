@@ -17,6 +17,9 @@ Over the last year or so, I've been experimenting with ways to bring intelligent
 
 ---
 
+:::ad
+:::
+
 ## Why Add AI to VR?
 
 Interactivity is a big part of what makes VR powerful. But traditional scripted behaviours only go so far. With AI, even a simple NPC can:

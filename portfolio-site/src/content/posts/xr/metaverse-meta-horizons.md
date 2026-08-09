@@ -11,6 +11,9 @@ tags:
   - Social VR
 ---
 
+:::ad
+:::
+
 ## Bridging Realities: How Meta Horizons Advances the Metaverse Concept
 
 I see Meta Horizons as a promising step toward a more open and accessible metaverse. Finally getting access to it in Australia in June 2024 has been a significant milestone. The idea of the metaverse has long been a topic of futuristic speculation, but with platforms like Meta Horizons, we are witnessing its tangible evolution. Meta Horizons is more than just a VR social space, it is a bridge between the digital and the real world, allowing people to interact, create, and explore without barriers. One of its greatest strengths lies in its accessibility, not only for those who own VR headsets, but also for those who prefer to engage through traditional devices such as browsers and mobile phones.

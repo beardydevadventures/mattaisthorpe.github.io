@@ -24,6 +24,9 @@ Before leaving, I made myself a small **bucket list** of things I wanted to achi
 
 ---
 
+:::ad
+:::
+
 ## Arriving at Meta
 
 The journey on the coach gave me time to connect with a few people around me who were there for the first time as well and had been working on amazing projects. As we drove past the Meta campus, the sheer scale of the building stood out, stretching over what felt like one or two football fields long. Stepping off the coach from the hotel onto the Meta campus for the first time felt surreal. The whole building was open plan, with meeting spaces off to the sides and some single person pods spaced around for where developers needed a quiet space for meetings. Cafes, breakout rooms and snack areas spread throughout. There were people chatting over coffee, others fully engaged with their machines, giving the place an atmosphere of creativity and innovation. As our group was led through the building, the energy was contagious and you could feel the excitement in the group.

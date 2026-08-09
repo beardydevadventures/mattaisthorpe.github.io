@@ -13,6 +13,9 @@ tags:
 
 Today, I want to dive into an exciting topic that's shaping the future of education—Mixed Reality (MR), Virtual Reality (VR), and Artificial Intelligence (AI). As someone deeply passionate about interactive digital experiences, I'm thrilled to explore how these technologies are revolutionising the way we learn and teach.
 
+:::ad
+:::
+
 ### The Power of Mixed Reality in Classrooms
 
 Mixed Reality (MR) blends the physical and digital worlds, creating an immersive learning environment where students can interact with both real and virtual objects. This innovative approach enhances engagement and retention by making abstract concepts tangible. Imagine a biology class where students can manipulate 3D models of cells or a history lesson that brings ancient civilisations to life right in the classroom. MR is not just a tool; it's a gateway to a deeper understanding of complex subjects.

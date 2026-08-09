@@ -16,6 +16,9 @@ Across my roles in higher education, enterprise systems, and immersive tech, the
 
 What really makes the difference is good communication, listening properly, and asking the right questions early on.
 
+:::ad
+:::
+
 ### Start with the conversation
 
 Before I start looking at solutions, I start with a conversation.

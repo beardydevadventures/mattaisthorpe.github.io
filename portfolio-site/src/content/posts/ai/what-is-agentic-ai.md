@@ -20,6 +20,9 @@ The simplest way to think about it is this: traditional AI responds to prompts, 
 
 Instead of answering one question and stopping, an agentic system can take a series of actions to move a task forward.
 
+:::ad
+:::
+
 ## What Is Agentic AI?
 
 At its core, **agentic AI refers to AI systems that can act toward a defined objective rather than just generating a response**.

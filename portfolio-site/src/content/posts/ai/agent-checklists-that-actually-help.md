@@ -19,6 +19,9 @@ The demo is usually clean. The agent reads a brief, changes a file, opens a pull
 
 I have been using agents more for real workflow tasks, not just chat responses. Things like drafting posts, checking repo structure, preparing pull requests and turning rough instructions into something usable. The value is there, but the quality comes from the checklist around the agent, not from the agent alone.
 
+:::ad
+:::
+
 ## Start with the boring checks
 
 Before an agent writes anything, it should prove it understands the workspace.

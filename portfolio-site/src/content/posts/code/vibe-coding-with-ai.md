@@ -20,6 +20,9 @@ AI can be a great partner in that space. It helps keep things moving. But like a
 
 So let’s talk about where AI fits in, where it doesn’t, and how to keep that creative spark front and centre.
 
+:::ad
+:::
+
 ## What is Vibe Coding?
 
 Vibe coding is a bit like spinning a roulette wheel. You start with a loose idea, begin building, and see what you end up with. Sometimes it lands exactly where you want. Other times it surprises you in a good way.
