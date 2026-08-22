@@ -59,13 +59,15 @@ const postSchema = {
 	dateModified: new Date(entry.data.publishDate).toISOString(),
 	author: {
 		"@type": "Person",
+		"@id": "https://matthewaisthorpe.com.au/about/#person",
 		name: "Matthew Aisthorpe",
-		url: "https://matthewaisthorpe.com.au/",
+		url: "https://matthewaisthorpe.com.au/about/",
 	},
 	publisher: {
 		"@type": "Person",
+		"@id": "https://matthewaisthorpe.com.au/about/#person",
 		name: "Matthew Aisthorpe",
-		url: "https://matthewaisthorpe.com.au/",
+		url: "https://matthewaisthorpe.com.au/about/",
 	},
 	mainEntityOfPage: {
 		"@type": "WebPage",

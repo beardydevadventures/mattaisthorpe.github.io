@@ -146,15 +146,12 @@ const pageDescription =
 const pageUrl = "https://matthewaisthorpe.com.au/links/";
 const profileSchema = {
 	"@context": "https://schema.org",
-	"@type": "ProfilePage",
+	"@type": "CollectionPage",
 	name: pageTitle,
 	description: pageDescription,
 	url: pageUrl,
-	mainEntity: {
-		"@type": "Person",
-		name: "Matthew Aisthorpe",
-		url: "https://matthewaisthorpe.com.au/",
-		sameAs: sections.flatMap((section) => section.links.map((link) => link.href)),
+	about: {
+		"@id": "https://matthewaisthorpe.com.au/about/#person",
 	},
 };
 ---
@@ -163,7 +160,7 @@ const profileSchema = {
 	title={pageTitle}
 	description={pageDescription}
 	url={pageUrl}
-	type="profile"
+	type="website"
 	schema={profileSchema}
 >
 	<div class="stack gap-20">

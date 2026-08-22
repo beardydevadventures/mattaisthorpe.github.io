@@ -53,8 +53,9 @@ const projectSchema = {
 	...(awardLabel ? { award: awardLabel } : {}),
 	author: {
 		'@type': 'Person',
+		'@id': 'https://matthewaisthorpe.com.au/about/#person',
 		name: 'Matthew Aisthorpe',
-		url: 'https://matthewaisthorpe.com.au/',
+		url: 'https://matthewaisthorpe.com.au/about/',
 	},
 	keywords: entry.data.tags,
 };

@@ -62,11 +62,13 @@ const homepageDescription =
 	"Matthew Aisthorpe is a Brisbane-based technical delivery leader working across AI adoption and enablement, XR experiences, solution architecture, software delivery, and digital transformation.";
 const homepageUrl = "https://matthewaisthorpe.com.au/";
 const homepageImage = "https://matthewaisthorpe.com.au/assets/portrait.jpg";
+const personId = "https://matthewaisthorpe.com.au/about/#person";
 const personSchema = {
 	"@context": "https://schema.org",
 	"@type": "Person",
+	"@id": personId,
 	name: "Matthew Aisthorpe",
-	url: homepageUrl,
+	url: "https://matthewaisthorpe.com.au/about/",
 	image: homepageImage,
 	jobTitle: "Technical Delivery Leader",
 	address: {
@@ -99,13 +101,15 @@ const websiteSchema = {
 	url: homepageUrl,
 	author: {
 		"@type": "Person",
+		"@id": personId,
 		name: "Matthew Aisthorpe",
-		url: homepageUrl,
+		url: "https://matthewaisthorpe.com.au/about/",
 	},
 	publisher: {
 		"@type": "Person",
+		"@id": personId,
 		name: "Matthew Aisthorpe",
-		url: homepageUrl,
+		url: "https://matthewaisthorpe.com.au/about/",
 	},
 };
 
