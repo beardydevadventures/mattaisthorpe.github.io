@@ -17,6 +17,7 @@ import PostPreview from "../components/PostPreview.astro";
 // Page section components
 import ContactCTA from "../components/ContactCTA.astro";
 import Skills from "../components/Skills.astro";
+import AvatarHero from "../components/AvatarHero.astro";
 
 // Content Fetching: List four most recent blog posts
 const posts = (await getCollection("posts"))
@@ -152,11 +153,9 @@ const websiteSchema = {
 					</div>
 				</Hero>
 
-				<img
-					alt="Matthew Aisthorpe"
-					width="480"
-					height="620"
-					src="/assets/portrait.jpg"
+				<AvatarHero
+					modelSrc="/models/matthew.vrm"
+					idleAnimationSrc="/animations/idle.fbx"
 				/>
 			</header>
 
@@ -390,7 +389,7 @@ const websiteSchema = {
 	}
 
 	.hero > :global(.hero),
-	.hero img {
+	.hero > :global(.avatar-hero) {
 		position: relative;
 		z-index: 1;
 	}
@@ -401,17 +400,6 @@ const websiteSchema = {
 		justify-content: center;
 		gap: 0.65rem;
 		margin-top: 0.75rem;
-	}
-
-	.hero img {
-		width: min(100%, 28rem);
-		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
-		border-radius: 1.25rem;
-		border: 1px solid var(--brand-border);
-		box-shadow: 0 28px 70px rgba(9, 11, 17, 0.18);
-		filter: saturate(1.04) contrast(1.03);
 	}
 
 	.section-header {
@@ -425,13 +413,6 @@ const websiteSchema = {
 			grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.82fr);
 			padding: clamp(2rem, 4vw, 3.5rem);
 			gap: clamp(2.5rem, 6vw, 5rem);
-		}
-
-		.hero img {
-			aspect-ratio: 3 / 4;
-			border-radius: 2rem;
-			object-fit: cover;
-			justify-self: end;
 		}
 
 		h2 {
