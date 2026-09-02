@@ -17,8 +17,6 @@
     "@astrojs/mdx": "^6.0.2",
     "@astrojs/partytown": "^2.1.7",
     "@astrojs/sitemap": "^3.7.3",
-    "@pixiv/three-vrm": "^3.5.5",
-    "@pixiv/three-vrm-animation": "^3.5.5",
     "astro": "^6.4.8",
     "astro-embed": "^0.13.0",
     "rss-parser": "^3.13.0",

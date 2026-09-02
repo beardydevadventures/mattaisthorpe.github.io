@@ -5,30 +5,72 @@ interface Props {
 }
 
 const { modelSrc, idleAnimationSrc } = Astro.props;
+const isDevelopment = import.meta.env.DEV;
 ---
 
-<div class="avatar-hero" data-model-src={modelSrc} data-idle-animation-src={idleAnimationSrc}>
-	<img
-		class="avatar-fallback"
-		alt="Matthew Aisthorpe"
-		width="480"
-		height="620"
-		src="/assets/portrait.jpg"
-		fetchpriority="high"
-	/>
-	<canvas class="avatar-canvas" aria-hidden="true"></canvas>
+<div class="avatar-shell">
+	<div class="avatar-hero" data-model-src={modelSrc} data-idle-animation-src={idleAnimationSrc}>
+		<img
+			class="avatar-fallback"
+			alt="Matthew Aisthorpe"
+			width="480"
+			height="620"
+			src="/assets/portrait.jpg"
+			fetchpriority="high"
+		/>
+		<canvas class="avatar-canvas" aria-hidden="true"></canvas>
+	</div>
+	{
+		isDevelopment && (
+			<div class="avatar-test-controls">
+				<button type="button" class="avatar-test-control" data-avatar-expression-test>
+					Test expressions
+				</button>
+				<label class="avatar-test-control">
+					Test speaking
+					<input type="file" accept="audio/*" data-avatar-audio-test />
+				</label>
+			</div>
+		)
+	}
 </div>
 
 <script>
-	import { initVrmAvatar } from "../scripts/avatar/vrmAvatar";
+	import { initAvatar } from "../scripts/avatar/avatar";
 
 	document.querySelectorAll<HTMLElement>(".avatar-hero:not([data-avatar-initialized])").forEach((root) => {
 		root.dataset.avatarInitialized = "";
-		initVrmAvatar(root);
+		const controller = initAvatar(root);
+		const expressionTest = root.parentElement?.querySelector<HTMLButtonElement>("[data-avatar-expression-test]");
+		const audioInput = root.parentElement?.querySelector<HTMLInputElement>("[data-avatar-audio-test]");
+		expressionTest?.addEventListener("click", () => {
+			if (!controller) return;
+			expressionTest.disabled = true;
+			void controller.runExpressionDiagnostic().finally(() => {
+				expressionTest.disabled = false;
+			});
+		});
+		audioInput?.addEventListener("change", () => {
+			const file = audioInput.files?.[0];
+			if (!file || !controller) return;
+			const url = URL.createObjectURL(file);
+			void controller
+				.speakAudio(url)
+				.catch(() => undefined)
+				.finally(() => URL.revokeObjectURL(url));
+			audioInput.value = "";
+		});
 	});
 </script>
 
 <style>
+	.avatar-shell {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		justify-items: center;
+	}
+
 	.avatar-hero {
 		position: relative;
 		z-index: 1;
@@ -99,4 +141,33 @@ const { modelSrc, idleAnimationSrc } = Astro.props;
 			transition: none;
 		}
 	}
+
+	.avatar-test-controls {
+		position: absolute;
+		right: 0.5rem;
+		bottom: 0.5rem;
+		z-index: 4;
+		display: flex;
+		gap: 0.4rem;
+	}
+
+	.avatar-test-control {
+		position: relative;
+		padding: 0.45rem 0.75rem;
+		border: 1px solid var(--brand-border);
+		border-radius: 999px;
+		background: var(--surface-menu);
+		color: var(--gray-200);
+		font-size: 0.75rem;
+		cursor: pointer;
+	}
+
+	.avatar-test-control input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		opacity: 0;
+	}
+
 </style>
