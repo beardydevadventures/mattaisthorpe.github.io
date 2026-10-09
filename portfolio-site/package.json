@@ -10,15 +10,16 @@
     "astro": "astro"
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.19.0"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
-    "@astrojs/mdx": "^6.0.2",
+    "@astrojs/markdown-remark": "^7.3.0",
+    "@astrojs/mdx": "^8.0.3",
     "@astrojs/partytown": "^2.1.7",
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^6.4.8",
-    "astro-embed": "^0.13.0",
+    "astro": "^7.3.8",
+    "astro-embed": "^0.13.1",
     "rss-parser": "^3.13.0",
     "typescript": "^6.0.3"
   },
