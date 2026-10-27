@@ -141,14 +141,14 @@ const websiteSchema = {
 		<div class="wrapper stack gap-8 lg:gap-16">
 			<header class="home-hero">
 				<Hero
-					title="Matthew Aisthorpe"
-					subheading="Leading people, products and digital delivery."
-					tagline="I lead teams across AI, XR and digital platforms, bringing technical depth to people, product and delivery decisions."
+					title="Leading people, products and digital delivery."
+					subheading="Matthew Aisthorpe"
+					tagline="I bring technical depth to leading teams, shaping products and delivering business outcomes."
 					align="start"
 				>
 					<div class="hero-cta">
 						<CallToAction href="#leadership-in-practice">
-							View leadership case studies
+							View my leadership work
 							<Icon icon="arrow-right" size="1.1em" />
 						</CallToAction>
 					</div>
@@ -420,6 +420,20 @@ const websiteSchema = {
 		line-height: 1.6;
 	}
 
+	/* Keep the name as an eyebrow while the leadership message is the page heading. */
+	.home-hero :global(.title) {
+		order: 1;
+	}
+
+	.home-hero :global(.subheading) {
+		order: 0;
+		font-size: var(--text-base);
+	}
+
+	.home-hero :global(.tagline) {
+		order: 2;
+	}
+
 	.hero-cta {
 		align-self: center;
 		max-width: 100%;
@@ -478,7 +492,7 @@ const websiteSchema = {
 		}
 
 		.home-hero :global(.subheading) {
-			font-size: var(--text-lg);
+			font-size: var(--text-base);
 			max-width: none;
 		}
 
