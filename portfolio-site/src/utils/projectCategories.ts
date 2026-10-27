@@ -2,6 +2,11 @@ import type { CollectionEntry } from "astro:content";
 
 export const projectCategories = [
 	{
+		slug: "leadership",
+		label: "Leadership",
+		sourceTags: ["Leadership"],
+	},
+	{
 		slug: "ai",
 		label: "AI",
 		sourceTags: ["AI", "Generative AI"],
