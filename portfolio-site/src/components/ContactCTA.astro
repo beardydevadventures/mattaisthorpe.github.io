@@ -1,10 +1,15 @@
 ---
 import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
+
+interface Props {
+	heading?: string;
+}
+const { heading = 'Interested in technical delivery, AI adoption, XR or emerging technology?' } = Astro.props;
 ---
 
 <aside>
-	<h2>Interested in technical delivery, AI adoption, XR or emerging technology?</h2>
+	<h2>{heading}</h2>
 	<CallToAction href="/contact">
 		Let's talk.
 		<Icon icon="paper-plane-tilt" size="1.2em" />
