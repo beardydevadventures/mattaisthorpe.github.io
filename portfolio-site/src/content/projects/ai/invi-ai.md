@@ -5,6 +5,7 @@ img: /assets/projects/invi-ai-cover.jpg
 img_alt: Field inspector using smart glasses with AI-assisted damage detection overlays during a property claim inspection.
 description: "Leading an international team through wearable-platform trade-offs to demonstrate an AI-assisted inspection workflow. XRCC finalist prototype."
 tags:
+  - Leadership
   - XR
   - AI
   - Smart Glasses
