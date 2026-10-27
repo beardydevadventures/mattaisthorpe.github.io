@@ -140,7 +140,7 @@ const websiteSchema = {
 >
 	<div class="stack gap-14 lg:gap-28">
 		<div class="wrapper stack gap-8 lg:gap-16">
-			<header class="hero">
+			<header class="home-hero">
 				<Hero
 					title="Matthew Aisthorpe"
 					subheading="Leading people, products and digital delivery."
@@ -222,7 +222,7 @@ const websiteSchema = {
 				</header>
 
 				<div class="gallery">
-					<Grid>
+					<Grid variant="offset">
 						{
 							leadershipProjects.map((project) => (
 								<li class="stack gap-4">
@@ -389,7 +389,7 @@ const websiteSchema = {
 </BaseLayout>
 
 <style>
-	.hero {
+	.home-hero {
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -403,7 +403,7 @@ const websiteSchema = {
 		overflow: hidden;
 	}
 
-	.hero::before {
+	.home-hero::before {
 		content: "";
 		position: absolute;
 		inset: 0;
@@ -422,8 +422,8 @@ const websiteSchema = {
 		pointer-events: none;
 	}
 
-	.hero > :global(.hero),
-	.hero img {
+	.home-hero > :global(.hero),
+	.home-hero img {
 		position: relative;
 		z-index: 1;
 	}
@@ -443,7 +443,7 @@ const websiteSchema = {
 		margin-top: 0.75rem;
 	}
 
-	.hero img {
+	.home-hero img {
 		width: min(100%, 28rem);
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
@@ -460,18 +460,35 @@ const websiteSchema = {
 	}
 
 	@media (min-width: 50em) {
-		.hero {
+		.home-hero {
 			display: grid;
-			grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.82fr);
-			padding: clamp(2rem, 4vw, 3.5rem);
-			gap: clamp(2.5rem, 6vw, 5rem);
+			grid-template-columns: minmax(0, 1fr) clamp(15rem, 28vw, 22rem);
+			padding: clamp(1.5rem, 2.5vw, 2.5rem);
+			gap: clamp(1.5rem, 3vw, 3rem);
 		}
 
-		.hero img {
-			aspect-ratio: 3 / 4;
+		.home-hero img {
+			width: min(100%, 22rem);
+			height: auto;
+			aspect-ratio: auto;
 			border-radius: 2rem;
 			object-fit: cover;
 			justify-self: end;
+		}
+
+		.home-hero :global(.title) {
+			font-size: clamp(2.625rem, 4vw, 3.5rem);
+			max-width: none;
+		}
+
+		.home-hero :global(.subheading) {
+			font-size: var(--text-lg);
+			max-width: none;
+		}
+
+		.home-hero :global(.tagline) {
+			font-size: var(--text-lg);
+			max-width: none;
 		}
 
 		h2 {
