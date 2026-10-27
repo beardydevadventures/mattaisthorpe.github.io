@@ -30,6 +30,10 @@ I stay close enough to the implementation to understand the trade-offs, while co
 
 I also use practical automation within that delivery process. One example takes a client bug from ticket creation through a proposed code fix and a pull request back to the codebase. Other work supports daily team workflows and time blocking. These are specific workflow improvements, rather than a claim that delivery or engineering judgement can be fully automated.
 
+## Product discovery and prioritisation
+
+Our scanning team raised a recurring problem with sharing model files. I worked with the scanning lead and founder to shape the model viewer’s scope, refine it through feedback and turn priorities into development tasks. We prioritised OBJ because the scanning device exported it directly, avoiding a conversion step, while deferring formats that needed more investigation. The viewer is in internal use and still under development, with team feedback informing what we prioritise next.
+
 ## Scope and evidence
 
 I have led or overseen six client projects, with up to five running concurrently. The portfolio includes work still in progress. Alongside delivery, I contribute to proposals and help align scope, estimates and team capacity.
