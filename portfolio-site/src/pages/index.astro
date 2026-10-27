@@ -596,6 +596,12 @@ const websiteSchema = {
 		opacity: 0.55;
 	}
 
+	/* Keep dark-mode sections consistent without changing their content cards. */
+	:global(:root.theme-dark) .with-background::before,
+	:global(:root[data-theme="dark"]) .with-background::before {
+		display: none;
+	}
+
 	.with-background.bg-variant::before {
 		background:
 			radial-gradient(
