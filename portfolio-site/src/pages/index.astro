@@ -23,9 +23,22 @@ const posts = (await getCollection("posts"))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
-// Content Fetching: List four most recent work projects
-const projects = (await getCollection("projects"))
-	.filter((p) => p.data.featured) // Only keep featured projects
+// Curate leadership examples separately from the wider technical portfolio.
+const allProjects = await getCollection("projects");
+const leadershipIds = [
+	"leadership/leading-xr-web-ai-delivery",
+	"leadership/leading-practical-ai-adoption",
+	"ai/invi-ai",
+];
+const leadershipProjects = leadershipIds.map((id) => {
+	const project = allProjects.find((entry) => entry.id === id);
+	if (!project) throw new Error(`Missing leadership case study: ${id}`);
+	return project;
+});
+
+// Keep other featured projects accessible below the leadership examples.
+const projects = allProjects
+	.filter((p) => p.data.featured && !leadershipIds.includes(p.id))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()) // Sort by date
 	.slice(0, 4); // Show only 4
 
@@ -202,6 +215,26 @@ const websiteSchema = {
 		</div>
 
 		<main class="wrapper stack gap-16 lg:gap-24">
+			<section class="section with-background with-cta centered">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h2>Leadership in practice</h2>
+					<p>How I bring people, priorities and technical decisions together.</p>
+				</header>
+
+				<div class="gallery">
+					<Grid>
+						{
+							leadershipProjects.map((project) => (
+								<li class="stack gap-4">
+									<PortfolioPreview project={project} />
+									<p>{project.data.description}</p>
+								</li>
+							))
+						}
+					</Grid>
+				</div>
+			</section>
+
 			<section class="section with-background with-cta centered">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>Blog Posts</h2>
