@@ -10,7 +10,6 @@ import Grid from "../components/Grid.astro";
 import Hero from "../components/Hero.astro";
 import Icon from "../components/Icon.astro";
 import type { iconPaths } from "../components/IconPaths";
-import Pill from "../components/Pill.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
 import PostPreview from "../components/PostPreview.astro";
 
@@ -142,27 +141,16 @@ const websiteSchema = {
 		<div class="wrapper stack gap-8 lg:gap-16">
 			<header class="home-hero">
 				<Hero
-					title="Matthew Aisthorpe"
-					subheading="Leading people, products and digital delivery."
-					tagline="I lead teams working across AI, XR and digital platforms. With a background in software development, I connect business priorities with the people and technical decisions needed to deliver them."
+					title="Leading people, products and digital delivery."
+					subheading="Matthew Aisthorpe"
+					tagline="I bring technical depth to leading teams, shaping products and delivering business outcomes."
 					align="start"
 				>
-					<p class="leadership-proof">At 3D Walkabout, I lead a multidisciplinary team of eight, with responsibility for people, project budgets, technical direction and delivery across up to five concurrent projects.</p>
-					<div class="roles">
-						<Pill
-							><Icon icon="target" size="1.33em" />Delivery
-							Leadership</Pill
-						>
-						<Pill
-							><Icon
-								icon="tree-structure"
-								size="1.33em"
-							/>Product &amp; Technical Judgement</Pill
-						>
-						<Pill
-							><Icon icon="sparkle" size="1.33em" />AI, XR &
-							Software Delivery</Pill
-						>
+					<div class="hero-cta">
+						<CallToAction href="#leadership-in-practice">
+							View my leadership work
+							<Icon icon="arrow-right" size="1.1em" />
+						</CallToAction>
 					</div>
 				</Hero>
 
@@ -177,10 +165,7 @@ const websiteSchema = {
 			<section class="delivery-section stack gap-8 centered">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>How I Lead People and Delivery</h2>
-					<p>
-						Clear priorities, capable teams and informed decisions,
-						with technical experience supporting the work.
-					</p>
+					<p class="leadership-proof">At 3D Walkabout, I lead a multidisciplinary team of eight, with responsibility for people, project budgets, technical direction and delivery across up to five concurrent projects.</p>
 				</header>
 				<Skills />
 			</section>
@@ -215,7 +200,7 @@ const websiteSchema = {
 		</div>
 
 		<main class="wrapper stack gap-16 lg:gap-24">
-			<section class="section with-background with-cta centered">
+			<section id="leadership-in-practice" class="section with-background with-cta centered">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h2>Leadership in practice</h2>
 					<p>How I bring people, priorities and technical decisions together.</p>
@@ -429,18 +414,39 @@ const websiteSchema = {
 	}
 
 	.leadership-proof {
-		max-width: 48ch;
+		max-width: 70ch;
 		color: var(--gray-300);
 		font-size: var(--text-base);
 		line-height: 1.6;
 	}
 
-	.roles {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 0.65rem;
-		margin-top: 0.75rem;
+	/* Keep the name as an eyebrow while the leadership message is the page heading. */
+	.home-hero :global(.title) {
+		order: 1;
+	}
+
+	.home-hero :global(.subheading) {
+		order: 0;
+		font-size: var(--text-base);
+	}
+
+	.home-hero :global(.tagline) {
+		order: 2;
+	}
+
+	.hero-cta {
+		align-self: center;
+		max-width: 100%;
+	}
+
+	.hero-cta :global(a) {
+		font-size: var(--text-md);
+		padding: 0.85rem 1.25rem;
+		white-space: normal;
+	}
+
+	.hero-cta :global(svg) {
+		flex-shrink: 0;
 	}
 
 	.home-hero img {
@@ -476,13 +482,17 @@ const websiteSchema = {
 			justify-self: end;
 		}
 
+		.hero-cta {
+			align-self: flex-start;
+		}
+
 		.home-hero :global(.title) {
 			font-size: clamp(2.625rem, 4vw, 3.5rem);
 			max-width: none;
 		}
 
 		.home-hero :global(.subheading) {
-			font-size: var(--text-lg);
+			font-size: var(--text-base);
 			max-width: none;
 		}
 
