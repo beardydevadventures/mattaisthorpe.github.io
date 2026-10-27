@@ -20,7 +20,7 @@ There was plenty of interest in AI across CQUniversity, alongside questions abou
 
 ## My role
 
-I led the Digital Services AI Taskforce, bringing staff into the discussion, helping prioritise opportunities and reporting what we were learning to our CTO. My focus was on connecting practical use cases with responsible adoption.
+I led university-wide AI adoption at CQUniversity through the Digital Services AI Taskforce, overseeing security assessments of AI tools, developing responsible AI use guidelines and providing staff with a portal of approved tools for specific tasks. I brought staff into the discussion, helped prioritise opportunities and reported what we were learning to our CTO.
 
 ## Start with the work
 
@@ -31,6 +31,8 @@ We considered how often a problem occurred, who it affected and whether an impro
 ## Build confidence and shared ownership
 
 We worked with internal cybersecurity colleagues on guidance about appropriate tools and information handling. Human review remained part of the process: generated summaries and action items needed checking before they were shared.
+
+Our taskforce curated responsible AI use guidelines and a portal of tools approved for specific tasks, including generating emails, images and videos. This gave staff a practical way to navigate the available tools and understand which ones to use for different kinds of work.
 
 I also encouraged interested staff to become champions within their own teams. A Teams community gave people a place to share examples, ask questions and support each other, rather than relying on the taskforce for every answer.
 
