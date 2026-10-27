@@ -57,9 +57,9 @@ const recognitions: { title: string; icon: keyof typeof iconPaths }[] = [
 ];
 
 const homepageTitle =
-	"Matthew Aisthorpe | Technical Delivery Leader in AI, XR & Digital Platforms";
+	"Matthew Aisthorpe | Product & Delivery Leader";
 const homepageDescription =
-	"Matthew Aisthorpe is a Brisbane-based technical delivery leader working across AI adoption and enablement, XR experiences, solution architecture, software delivery, and digital transformation.";
+	"Matthew Aisthorpe is a Brisbane-based product and delivery leader with a software development background, leading people, priorities and digital platforms across AI and XR.";
 const homepageUrl = "https://matthewaisthorpe.com.au/";
 const homepageImage = "https://matthewaisthorpe.com.au/assets/portrait.jpg";
 const personId = "https://matthewaisthorpe.com.au/about/#person";
@@ -70,7 +70,7 @@ const personSchema = {
 	name: "Matthew Aisthorpe",
 	url: "https://matthewaisthorpe.com.au/about/",
 	image: homepageImage,
-	jobTitle: "Technical Delivery Leader",
+	jobTitle: "Head of XR, Web & AI Development",
 	address: {
 		"@type": "PostalAddress",
 		addressLocality: "Brisbane",
@@ -130,10 +130,11 @@ const websiteSchema = {
 			<header class="hero">
 				<Hero
 					title="Matthew Aisthorpe"
-					subheading="Technical Delivery Leader across AI, XR and Digital Platforms"
-					tagline="I lead cross-functional teams delivering AI-enabled platforms, immersive XR experiences, and modern digital systems from strategy through production."
+					subheading="Leading people, products and digital delivery."
+					tagline="I lead teams working across AI, XR and digital platforms. With a background in software development, I connect business priorities with the people and technical decisions needed to deliver them."
 					align="start"
 				>
+					<p class="leadership-proof">At 3D Walkabout, I lead a multidisciplinary team of eight, with responsibility for people, project budgets, technical direction and delivery across up to five concurrent projects.</p>
 					<div class="roles">
 						<Pill
 							><Icon icon="target" size="1.33em" />Delivery
@@ -143,7 +144,7 @@ const websiteSchema = {
 							><Icon
 								icon="tree-structure"
 								size="1.33em"
-							/>Solution Architecture</Pill
+							/>Product &amp; Technical Judgement</Pill
 						>
 						<Pill
 							><Icon icon="sparkle" size="1.33em" />AI, XR &
@@ -162,11 +163,10 @@ const websiteSchema = {
 
 			<section class="delivery-section stack gap-8 centered">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h2>How I Lead Technical Delivery</h2>
+					<h2>How I Lead People and Delivery</h2>
 					<p>
-						Practical delivery leadership across solution design,
-						team execution, governance, and production-ready digital
-						products.
+						Clear priorities, capable teams and informed decisions,
+						with technical experience supporting the work.
 					</p>
 				</header>
 				<Skills />
@@ -393,6 +393,13 @@ const websiteSchema = {
 	.hero img {
 		position: relative;
 		z-index: 1;
+	}
+
+	.leadership-proof {
+		max-width: 48ch;
+		color: var(--gray-300);
+		font-size: var(--text-base);
+		line-height: 1.6;
 	}
 
 	.roles {
