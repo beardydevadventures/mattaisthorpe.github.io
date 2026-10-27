@@ -200,9 +200,9 @@ const websiteSchema = {
 		</div>
 
 		<main class="wrapper stack gap-16 lg:gap-24">
-			<section id="leadership-in-practice" class="section with-background with-cta centered">
+			<section class="section with-background with-cta centered">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h2>Leadership in practice</h2>
+					<h2 id="leadership-in-practice">Leadership in practice</h2>
 					<p>How I bring people, priorities and technical decisions together.</p>
 				</header>
 
@@ -374,6 +374,17 @@ const websiteSchema = {
 </BaseLayout>
 
 <style>
+	/* Match the fixed navigation clearance used by Nav.astro. */
+	#leadership-in-practice {
+		scroll-margin-top: 8.25rem;
+	}
+
+	@media (min-width: 50em) {
+		#leadership-in-practice {
+			scroll-margin-top: 8.75rem;
+		}
+	}
+
 	.home-hero {
 		position: relative;
 		display: flex;
