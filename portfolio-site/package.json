@@ -18,7 +18,7 @@
     "@astrojs/mdx": "^8.0.3",
     "@astrojs/partytown": "^2.1.7",
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^7.3.8",
+    "astro": "^7.4.12",
     "astro-embed": "^0.13.1",
     "rss-parser": "^3.13.0",
     "typescript": "^6.0.3"
